@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation=
+        "http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+            http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        	http://www.springframework.org/schema/aop/spring-aop.xsd"
+    default-autowire="byName">
+    
+    <!-- Set the properties file -->
+	<context:property-placeholder location="
+		classpath:db.properties,
+		classpath:hibernate.properties,
+		classpath:displaytag.properties"/>
+    
+    <!-- Activates scanning of @Autowired -->
+    <context:annotation-config />
+
+    <!-- Activates scanning of @Repository and @Service -->
+    <context:component-scan base-package="com.hangarservicios.serviceImpl"/>
+    <context:component-scan base-package="com.hangarservicios.daoImpl"/>
+    
+    <!-- Internacionalizacion--> 
+      <!-- Tag para insertar textos para internacionalizacion-->    
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="classpath:messages" />
+    </bean> 
+    
+       <!-- Nos permite cambiar el “Locale” actual en cada petición al servidor, mediante el uso de un parámetro que debemos especificar. -->
+    <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+	    <property name="paramName">
+	        <value>siteLanguage</value>
+	    </property>
+	</bean> 
+	
+    <!-- “SessionLocaleResolver”  utiliza la sesión del usuario para especificar el “Locale” actual.  -->  
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+        <property name="defaultLocale" value="es_ES" />
+    </bean>
+    
+    <!-- Se carga el interceptor en el “urlMapping” de nuestra aplicación. -->
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	    <property name="interceptors">
+	        <list>
+	            <ref bean="localeChangeInterceptor"/>
+	        </list>
+	    </property>
+	</bean>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+        destroy-method="close">
+        <property name="driverClassName" value="${db.driverClassName}" />
+        <property name="url" value="${db.url}" />
+        <property name="username" value="${db.username}" />
+        <property name="password" value="${db.password}" />
+    </bean>
+	
+</beans>

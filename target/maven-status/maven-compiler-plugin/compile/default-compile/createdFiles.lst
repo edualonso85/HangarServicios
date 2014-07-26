@@ -1,0 +1,8 @@
+com\hangarservicios\controller\NoticeController.class
+com\hangarservicios\util\NoticeDecorator.class
+com\hangarservicios\serviceImpl\NoticeServiceImpl.class
+com\hangarservicios\entity\Image.class
+com\hangarservicios\entity\Notice.class
+com\hangarservicios\daoImpl\NoticeDaoImpl.class
+com\hangarservicios\controller\UsersController.class
+com\hangarservicios\controller\BaseController.class
