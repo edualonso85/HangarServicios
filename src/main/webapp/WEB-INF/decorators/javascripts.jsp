@@ -1,4 +1,4 @@
-	<script type='text/javascript' src='resources/js/jquery/jquery-1.10.2.min'></script>
+	<script type='text/javascript' src='resources/js/jquery/jquery-1.10.2.min.js'></script>
 	<script type='text/javascript' src='resources/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
 	<script type='text/javascript' src='resources/js/plugins/wp-customer-review.js?ver=2.4.8'></script>
 	<script type='text/javascript' src='resources/js/plugins/comment-reply.min.js?ver=3.8'></script>

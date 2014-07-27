@@ -12,7 +12,5 @@
 		.box1 i, .fancybox2 i, .sbutton i, .intro i  {margin-right:5px;}
 		.boxlink i {margin-right:0px;}
 		.captionicons {margin-right:5px;}
-		input, button, select, textarea {font-family:'open_sansregular';}
-		body.boxed { 
-		-webkit-background-size: cover;	-moz-background-size: cover;	-o-background-size: cover;	background-image:url(resources/img/bisimg/pic7.jpg) ;	background-color:;	background-repeat:no-repeat;	background-position:center left;	background-attachment:fixed;} 
+		input, button, select, textarea {font-family:'open_sansregular';}		
 	</style>

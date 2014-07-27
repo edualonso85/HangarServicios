@@ -23,32 +23,31 @@ import com.hangarservicios.entity.Image;
 import com.hangarservicios.entity.Notice;
 import com.hangarservicios.service.NoticeService;
 
-
 @Controller
 @RequestMapping("/")
 public class BaseController {
 
 	@Autowired
 	NoticeService noticeService;
-	
+
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String welcome(HttpServletRequest request, ModelMap model) {
 		Notice notice = null;
 		String img = "resources/img_notices/default.jpg";
 		List<Notice> notices = noticeService.getLatestNoticesByLanguage(1, RequestContextUtils.getLocale(request).getLanguage());
-		
+
 		if (notices != null) {
 			if (notices.get(0).getContent().length() > 201) {
 				String descripcionCorta = notices.get(0).getContent().substring(0, 200);
 				notices.get(0).setContent(descripcionCorta);
 			}
 			notice = notices.get(0);
-			List<Image> images=notice.getImages();
-			if (notice.getImages().size()>0)
-				img="resources/img_notices/"+notice.getImages().get(0).getName();
-			
+			List<Image> images = notice.getImages();
+			if (notice.getImages().size() > 0)
+				img = "resources/img_notices/" + notice.getImages().get(0).getName();
+
 		}
-		
+
 		request.setAttribute("urlnoticeimg", img);
 		request.setAttribute("notice", notice);
 		return "index";
