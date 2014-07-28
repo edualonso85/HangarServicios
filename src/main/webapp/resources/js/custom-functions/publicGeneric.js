@@ -43,8 +43,12 @@ function createLoginModal(){
 	jQuery('#login').on('click',function(){
 		jQuery('#loginModal').dialog({
 			title: "Login",
-			width: 750,
-			resizable: false
+			width: 450,
+			resizable: false,
+			draggable: false,
+			show: 'slideDown',
+			modal: true,
+			position: { my: "center", at: "top", of: window }
 		});
 	});
 	
