@@ -48,7 +48,8 @@ function createLoginModal(){
 			draggable: false,
 			show: 'slideDown',
 			modal: true,
-			position: { my: "center", at: "top", of: window }
+			position: { my: "center", at: "top", of: window },
+			close: function( event, ui ) {jQuery('#errorMessage').hide()}
 		});
 	});
 	
