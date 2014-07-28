@@ -2,10 +2,11 @@
 <decorators defaultdir="/WEB-INF/decorators">  
     <decorator name="usersTemplate" page="usersTemplate.jsp">  
         <pattern>/users/*</pattern>  
-        <pattern>/login</pattern>  
+        
     </decorator>
     <decorator name="template" page="template.jsp">  
-        <pattern>/*</pattern>  
+        <pattern>/*</pattern> 
+        <pattern>/login</pattern>   
     </decorator>  
 </decorators>  
 

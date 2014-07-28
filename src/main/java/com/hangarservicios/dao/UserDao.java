@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.hangarservicios.entity.DBUser;
 import com.hangarservicios.entity.Role;
@@ -59,23 +60,24 @@ public class UserDao {
 		String query = "FROM DBUser user WHERE user.userName = ? AND user.password = ?";
 		try {
 			session = sessionFactory.getCurrentSession();
-			session.beginTransaction();
+			// session.beginTransaction();
 			DBUser user = (DBUser) session.createQuery(query).setParameter(0, userName).setParameter(1, password).uniqueResult();
-			if (!session.getTransaction().wasCommitted())
-				session.getTransaction().commit();
+			// if (!session.getTransaction().wasCommitted())
+			// session.getTransaction().commit();
 			return user;
 		} catch (HibernateException e) {
-			session.getTransaction().rollback();
-			logger.error("HibernateException in Notice" + ".getAll " + e.getMessage());
+			// session.getTransaction().rollback();
+			logger.error("HibernateException in UserDao" + ".getAll " + e.getMessage());
 			return null;
 		} catch (Exception e) {
-			session.getTransaction().rollback();
-			logger.error("Exception in Notice" + ".getAll " + e.getMessage());
+			// session.getTransaction().rollback();
+			logger.error("Exception in UserDao" + ".getAll " + e.getMessage());
 			return null;
 		}
 
 	}
 
+	@Transactional
 	public CustomUserDetail getUserDetail(String username, String password) {
 
 		try {
@@ -90,11 +92,13 @@ public class UserDao {
 				authorities.add(new SimpleGrantedAuthority(role.getRoleName()));
 
 			}
+			user.setFirstName(dbUser.getFirstName());
+			user.setLastName(dbUser.getLastName());
 
 			user.setAuthorities(authorities);
 			return user;
 		} catch (Exception e) {
-			logger.info(e.getMessage());
+			logger.error(e.getMessage());
 			return null;
 		}
 	}

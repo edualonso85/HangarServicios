@@ -12,16 +12,13 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
-import com.hangarservicios.dao.UserDao;
+import com.hangarservicios.service.UserService;
 
 @Service
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
 	@Autowired
-	UserDao userLoginDao;
-
-	// @Autowired
-	// SessionFactory sessionFactory;
+	UserService userLoginDao;
 
 	@Override
 	public Authentication authenticate(Authentication auth) throws AuthenticationException {

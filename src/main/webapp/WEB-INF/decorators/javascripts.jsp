@@ -13,3 +13,5 @@
 	<script type='text/javascript' src='resources/js/plugins/tabs.js?ver=3.8'></script>
 	<script type='text/javascript' src='resources/js/plugins/flexslider.js?ver=3.8'></script>
 	<script type='text/javascript' src='resources/js/plugins/testimonial.js?ver=3.8'></script>
+	<script src="resources/js/usersjs/libs/jquery-ui.js"></script>
+	<script src="resources/js/usersjs/libs/jquery.form.min.js"></script>

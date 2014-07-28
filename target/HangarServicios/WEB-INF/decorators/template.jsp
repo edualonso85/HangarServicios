@@ -16,15 +16,15 @@
 
 <body class="home page page-id-10 page-template page-template-template-home-php boxed group-blog">
 <%@include file="../pages/includesPlugins/modalLanguage.jsp"%>
-	<div class="body">
+	<div class="header">
 		<div id="page" class="hfeed site">			
 		<!-- Header -->
 			<header id="masthead" class="site-header" role="banner">
-				<div class="container clearfix">
+				<div class="clearfix">
 					<div class="row-fluid">
 						<div class="span12">
 							<h1 class="brandlogo">
-								<a href="index.html" title="Hangar Servicios" rel="home"><img src="resources/img/logo20anos.jpg" alt="Hangar Servicios" /></a>							
+								<a href="index.html" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/hangarhead.png" alt="Hangar Servicios" /></a>							
 							</h1>		
 							<div class="topinfo">
 								<ul class="social-icons list-soc">						
@@ -32,6 +32,7 @@
 									<li><a href="<c:url value='login' />" title ="<s:message code="title.login"/>"><i class="icon-signin"></i></a></li>
 									<li><a href="#" target="_blank" title ="<s:message code="title.changeLenguage"/>"  data-toggle="modal" data-target="#modalLanguage" ><i class="icon-globe"></i></a></li>											
 								</ul>					
+								<a href="index.html" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/anios.png" alt="Hangar Servicios 20 años" /></a>
 							</div>
 						</div>						
 						<!-- Navigation -->
@@ -78,10 +79,11 @@
 				</div>
 			</div>
 		</header>
-		<div class="menushadow"></div>
+		</div>
 		<!-- /end header -->
 		<!-- .container -->
-		<div class="container site-content">
+		<div class="body">
+		<div class="site-content">
 			<div class="content-area">
 				<main id="main" class="site-main" role="main">
 					<article id="post-14" class="post-14 page type-page status-publish hentry">	
@@ -109,7 +111,7 @@
 									<p>Hangar Servicios es una empresa que brinda servicios de inspección aéreos especializados. La más avanzada tecnología, el know how y un staff altamente calificado permiten a Hangar Servicios auditar las redes de transmisión eléctrica para su efectivo mantenimiento correctivo y una justificada planificación del mantenimiento preventivo. </p>
 									
 									<p class="footerlogo">
-										Hangar Servicios
+										<a href="index.html" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/hangarfoot.png" alt="Hangar Servicios" /></a>
 									</p>
 								</div>
 							</aside>

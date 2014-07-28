@@ -22,8 +22,7 @@
     <context:annotation-config />
 
     <!-- Activates scanning of @Repository and @Service -->
-    <context:component-scan base-package="com.hangarservicios.serviceImpl"/>
-    <context:component-scan base-package="com.hangarservicios.daoImpl"/>
+    <context:component-scan base-package="com.hangarservicios"/>
     
     <!-- Internacionalizacion--> 
       <!-- Tag para insertar textos para internacionalizacion-->    

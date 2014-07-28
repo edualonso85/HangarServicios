@@ -218,11 +218,11 @@
 		<div class="row">
 			
 			<div id="footer-copyright" class="col-md-6">
-				&copy; 2012-13 Jumpstart UI.
+				&copy; Hangar servicios derechos reservados.
 			</div> <!-- /span6 -->
 			
 			<div id="footer-terms" class="col-md-6">
-				Theme by <a href="http://jumpstartui.com" target="_blank">Jumpstart UI</a>
+				 <a href="http://hangarservicios.com.ar" target="_blank">Hangar Servicios</a>
 			</div> <!-- /.span6 -->
 			
 		</div> <!-- /row -->

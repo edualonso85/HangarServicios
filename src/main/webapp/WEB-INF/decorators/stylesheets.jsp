@@ -8,6 +8,7 @@
 	<link rel='stylesheet' id='biscaya-responsive-css'  href='resources/css/biscss/bootstrap-responsive.css?ver=3.8' type='text/css' media='all' />
 	<link rel='stylesheet' id='customskin-css'  href='resources/css/biscss/skin-yellow.css?ver=3.8' type='text/css' media='all' />
 	<link rel='stylesheet' id='biscaya-style-css'  href='resources/css/biscss/style.css?ver=3.8' type='text/css' media='all' />
+	<link rel="stylesheet" type="text/css" href="resources/css/userscss/jquery-ui.css" /> 
 	<style type="text/css" media="all">
 		.box1 i, .fancybox2 i, .sbutton i, .intro i  {margin-right:5px;}
 		.boxlink i {margin-right:0px;}

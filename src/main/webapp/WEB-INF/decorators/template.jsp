@@ -16,6 +16,7 @@
 
 <body class="home page page-id-10 page-template page-template-template-home-php boxed group-blog">
 <%@include file="../pages/includesPlugins/modalLanguage.jsp"%>
+<%@include file="../pages/login.jsp"%>
 	<div class="header">
 		<div id="page" class="hfeed site">			
 		<!-- Header -->
@@ -29,7 +30,7 @@
 							<div class="topinfo">
 								<ul class="social-icons list-soc">						
 									<li><a href="https://www.facebook.com/profile.php?id=100001895700065&fref=ts" target="_blank" title = "<s:message code="title.fb"/>" ><i class="icon-facebook"></i></a></li>
-									<li><a href="<c:url value='login' />" title ="<s:message code="title.login"/>"><i class="icon-signin"></i></a></li>
+									<li><a href="#" id="login" title ="<s:message code="title.login"/>"><i class="icon-signin"></i></a></li>
 									<li><a href="#" target="_blank" title ="<s:message code="title.changeLenguage"/>"  data-toggle="modal" data-target="#modalLanguage" ><i class="icon-globe"></i></a></li>											
 								</ul>					
 								<a href="index.html" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/anios.png" alt="Hangar Servicios 20 años" /></a>

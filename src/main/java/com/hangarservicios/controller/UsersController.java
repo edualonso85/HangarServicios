@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hangarservicios.entity.Notice;
 import com.hangarservicios.service.NoticeService;
@@ -21,8 +22,9 @@ public class UsersController {
 	NoticeService noticeService;
 
 	@RequestMapping(value = "/users/index", method = RequestMethod.GET)
-	public String welcome(HttpServletRequest request, ModelMap model) {
+	public String welcome(HttpServletRequest request, ModelMap model, @RequestParam("name") String name) {
 
+		request.setAttribute("name", name);
 		List<Notice> notices = noticeService.getLatestNotices(4);
 		if (notices != null) {
 			for (int i = 0; i < notices.size(); i++) {

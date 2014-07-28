@@ -32,6 +32,7 @@
   		<property name="packagesToScan" value="com.hangarservicios.entity" />
         <property name="hibernateProperties">
             <props>
+<!--             <prop key="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</prop> -->
                 <prop key="hibernate.dialect">${hibernate.dialect}</prop>
                 <prop key="hibernate.hbm2ddl.auto">validate</prop>
                 <prop key="hibernate.show_sql">false</prop>

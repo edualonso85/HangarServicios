@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <%@taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
   <head>
   	<meta charset="UTF-8">
 	<title>Hangar Servicios</title>
@@ -48,7 +50,7 @@
 								
 					<a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">
 						<i class="icon-user"></i> 
-						Gustavo Alonso
+						${name}
 						<b class="caret"></b>
 					</a>
 					
@@ -56,7 +58,7 @@
 						<li><a href="javascript:;">My Profile</a></li>
 						<li><a href="javascript:;">My Groups</a></li>
 						<li class="divider"></li>
-						<li><a href="javascript:;">Logout</a></li>
+						<li><a href="<c:url value="/j_spring_security_logout" />">Logout</a></li>
 					</ul>
 					
 				</li>

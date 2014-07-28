@@ -6,8 +6,8 @@
 .modalLanguage {
 left: 1480px !important;
 top: 84px !important;
-width: 210px !important;
-margin-left: -280px !important;
+width: 240px !important;
+margin-left: -299px !important;
 background-color: #ffffff !important;
 border: 1px solid #999 !important;
 border: 1px solid rgba(0, 0, 0, 0.3) !important;

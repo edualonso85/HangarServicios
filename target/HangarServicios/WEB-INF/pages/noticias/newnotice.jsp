@@ -6,7 +6,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 
-<head></head>
+<head>	
+
+</head>
 
 
 <body>
@@ -23,7 +25,7 @@
 			    <div id="content">
 			    <h3>Noticias</h3>
 			    </br>	
-					<form id="newNoticeForm" action="savenewnotice" method="post">
+					<form modelAttribute="noticeDto"  enctype="multipart/form-data" id="newNoticeForm" action="savenewnotice" method="post">
 						<div class="panel-group accordion">
 			                <div class="panel panel-default open">
 			                  <div class="panel-heading">
@@ -37,12 +39,12 @@
 			                    <div class="panel-body">		
 										<div class="form-group">
 											<label>Titulo</label>
-											<input type="text" name="input1" value="" class="form-control" />
+											<input type="text" name="titleEs" id="titleEs" value="" class="form-control" />
 										</div> <!-- /.form-group -->
 				
 										<div class="form-group">
 											<label>Contenido</label>
-											<textarea name="text1" class="form-control" rows="6"></textarea>
+											<textarea name="ContentEs" id="contentEs" class="form-control" rows="6"></textarea>
 										</div> <!-- /.form-group -->												                     
 			                    </div>
 			                  </div>
@@ -59,12 +61,12 @@
 			                    <div class="panel-body">
 			                      <div class="form-group">
 											<label>Titulo</label>
-											<input type="text" name="input1" value="" class="form-control" />
+											<input type="text" name="titleEn" id="titleEn" value="" class="form-control" />
 										</div> <!-- /.form-group -->
 				
 										<div class="form-group">
 											<label>Contenido</label>
-											<textarea name="text1" class="form-control" rows="6"></textarea>
+											<textarea name="ContentEn" id="ContentEn" class="form-control" rows="6"></textarea>
 										</div> <!-- /.form-group -->	
 			                    </div>
 			                  </div>
@@ -81,12 +83,12 @@
 			                    <div class="panel-body">
 			                     <div class="form-group">
 									<label>Titulo</label>
-										<input type="text" name="input1" value="" class="form-control" />
+										<input type="text" name="titlePt" id="titlePt" value="" class="form-control" />
 									</div> <!-- /.form-group -->
 				
 									<div class="form-group">
 										<label>Contenido</label>
-										<textarea name="text1" class="form-control" rows="6"></textarea>
+										<textarea name="ContentPt" id="ContentPt" class="form-control" rows="6"></textarea>
 									</div> <!-- /.form-group -->	
 			                    </div>
 			                  </div>
@@ -94,61 +96,13 @@
 			              </div>	
 			             </br>	
 			              <h3>Imagenes</h3>	
-							<div class="form-group">									
-								<div class="col-md-8">
-									<div class="input-group">
-								      <input type="text" class="form-control">
-								      <span class="input-group-btn">
-								        <button class="btn btn-primary" type="button">Subir!</button>
-								      </span>
-								    </div><!-- /input-group -->
-								</div>
-							</div>
-							</br>
+													
+							<input type="file" id="img1" name="images[0]" class="droparea" data-crop="true"/>
+							<input type="file" id="img2" name="images[1]" class="droparea" data-crop="true"/>
+							<input type="file" id="img3" name="images[2]" class="droparea" data-crop="true"/>
+							<input type="file" id="img4" name="images[3]" class="droparea" data-crop="true"/>
 					
-							<ul class="gallery-container">
-							
-							<li>
-								
-								<a href="../resources/img/usersimg/gallery/lr4_large.png" class="ui-lightbox">
-									<img src="../resources/img/usersimg/gallery/lr4_large.png" alt="" />
-								</a>
-								
-								<a href="../resources/img/usersimg/gallery/lr4_large.png" class="preview"></a>
-							</li>
-							
-							<li>
-								
-								<a href="../resources/img/usersimg/gallery/lr4_large.png" class="ui-lightbox">
-									<img src="../resources/img/usersimg/gallery/lr4_large.png" alt="" />
-								</a>
-								
-								<a href="../resources/img/usersimg/gallery/lr4_large.png" class="preview"></a>
-							</li>
-							
-							<li>
-								
-								<a href="../resources/img/usersimg/gallery/lr4_large.png" class="ui-lightbox">
-									<img src="../resources/img/usersimg/gallery/lr4_large.png" alt="" />
-								</a>
-								
-								<a href="../resources/img/usersimg/gallery/lr4_large.png" class="preview"></a>
-							</li>
-							
-							<li>
-								
-								<a href="../resources/img/usersimg/gallery/lr4_large.png" class="ui-lightbox">
-									<img src="../resources/img/usersimg/gallery/lr4_large.png" alt="" />
-								</a>
-								
-								<a href="../resources/img/usersimg/gallery/lr4_large.png" class="preview"></a>
-							</li>
-							
-
-							
-						</ul>
-					
-				
+						<button class="btn btn-primary save" type="sumbit">Guardar!</button>	
 					
 						
 					</form>
@@ -160,6 +114,7 @@
 </div>
 </div>
 </div>
-<script type='text/javascript' src='resources/js/functions/newnotice.js'></script>
+<script type='text/javascript' src='../resources/js/functions/newnotice.js'></script>
+<script type='text/javascript' src="../resources/js/usersjs/plugins/droparea.js"></script>
 </body>
 </html>

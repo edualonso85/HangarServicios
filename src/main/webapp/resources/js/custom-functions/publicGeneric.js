@@ -1,4 +1,7 @@
 jQuery(document).ready(function() {
+	
+	createLoginModal();
+	
 	jQuery.ajax({
 		   type: "post",
 		   url: "getResumeLastNotice",
@@ -32,5 +35,30 @@ function validateUser(){
 	}
 	
 	return ok;
+	
+}
+
+function createLoginModal(){
+	
+	jQuery('#login').on('click',function(){
+		jQuery('#loginModal').dialog({
+			title: "Login",
+			width: 750,
+			resizable: false
+		});
+	});
+	
+	var options = {
+			success: function(result) { 
+				var array = result.split(",");
+				if(array[0]=="success"){
+					document.location.href = "users/index?name="+array[1];
+				}else{
+					jQuery('#errorMessage').show();
+				}
+		    }
+	};
+	
+	jQuery('#contact-form').ajaxForm(options); 
 	
 }
