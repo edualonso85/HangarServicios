@@ -183,6 +183,26 @@ div.header {
 .margintop-50{
 	margin-top: 50px;
 }
+
+.menu-lateral li a{
+	font-size: 13px;
+	line-height: 30px;
+	color:#6F6F6E;
+}
+
+.menu-lateral li.active a{
+	color:#FDC300;
+	font-weight:bold;
+}
+
+span.bold {
+	color:#000000;
+	font-weight:bold;
+}
+
+.hidden{
+	display:none !important;
+}
 body.boxed {
 	/* background-attachment:fixed; */
 	background-position:49% 50%;
@@ -1029,7 +1049,7 @@ ul.circleoklist li:before {
 	font-family:FontAwesome;
 	margin-right:5px;
 }
-ul.arrowlist li:before {
+ul.di li:before {
 	content:"\f061 ";
 	font-family:FontAwesome;
 	margin-right:5px;
