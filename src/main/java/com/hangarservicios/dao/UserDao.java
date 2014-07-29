@@ -98,7 +98,6 @@ public class UserDao {
 			user.setAuthorities(authorities);
 			return user;
 		} catch (Exception e) {
-			logger.error(e.getMessage());
 			return null;
 		}
 	}

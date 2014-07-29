@@ -205,27 +205,6 @@ public class NoticeDao {
 
 	}
 
-	// public Long getAutoincrementImage(){
-	// Session session = null;
-	// try {
-	// session = sessionFactory.getCurrentSession();
-	// String query =
-	// "FROM InformationSchemaTables WHERE TABLE_SCHEMA = 'web_db' AND TABLE_NAME = 'ntc_image'";
-	// // InformationSchemaTables info = (InformationSchemaTables)
-	// session.createQuery(query).uniqueResult();
-	// // return info.getAUTO_INCREMENT();
-	//
-	//
-	// } catch (HibernateException e) {
-	// logger.error("HibernateException in Notice" + ".getAll " +
-	// e.getMessage());
-	// return null;
-	// } catch (Exception e) {
-	// logger.error("Exception in Notice" + ".getAll " + e.getMessage());
-	// return null;
-	// }
-	// }
-
 	@Transactional
 	public void saveNotices(List<Notice> notices, List<MultipartFile> imagesMultipart) {
 		Session session = null;

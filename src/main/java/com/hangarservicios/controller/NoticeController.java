@@ -116,17 +116,20 @@ public class NoticeController {
 			// 3.POR CADA IMAGEN:
 			for (Iterator iterator = noticeDto.getImages().iterator(); iterator.hasNext();) {
 				MultipartFile multipartFile = (MultipartFile) iterator.next();
-				// A.SE CREA EL NUEVO NOMBRE DE LA IMAGEN
-				String newFileName = multipartFile.getOriginalFilename();
-				String extension = newFileName.substring(newFileName.lastIndexOf("."));
-				String newFileEnding = "_" + autoincrement + extension;
-				newFileName = newFileName.replace(extension, newFileEnding);
-				// B.SE CREA EL BEAN IMAGE Y SE LO AGREGA A LA LISTA DE IMAGENES
-				Image image = new Image();
-				image.setName(newFileName);
-				images.add(image);
-				// C. SE INCREMENTA EL VALOR DEL AUTOINCREMENT
-				autoincrement++;
+				if (!multipartFile.isEmpty()) {
+					// A.SE CREA EL NUEVO NOMBRE DE LA IMAGEN
+					String newFileName = multipartFile.getOriginalFilename();
+					String extension = newFileName.substring(newFileName.lastIndexOf("."));
+					String newFileEnding = "_" + autoincrement + extension;
+					newFileName = newFileName.replace(extension, newFileEnding);
+					// B.SE CREA EL BEAN IMAGE Y SE LO AGREGA A LA LISTA DE
+					// IMAGENES
+					Image image = new Image();
+					image.setName(newFileName);
+					images.add(image);
+					// C. SE INCREMENTA EL VALOR DEL AUTOINCREMENT
+					autoincrement++;
+				}
 			}
 			// 4.POR CADA NOTICIA SE ASIGNA LA LISTA DE IMAGENES:
 			for (Iterator iterator = notices.iterator(); iterator.hasNext();) {
