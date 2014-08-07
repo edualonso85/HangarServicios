@@ -1,6 +1,5 @@
 package com.hangarservicios.service;
 
-import java.util.Collection;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.hangarservicios.dao.NoticeDao;
+import com.hangarservicios.entity.Image;
 import com.hangarservicios.entity.Notice;
 
 @Service("noticeService")
@@ -16,8 +16,8 @@ public class NoticeService {
 	@Autowired
 	NoticeDao noticeDao;
 
-	public void save(Notice notice) {
-		noticeDao.save(notice);
+	public void save(Notice notice, List<Image> images) {
+		noticeDao.save(notice, images);
 	}
 
 	public Long saveWithId(Notice notice) {
@@ -28,19 +28,19 @@ public class NoticeService {
 		noticeDao.saveOrUpdate(notice);
 	}
 
-	public void update(Notice notice) {
-		noticeDao.update(notice);
+	public void update(Notice notice, List<Image> images) {
+		noticeDao.update(notice, images);
 	}
 
-	public void delete(Notice notice) {
-		noticeDao.delete(notice);
+	public String delete(Notice notice) {
+		return noticeDao.delete(notice);
 	}
 
 	public void merge(Notice notice) {
 		noticeDao.merge(notice);
 	}
 
-	public Collection<Notice> getAllNotices() {
+	public List<Notice> getAllNotices() {
 		return noticeDao.getAllNotices();
 	}
 

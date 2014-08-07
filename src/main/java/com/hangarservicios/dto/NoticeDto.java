@@ -1,75 +1,75 @@
 package com.hangarservicios.dto;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
 public class NoticeDto {
 
-	public String getTitleEs() {
-		return titleEs;
+	private Long id_notice;
+	private String title;
+	private String content;
+	private Date createdDate;
+	private String languageId;
+	private List<Long> addedFiles = new ArrayList<>();
+	private List<MultipartFile> files = new ArrayList<>();
+
+	public Long getId_notice() {
+		return id_notice;
 	}
 
-	public void setTitleEs(String titleEs) {
-		this.titleEs = titleEs;
+	public void setId_notice(Long id_notice) {
+		this.id_notice = id_notice;
 	}
 
-	public String getContentEs() {
-		return ContentEs;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setContentEs(String contentEs) {
-		ContentEs = contentEs;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	public String getTitlePt() {
-		return titlePt;
+	public String getContent() {
+		return content;
 	}
 
-	public void setTitlePt(String titlePt) {
-		this.titlePt = titlePt;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
-	public String getContentPt() {
-		return contentPt;
+	public Date getCreatedDate() {
+		return createdDate;
 	}
 
-	public void setContentPt(String contentPt) {
-		this.contentPt = contentPt;
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
 	}
 
-	public String getTitleEn() {
-		return titleEn;
+	public String getLanguageId() {
+		return languageId;
 	}
 
-	public void setTitleEn(String titleEn) {
-		this.titleEn = titleEn;
+	public void setLanguageId(String languageId) {
+		this.languageId = languageId;
 	}
 
-	public String getContentEn() {
-		return ContentEn;
+	public List<MultipartFile> getFiles() {
+		return files;
 	}
 
-	public void setContentEn(String contentEn) {
-		ContentEn = contentEn;
+	public void setFiles(List<MultipartFile> files) {
+		this.files = files;
 	}
 
-	private String titleEs;
-	private String ContentEs;
-	private String titlePt;
-	private String contentPt;
-	private String titleEn;
-	private String ContentEn;
-	private List<MultipartFile> images;
-
-
-
-	public List<MultipartFile> getImages() {
-		return images;
+	public List<Long> getAddedFiles() {
+		return addedFiles;
 	}
 
-	public void setImages(List<MultipartFile> images) {
-		this.images = images;
+	public void setAddedFiles(List<Long> addedFiles) {
+		this.addedFiles = addedFiles;
 	}
 
 }

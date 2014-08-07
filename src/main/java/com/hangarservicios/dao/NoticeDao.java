@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
@@ -34,11 +33,17 @@ public class NoticeDao {
 	private SessionFactory sessionFactory;
 
 	@Transactional
-	public void save(Notice notice) {
+	public void save(Notice notice, List<Image> images) {
 		Session session = null;
 		try {
 			session = sessionFactory.getCurrentSession();
 			session.save(notice);
+			notice.getImages().addAll(images);
+			for (Iterator iterator = images.iterator(); iterator.hasNext();) {
+				Image image = (Image) iterator.next();
+				image.setNotice(notice);
+				session.save(image);
+			}
 		} catch (HibernateException e) {
 			logger.error("HibernateException in " + "Notice" + ".save " + e.getMessage());
 		} catch (Exception e) {
@@ -77,11 +82,22 @@ public class NoticeDao {
 	}
 
 	@Transactional
-	public void update(Notice notice) {
+	public void update(Notice notice, List<Image> images) {
 		Session session = null;
 		try {
 			session = sessionFactory.getCurrentSession();
-			session.update(notice);
+			for (Iterator iterator = notice.getImages().iterator(); iterator.hasNext();) {
+				Image image = (Image) iterator.next();
+				session.delete(image);
+			}
+			notice.getImages().clear();
+			notice.getImages().addAll(images);
+			for (Iterator iterator = images.iterator(); iterator.hasNext();) {
+				Image image = (Image) iterator.next();
+				image.setNotice(notice);
+				session.save(image);
+			}
+			session.merge(notice);
 		} catch (HibernateException e) {
 			logger.error("HibernateException in " + "Notice.update " + e.getMessage());
 		} catch (Exception e) {
@@ -90,7 +106,7 @@ public class NoticeDao {
 	}
 
 	@Transactional
-	public void delete(Notice notice) {
+	public String delete(Notice notice) {
 		Session session = null;
 
 		try {
@@ -98,9 +114,13 @@ public class NoticeDao {
 			session.delete(notice);
 		} catch (HibernateException e) {
 			logger.error("HibernateException in " + "Notice.delete " + e.getMessage());
+			return "\"No se pudo borrar la noticia\"";
 		} catch (Exception e) {
 			logger.error("Exception in " + "Notice.delete " + e.getMessage());
+			return "\"No se pudo editar la noticia\"";
 		}
+
+		return "\"success\"";
 	}
 
 	@Transactional
@@ -119,13 +139,13 @@ public class NoticeDao {
 
 	@SuppressWarnings("unchecked")
 	@Transactional
-	public Collection<Notice> getAllNotices() {
+	public List<Notice> getAllNotices() {
 
 		Session session = null;
 		String query = "FROM Notice";
 		try {
 			session = sessionFactory.getCurrentSession();
-			return (Collection<Notice>) session.createQuery(query).list();
+			return (List<Notice>) session.createQuery(query).list();
 		} catch (HibernateException e) {
 			logger.error("HibernateException in Notice" + ".getAll " + e.getMessage());
 		} catch (Exception e) {

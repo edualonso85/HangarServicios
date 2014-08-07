@@ -7,7 +7,6 @@
 
 package com.hangarservicios.entity;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +17,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ntc_image")
+@Table(name = "image")
 public class Image {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,14 +28,8 @@ public class Image {
 	@JoinColumn(name = "id_notice")
 	private Notice notice;
 
-
-	public Long getId_image() {
-		return id;
-	}
-
-	public void setId_image(Long id_image) {
-		this.id = id_image;
-	}
+	@Column(name = "image", nullable = true, columnDefinition = "longblob")
+	private byte[] image;
 
 	public String getName() {
 		return name;
@@ -52,6 +45,22 @@ public class Image {
 
 	public void setNotice(Notice notice) {
 		this.notice = notice;
+	}
+
+	public byte[] getImage() {
+		return image;
+	}
+
+	public void setImage(byte[] image) {
+		this.image = image;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 }

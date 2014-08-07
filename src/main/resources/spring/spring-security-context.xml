@@ -9,16 +9,10 @@
 	<http pattern="/log*" security="none"/>
 
 	<http auto-config="true">
-		<intercept-url pattern="/login*" access="IS_AUTHENTICATED_ANONYMOUSLY" />
         <intercept-url pattern="/users/*" access="ROLE_USER" />
-        <intercept-url pattern="/firstPage" access="ROLE_USER" />
-        <intercept-url pattern="/resources/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
+<!-- 		<intercept-url pattern="/login*" access="IS_AUTHENTICATED_ANONYMOUSLY" /> -->
+<!--         <intercept-url pattern="/resources/**" access="IS_AUTHENTICATED_ANONYMOUSLY" /> -->
         <intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY" />
-        <!-- Override default login and logout pages -->
-<!--         <form-login login-page="/login"  -->
-<!--                              default-target-url="/user/index"  -->
-<!--                              authentication-failure-url="/login?login_error=1" /> -->
-<!--         <logout logout-url="/logout" logout-success-url="/login" /> -->
 		<form-login login-page="/index" authentication-success-handler-ref="successHandler" 
 			authentication-failure-handler-ref="errorHandler"/>
         <logout logout-success-url="/index" />

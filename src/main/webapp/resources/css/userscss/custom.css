@@ -7,3 +7,97 @@ Last change:	03/25/2013
 Assigned to:	You
 
 -------------------------------------------------------------------*/
+
+.editIcon{
+	height:24px;
+	width:24px;
+	background-image:url('../../img/buttons.png'); 
+	background-position: -66px -6px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.deleteIcon{
+	height:24px;
+	width:24px;
+	background-image:url('../../img/buttons.png'); 
+	background-position: -366px -156px;
+	background-color: transparent;
+	cursor: pointer;
+}
+.successMessage{
+	text-align: center;
+	height: 60px;
+	color: #000;
+	background-color: #D4FF9C;
+	border: 3px solid #91FF00;
+	padding: 16px;
+	margin: 8px;
+	vertical-align: middle;
+}
+.errorLabel{
+	color: red;
+	vertical-align: middle;
+}
+
+.successLabel{
+	color: green;
+	vertical-align: middle;
+}
+
+.errorElement{
+	border: 1px solid red;
+}
+
+.errorMessage{
+	text-align: center;
+	height: 60px;
+	color: #000;
+	background-color: #ffEEEE;
+	border: 3px solid #DD4B39;
+	padding: 16px;
+	margin: 8px;
+	vertical-align: middle;
+}
+
+.errorblock {
+	color: #ff0000;
+	background-color: #ffEEEE;
+	border: 3px solid #ff0000;
+	padding: 8px;
+	margin: 16px;
+}
+
+.loadingDiv{
+	height: 100%;
+	width: 82%;
+	z-index: 9999;
+	display: none;
+	position: fixed;
+	background: url('../../img/loading.gif') 60% 20% no-repeat;
+}
+.addButton{
+	background-image:url('../../img/otherIcons.png'); 
+	height: 34px;
+	width: 34px;
+	background-position: -77px -5px;
+}
+
+.removeButton{
+	background-image:url('../../img/otherIcons.png'); 
+	height: 34px;
+	width: 34px;
+	background-position: -113px -184px;
+}
+
+
+.attachFile{
+	padding-left: 34px;
+	height: 34px;
+	background-image:url('../../img/addFile.png');
+	background-repeat: no-repeat;
+	width: 185px;
+	background-position: right;
+	padding-left: 10px;
+	text-align: left;
+}

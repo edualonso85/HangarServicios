@@ -1,111 +1,107 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<%@ page contentType="text/html;charset=UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@taglib uri="http://www.springframework.org/tags" prefix="s" %>
-
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
-
-<head profile="http://www.w3.org/2005/10/profile">
-<title>Hangar Servicios</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel='stylesheet' type='text/css' href= "<c:url value="/resources/style/estilo.css"/>"/>
-<link rel="icon" type="image/png"  href="<c:url value='/resources/images/LogoWeb.png'/>" />
-<link rel='stylesheet' type='text/css' href= "<c:url value="/resources/style/jquery-te-1.4.0.css"/>"/>
-<link rel="shortcut icon" href="<c:url value='/resources/images/favicon.ico'/>">
-<script type="text/javascript" src="<c:url value='/resources/js/jquery-1.10.0.js'/>"></script>
-<script type="text/javascript" src="<c:url value='/resources/js/jQueryTE/jquery-te-1.4.0.js'/>"></script>
-<script type="text/javascript" src="<c:url value='/resources/js/jQueryTE/jquery-te-1.4.0.min.js'/>"></script>
-</head>
-
-<script>
-	$(document).ready(function(){
-		
-		$(".editor").jqte();
-	
-	});
-</script>
-<body>
-<div align="center">
-	<table width="100%"  border="0" cellpadding="0" cellspacing="0">
-    <tr>
-      <td align="center" valign="top"><table width="830" border="0" cellpadding="0" cellspacing="0" id="Table_01">
-        <tr class="fondocabecera">
-          <td width="30" height="90">&nbsp;</td>
-          <td width="550" height="90" colspan="5"><img src="<c:url value="/resources/images/logo.gif"/>" width="158" height="41" border="0"></td>
-          <td width="195" height="90" colspan="3" align="left" valign="top" class="click">
-          <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td height="10"><a></a></td>
-            </tr>
-            <tr>
-              <td>
-              	<a href="?lang=es_ES" class="idioma"><spring:message code="label.spanish"/></a>
-              	<img src="<c:url value="/resources/images/1.gif"/>" width="5" height="10" border="0">
-              	<a href="?lang=pt_PT" class="idioma"><spring:message code="label.portuguese"/></a>
-              	<img src="<c:url value="/resources/images/1.gif"/>" width="5" height="10" border="0">
-              	<a href="?lang=en_US" class="idioma"><spring:message code="label.english"/></a>
-              	<img src="<c:url value="/resources/images/1.gif"/>" width="5" height="10" border="0">
-              	<a href="<c:url value="/index"/>"><img src="<c:url value="/resources/images/home_white.gif"/>" width="12" height="14" border="0"></a>
-              </td>
-             </tr>
-            </table>            
-          </td>
-        </tr>
-        </table></td>
-    </tr>
-    </table>
-    <div id="menu">
-	    <table width="830"  border="0" cellpadding="0" cellspacing="0">
-		    <tr class="lineabotonera">
-		          <td height="1" colspan="9"><div align="left"></div></td>
-		    </tr>
-		    <tr class="fondobotonera1">
-		          <td height="30" colspan="8"><div align="left"></div></td>
-		    </tr>
-		    <tr class="lineabotonera">
-		          <td height="1" colspan="9"><div align="left"></div></td>
-		    </tr>
-		    <tr class="fondobotonera1">
-		          <td height="30" colspan="8"><div align="left"></div></td>
-		    </tr>
-		    <tr class="lineabotonera">
-		          <td height="1" colspan="9"><div align="left"></div></td>
-		    </tr>
-	    </table>
-    </div>
-    <div id="content"  style="width:830px; background-color: white;">
-    <br></br>
-		<form id="newNoticeForm" action="saveeditnotice">
-			<div id="content"  style="width:600px; background-color: #CCCCC3;">
-			<br>
-			<label style="text-align: center; font-size: xx-large;"><b><spring:message code="label.editnotice"></spring:message></b></label>
-			<br>
-			</br>
-			
-			<input type="hidden" id="id"  name="id" value="${id}"/>		
-			
-			<input type="text" name="title" id="title" style="font-family: sans-serif;width: 420px" value="${title}"/>
-			
-			<div id="div_esp" class="jqte">
-				<textarea class="editor" style="font-family: sans-serif;width: 420px" rows="20" name="body" id="body" >${body}</textarea>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<html>
+	<body>
+		<div class="container">
+			<div id="loader" class="loadingDiv">
 			</div>
-		
-			<br>
-			</br>
-			<input type="submit" value="<s:message code="button.save"/>"></input>
-			<br>
-			</br>
-			
-		</form>
-	</div>
-	<br></br>
-</div>
-<table width="775" height="20px"  border="0" cellpadding="0" cellspacing="0">
-	<tr class="piefondo">
-		<td height="25"><div align="right" class="pie"><spring:message code="label.copyright"/></div></td>
-     	<td>&nbsp;</td>
-    </tr>
-</table>
-</body>
+			<div class="widget stacked ">
+				<div class="widget-header">
+					<h3>Editar Noticia</h3>
+				</div>
+				<div id="saveMessageDiv">
+				</div>
+				<div class="widget-content" style="padding: 50px">
+					<form modelAttribute="noticeDto" onSubmit="return validateData()" enctype="multipart/form-data" id="editNoticeForm" action="saveEditNotice" method="post">
+						<div class="row" style="padding-left: 10%">
+							<div class="col-md-4"">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="input-group">
+											<input type="text" style="display:none" name="id_notice" id="id" value="${id}" class="form-control" />
+											<input type="text" style="display:none" name="languageId" id="languageId" value="${languageId}" class="form-control" />
+											<span class="input-group-addon" style="width:20%">Idioma</span>
+											<select id="language" class="form-control">
+												<option id="fakeOption" disabled selected value="">Seleccione...</option>
+												<option id="es">Español</option>
+												<option id="en">Ingles</option>
+												<option id="por">Portugues</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								</br>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label>Titulo</label>
+											<input type="text" name="title" id="title" value="${title}" class="form-control" />
+										</div> <!-- /.form-group -->
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label>Contenido</label>
+											<textarea name="content" id="content" class="form-control" rows="6">${content}</textarea>
+										</div> <!-- /.form-group -->	
+									</div>
+								</div>
+							</div>
+							<div id="fileDiv" class="col-md-8" style="padding-left: 10%;">
+								<div class="col-md-12">
+									<b>Listado de archivos agregados</b>
+								</div>
+								</br>
+								<div id="addedFilesDiv" class="row">
+										<c:forEach items="${files}" var="file" varStatus="counter">
+									<div id="addedFiles" class="col-md-12">
+											<div class="input-group">
+												<span class="input-group-addon" style="width:20%" id="${file.id}">${file.name}</span>
+												<input type="text" style="display:none" name="addedFiles[${counter.index}]" value="${file.id}"/>
+												<span class="input-group-btn">
+												    <button id="removeAddedFile" onClick="removeAddedFileRow(this)" class="btn btn-default removeButton" type="button"></button>
+												</span>
+											</div>
+									</div>
+										</c:forEach>
+								</div>
+								</br>
+								<div class="col-md-12">
+									<b>Agregar nuevos archivos</b>
+								</div>
+								</br>
+								<div class="row" id="newFileDiv">
+									<div id="fileRow" class="col-md-12">
+										<div class="input-group">
+											<span class="input-group-btn">
+												<button id="fakeUpload" onClick="uploadFile(this)" type="button" class="btn btn-default">Adjuntar Archivo</button>
+												<input id="upload" name="files[0]" type="file" value="" style="display:none"
+													onChange="$(this).parent().parent().find('#fileUrl').val($(this).parent().find('#upload').val());"/>
+											</span>
+											<input id="fileUrl" type="text" class="form-control">
+											<span class="input-group-btn">
+											    <button id="addFile" onClick="addFileRow()" class="btn btn-default addButton" type="button"></button>
+											</span>
+											<span class="input-group-btn">
+											    <button id="removeFile" onClick="removeFileRow(this)" class="btn btn-default removeButton" type="button"></button>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</br>
+						<div class="row" align="center">
+							<button class="btn btn-primary save" type="submit" id="save">Guardar</button>
+							<button class="btn btn-primary save" type="button" id="cancel">Cancelar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script type='text/javascript' src='../resources/js/usersjs/libs/jquery.form.min.js'></script>
+		<script type='text/javascript' src="../resources/js/jquery/jQueryTE/jquery-te-1.4.0.min.js"></script>
+		<link href="../resources/css/userscss/jquery-te-1.4.0.css" rel="stylesheet">
+		<script src="../resources/js/custom-functions/editNoticeManager.js"></script>
+	</body>
 </html>

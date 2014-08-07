@@ -1,8 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<%@taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
+    prefix="decorator"%>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<%@page contentType="text/html; charset=UTF-8"%>
   <head>
   	<meta charset="UTF-8">
 	<title>Hangar Servicios</title>
@@ -24,7 +28,7 @@
 		      <span class="sr-only">Toggle navigation</span>
 		      <i class="icon-cog"></i>
 		    </button>
-		    <a class="navbar-brand" href="users/index">Hangar Servicios</a>
+		    <a class="navbar-brand" href="<c:url value="index"/>?name=${name}">Hangar Servicios</a>
 		  </div>
 		  <!-- Collect the nav links, forms, and other content for toggling -->
 		  <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -89,7 +93,7 @@
 					<ul class="mainnav">
 					
 						<li class="active">
-							<a href="./index.html">
+							<a href="<c:url value="index"/>?name=${name}">
 								<i class="icon-home"></i>
 								<span>Home</span>
 							</a>	    				
@@ -103,8 +107,8 @@
 							</a>	    
 						
 							<ul class="dropdown-menu">
-								<li><a href="notices">Noticias</a></li>
 								<li><a href="newnotice">Nueva Noticia</a></li>
+								<li><a href="notices">Listado de Noticias</a></li>
 							</ul> 				
 						</li>
 						
@@ -119,7 +123,7 @@
 						<li class="dropdown">					
 							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
 								<i class="icon-external-link"></i>
-								<span>Configuración</span>
+								<span>ConfiguraciÃ³n</span>
 								<b class="caret"></b>
 							</a>	
 						
