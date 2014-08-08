@@ -41,6 +41,8 @@ public class NoticeController {
 	@RequestMapping(value = "/users/notices", method = RequestMethod.GET)
 	public ModelAndView getNotices(HttpServletRequest request, HttpServletResponse response) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		CustomUserDetail user = (CustomUserDetail) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		request.setAttribute("name", user.getFirstName() + " " + user.getLastName());
 		return new ModelAndView("noticias/listnotice");
@@ -51,6 +53,8 @@ public class NoticeController {
 	public @ResponseBody
 	List<Notice> loadClientListTable(HttpServletRequest request, HttpServletResponse response) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		List<Notice> notices = noticeService.getAllNotices();
 		for (Iterator iterator = notices.iterator(); iterator.hasNext();) {
 			Notice notice = (Notice) iterator.next();
@@ -67,6 +71,8 @@ public class NoticeController {
 	@RequestMapping(value = "/users/viewnotice")
 	public ModelAndView getViewNotice(@RequestParam("id_notice") Long id_notice, HttpServletRequest request, HttpServletResponse response) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		CustomUserDetail user = (CustomUserDetail) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		request.setAttribute("name", user.getFirstName() + " " + user.getLastName());
 		Notice notice = noticeService.getById(id_notice);
@@ -79,6 +85,8 @@ public class NoticeController {
 	@RequestMapping(value = "/users/newnotice")
 	public ModelAndView getNewNotice(HttpServletRequest request, HttpServletResponse response) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		CustomUserDetail user = (CustomUserDetail) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		request.setAttribute("name", user.getFirstName() + " " + user.getLastName());
 		return new ModelAndView("noticias/newnotice");
@@ -88,6 +96,8 @@ public class NoticeController {
 	@RequestMapping(value = "/users/listnotice", method = RequestMethod.GET)
 	public ModelAndView getListNotice(HttpServletRequest request, HttpServletResponse response) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		CustomUserDetail user = (CustomUserDetail) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		request.setAttribute("name", user.getFirstName() + " " + user.getLastName());
 		// Collection<Notice> notices = noticeService.getAllNotices();
@@ -101,6 +111,8 @@ public class NoticeController {
 	@RequestMapping(value = "/users/savenewnotice", method = RequestMethod.POST)
 	public ModelAndView saveNewNotice(@ModelAttribute("noticeDto") NoticeDto noticeDto, HttpServletResponse response, HttpServletRequest request) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		Notice notice = new Notice();
 		notice.setContent(noticeDto.getContent());
 		notice.setCreatedDate(new Date());
@@ -136,6 +148,8 @@ public class NoticeController {
 	@RequestMapping(value = "/users/admin", method = RequestMethod.GET)
 	public ModelAndView getAdmin(HttpServletResponse response, HttpServletRequest request) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		CustomUserDetail user = (CustomUserDetail) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		request.setAttribute("name", user.getFirstName() + " " + user.getLastName());
 		return new ModelAndView("admin/admin");
@@ -146,6 +160,8 @@ public class NoticeController {
 	public @ResponseBody
 	String deleteNotice(@RequestBody Notice notice, HttpServletResponse response, HttpServletRequest request) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "{\"message\":" + noticeService.delete(notice) + "}";
 
 	}
@@ -153,6 +169,8 @@ public class NoticeController {
 	@RequestMapping(value = "users/editNotice", method = RequestMethod.GET)
 	public ModelAndView editNotice(@RequestParam("id") Long id, HttpServletResponse response, HttpServletRequest request) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		Notice notice = noticeService.getById(id);
 
 		request.setAttribute("id", id);
@@ -170,6 +188,8 @@ public class NoticeController {
 	@RequestMapping(value = "users/saveEditNotice", method = RequestMethod.POST)
 	public ModelAndView saveEditNotice(@ModelAttribute("noticeDto") NoticeDto noticeDto, HttpServletResponse response, HttpServletRequest request) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		Notice notice = noticeService.getById(noticeDto.getId_notice());
 
 		notice.setContent(noticeDto.getContent());

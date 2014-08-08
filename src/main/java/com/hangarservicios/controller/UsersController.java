@@ -3,6 +3,7 @@ package com.hangarservicios.controller;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,8 +23,10 @@ public class UsersController {
 	NoticeService noticeService;
 
 	@RequestMapping(value = "/users/index", method = RequestMethod.GET)
-	public String welcome(HttpServletRequest request, ModelMap model, @RequestParam("name") String name) {
+	public String welcome(HttpServletResponse response, HttpServletRequest request, ModelMap model, @RequestParam("name") String name) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		request.setAttribute("name", name);
 		List<Notice> notices = noticeService.getLatestNotices(4);
 		if (notices != null) {

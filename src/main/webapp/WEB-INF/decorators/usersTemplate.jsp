@@ -103,7 +103,7 @@
 							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
 								<i class="icon-th"></i>
 								<span>Noticias</span>
-								<b class="caret"></b>
+								<b class="caret" style="margin-top:0px"></b>
 							</a>	    
 						
 							<ul class="dropdown-menu">
@@ -124,7 +124,7 @@
 							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
 								<i class="icon-external-link"></i>
 								<span>Configuración</span>
-								<b class="caret"></b>
+								<b class="caret" style="margin-top:0px"></b>
 							</a>	
 						
 							<ul class="dropdown-menu">

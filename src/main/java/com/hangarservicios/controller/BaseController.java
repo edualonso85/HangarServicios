@@ -31,7 +31,10 @@ public class BaseController {
 	NoticeService noticeService;
 
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
-	public String welcome(HttpServletRequest request, ModelMap model) {
+	public String welcome(HttpServletResponse response, HttpServletRequest request, ModelMap model) {
+
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		Notice notice = null;
 		String img = "resources/img_notices/default.jpg";
 		List<Notice> notices = noticeService.getLatestNoticesByLanguage(1, RequestContextUtils.getLocale(request).getLanguage());
@@ -55,23 +58,29 @@ public class BaseController {
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String login(HttpServletRequest request, ModelMap model) {
+	public String login(HttpServletResponse response, HttpServletRequest request, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "login";
 
 	}
 
 	@RequestMapping(value = "/firstPage", method = RequestMethod.POST)
-	public String firstPage(HttpServletRequest request, ModelMap model) {
+	public String firstPage(HttpServletResponse response, HttpServletRequest request, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "firstPage";
 
 	}
 
 	@RequestMapping(value = "/getResumeLastNotice", method = RequestMethod.POST)
 	public @ResponseBody
-	List<Notice> getResumeLastNotice(HttpServletRequest request) {
+	List<Notice> getResumeLastNotice(HttpServletResponse response, HttpServletRequest request) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		List<Notice> notices = noticeService.getLatestNoticesByLanguage(4, RequestContextUtils.getLocale(request).getLanguage());
 		List<Notice> results = notices;
 		if (results != null) {
@@ -104,79 +113,101 @@ public class BaseController {
 
 	// ABOUT
 	@RequestMapping(value = "/about", method = RequestMethod.GET)
-	public String getAbout(ModelMap model) {
+	public String getAbout(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "empresa/about";
 
 	}
 
 	// SERVICES
 	@RequestMapping(value = "/visualInspection", method = RequestMethod.GET)
-	public String getVisualInspection(ModelMap model) {
+	public String getVisualInspection(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "services/visualInspection/visualInspection";
 
 	}
 
 	@RequestMapping(value = "/visualInspectionInformaticSystem", method = RequestMethod.GET)
-	public String getVisualInspectionInformaticSystem(ModelMap model) {
+	public String getVisualInspectionInformaticSystem(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "services/visualInspection/visualInspectionInformaticSystem";
 
 	}
 
 	@RequestMapping(value = "/visualInspectionObjetives", method = RequestMethod.GET)
-	public String getVisualInspectionObjetives(ModelMap model) {
+	public String getVisualInspectionObjetives(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "services/visualInspection/visualInspectionObjetives";
 
 	}
 
 	@RequestMapping(value = "/visualInspectionWorks", method = RequestMethod.GET)
-	public String getVisualInspectionWorks(ModelMap model) {
+	public String getVisualInspectionWorks(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "services/visualInspection/visualInspectionWorks";
 
 	}
 
 	@RequestMapping(value = "/thermography", method = RequestMethod.GET)
-	public String getThermography(ModelMap model) {
+	public String getThermography(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "services/thermography/thermography";
 
 	}
 
 	@RequestMapping(value = "/thermographyEquipment", method = RequestMethod.GET)
-	public String getThermographyEquipment(ModelMap model) {
+	public String getThermographyEquipment(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "services/thermography/thermographyEquipment";
 
 	}
 
 	@RequestMapping(value = "/thermographyWorks", method = RequestMethod.GET)
-	public String getThermographyWorks(ModelMap model) {
+	public String getThermographyWorks(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "services/thermography/thermographyWorks";
 
 	}
 
 	@RequestMapping(value = "/coronaEfect", method = RequestMethod.GET)
-	public String getCoronaEfect(ModelMap model) {
+	public String getCoronaEfect(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "services/coronaEfect";
 
 	}
 
 	@RequestMapping(value = "/digitalCartography", method = RequestMethod.GET)
-	public String getDigitalCartography(ModelMap model) {
+	public String getDigitalCartography(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "services/digitalCartography";
 
 	}
 
 	@RequestMapping(value = "/otherServices", method = RequestMethod.GET)
-	public String getOtherServices(ModelMap model) {
+	public String getOtherServices(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "services/otherServices";
 
 	}
@@ -184,15 +215,19 @@ public class BaseController {
 	// PRODUCTS
 
 	@RequestMapping(value = "/on-LoadTapChangers", method = RequestMethod.GET)
-	public String getOnLoadTapChangers(ModelMap model) {
+	public String getOnLoadTapChangers(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "products/onLoadTapChangers";
 
 	}
 
 	@RequestMapping(value = "/automaticControllers", method = RequestMethod.GET)
-	public String getAutomaticControllers(ModelMap model) {
+	public String getAutomaticControllers(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "products/automaticControllers";
 
 	}
@@ -200,8 +235,10 @@ public class BaseController {
 	// CONTACT
 
 	@RequestMapping(value = "/contact", method = RequestMethod.GET)
-	public String getContact(ModelMap model) {
+	public String getContact(HttpServletResponse response, ModelMap model) {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		return "contact";
 
 	}
@@ -209,6 +246,9 @@ public class BaseController {
 	// NEWS
 	@RequestMapping(value = "/news", method = RequestMethod.GET)
 	public ModelAndView getNews(HttpServletRequest request, HttpServletResponse response) {
+
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		List<Notice> notices = noticeService.getNoticesByLanguage(RequestContextUtils.getLocale(request).getLanguage());
 		Notice principal = null;
 		if (notices != null) {
@@ -237,6 +277,9 @@ public class BaseController {
 
 	@RequestMapping(value = "/new", method = RequestMethod.GET)
 	public ModelAndView getNew(@RequestParam("id") Long id, HttpServletResponse response, HttpServletRequest request) {
+
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		Notice notice = noticeService.getById(id);
 		List<Notice> notices = noticeService.getNoticesByLanguage(RequestContextUtils.getLocale(request).getLanguage());
 		if (notices != null) {
@@ -256,6 +299,8 @@ public class BaseController {
 	@RequestMapping(value = "/changeLanguage", method = RequestMethod.GET)
 	public ModelAndView changeLanguage(@RequestParam("lang") String lang, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
 		try {
 			RequestContextUtils.getLocaleResolver(request).setLocale(request, response, new Locale(lang));
 		} catch (Exception ex) {
