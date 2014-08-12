@@ -162,7 +162,6 @@ div.header {
 .imgiso{
 	float: left;
 	margin-right: 37px;
-	width: 200px;
 }
 
 
@@ -171,6 +170,8 @@ div.header {
 	height:230px;
 	padding:30px;
 	overflow:hidden;
+	min-height:230px !important;
+	min-width:290px !important;
 }
 .margintop-15{
 	margin-top: 15px;
@@ -298,10 +299,16 @@ h5{
 	
 	line-height: 18px;
 }
+
+.justify {	
+	text-align: justify;
+}
+
  .fontmediumsmall{
  	font-size: 0.923em; 
 	line-height: 1.384em;
 	margin-top: 0.692em;
+	text-align: justify;
  	/* font-size: 12px; 
 	line-height: 18px;
 	margin-top: 9px; */
