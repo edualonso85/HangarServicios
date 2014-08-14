@@ -25,7 +25,7 @@
 							</div>
 							<div class="span8">
 								<h5><s:message code="title.1"/></h5>						
-								<span class="justify"><s:message code="text.1"/></span>
+								<span class="justify"><s:message code="text.1"/>
 							</div>
 						</div>	
 						<!-- IMAGENES -->

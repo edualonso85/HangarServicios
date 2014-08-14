@@ -185,13 +185,14 @@ div.header {
 	margin-top: 50px;
 }
 
-.menu-lateral li a{
+.menu-lateral li{
 	font-size: 13px;
 	line-height: 30px;
 	color:#6F6F6E;
+	cursor: pointer;
 }
 
-.menu-lateral li.active a{
+.menu-lateral li.active{
 	color:#FDC300;
 	font-weight:bold;
 }
@@ -203,6 +204,10 @@ span.bold {
 
 .hidden{
 	display:none !important;
+}
+
+#about-quality-images img{
+	width:100%;
 }
 body.boxed {
 	/* background-attachment:fixed; */
@@ -286,6 +291,7 @@ h5{
 	/* font-size: 24px;  */
 	font-family: 'soho-bold'; 	
 	color: #6E6E62;
+	margin: 0 0 20px;
 }
 
 .h6{
@@ -294,6 +300,12 @@ h5{
 	padding-bottom: 20px;
 	font-family: 'soho-light'; 	
 	color: #7C7B79;
+}
+
+h7{
+	font-size: 15px; 
+	font-family: 'soho-bold'; 	
+	color: #6E6E62;
 }
 .lastnotice{
 	
@@ -313,6 +325,23 @@ h5{
 	line-height: 18px;
 	margin-top: 9px; */
  }
+ 
+ p{
+ 	margin: 0 0 30px;
+ }
+ 
+.homeinspecciones{
+	background-image: url(../../img/page/inspecciones.jpg); 
+}
+
+.homeconmutadores{
+	background-image: url(../../img/page/conmutadores.jpg); 
+}
+
+.homeconmutadores{
+	background-image: url(../../img/page/reguladores.jpg); 
+}
+
 li {
 	line-height:inherit;
 }
