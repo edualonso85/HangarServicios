@@ -45,21 +45,10 @@
 									<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-12"><a href="about"><s:message code="menu.company"/></a></li>
 									<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13 dropdown"><a href="#" data-toggle="dropdown" data-target="#" class="dropdown-toggle"><s:message code="menu.services"/><span class="caret"></span></a>
 										<ul class="dropdown-menu">
-											<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20 dropdown-submenu"><a tabindex="-1" href="#"><s:message code="menu.services.visualInspection"/></a>
-												<ul class="dropdown-menu">
-											      <li><a href="visualInspection"><s:message code="menu.services.visualInspection.procedures"/></a></li>
-											      <li><a href="visualInspectionInformaticSystem"><s:message code="menu.services.visualInspection.informaticSystems"/></a></li>
-											      <li><a href="visualInspectionObjetives"><s:message code="menu.services.visualInspection.objetives"/></a></li>
-											      <li><a href="visualInspectionWorks"><s:message code="menu.services.visualInspection.works"/></a></li>
-											    </ul>
-											</li>
-											<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19 dropdown-submenu"><a href="#"><s:message code="menu.services.thermography"/></a>
-												<ul class="dropdown-menu">
-											      <li><a href="thermography"><s:message code="title.services.thermography.thermography"/></a></li>
-											      <li><a href="thermographyEquipment"><s:message code="menu.services.thermography.equipment"/></a></li>
-											      <li><a href="thermographyWorks"><s:message code="menu.services.thermography.works"/></a></li>
-											    </ul>											
-											</li>
+											
+											<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="visualInspection"><s:message code="menu.services.visualInspection"/></a></li>
+											<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="thermography"><s:message code="menu.services.thermography"/></a></li>
+											
 											<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="coronaEfect"><s:message code="menu.services.coronaEfect"/></a></li>
 											<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="digitalCartography"><s:message code="menu.services.digitalCartography"/></a></li>
 											<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="otherServices"><s:message code="menu.services.otherServices"/></a></li>
