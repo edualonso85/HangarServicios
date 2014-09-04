@@ -43,6 +43,11 @@
     font-family: 'soho-medium-it';
     src: url(../font/SohoGothicPro/SohoGothicPro-MediumIt.otf);
 }
+@font-face
+{
+    font-family: 'helveticaneue';
+    src: url(../font/helveticaneue-condensed.otf);
+}
 
 /* OPEN SANS FONT */
 @font-face {
@@ -195,6 +200,31 @@ div.header {
 .menu-lateral li.active{
 	color:#FDC300;
 	font-weight:bold;
+}
+
+.menu-lateral.services li{
+	text-transform: uppercase;	
+	font-weight:bold;
+}
+
+.menu-lateral.services.visualInspection li{
+	color:#FDC300;
+}
+
+.menu-lateral.services.cartography li{
+	color:#56AA5D;
+}
+
+.menu-lateral.services.corona li{
+	color:#13B3E3;
+}
+
+.menu-lateral.services.thermography li{
+	color:#FF961E;
+}
+
+.menu-lateral.services li.active{
+	color:#C2C2C4;
 }
 
 span.bold {
@@ -1004,7 +1034,7 @@ footer .widget ul li a {
 }
 /* =========================================================== */
 /* Services /* ============================================================== */
-.services {
+/* .services {
 	margin-top:25px;
 }
 .services h2 {
@@ -1015,7 +1045,7 @@ footer .widget ul li a {
 }
 .services i {
 	margin-right:7px;
-}
+} */
 .grey-box {
 	background:#Fff;
 	padding:20px;

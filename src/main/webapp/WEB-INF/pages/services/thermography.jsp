@@ -11,8 +11,8 @@
 	</div>
 	<div class="row-fluid container margintop-50">
 		<div class="span3">
-			<ul class="menu-lateral">
-				<li id="thermography"><s:message code="menu.services.thermography"/></li>
+			<ul class="menu-lateral services thermography">
+				<li id="thermography" class="active"><s:message code="menu.services.thermography"/></li>
 				<li id="equipment"><s:message code="menu.services.thermography.equipment"/></li>
 				<li id="examples"><s:message code="menu.services.thermography.examples"/></li>
 			</ul>

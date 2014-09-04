@@ -11,8 +11,8 @@
 	</div>
 	<div class="row-fluid container margintop-50">
 		<div class="span3">
-			<ul class="menu-lateral">
-				<li id="procedures"><s:message code="menu.services.visualInspection.procedures"/></li>
+			<ul class="menu-lateral services visualInspection">
+				<li class="active" id="procedures"><s:message code="menu.services.visualInspection.procedures"/></li>
 				<li id="systems"><s:message code="menu.services.visualInspection.systems"/></li>
 				<li id="objetives"><s:message code="menu.services.visualInspection.objetives"/></li>
 				<li id="examples"><s:message code="menu.services.visualInspection.examples"/></li>

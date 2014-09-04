@@ -11,8 +11,8 @@
 	</div>
 	<div class="row-fluid container margintop-50">
 		<div class="span3">
-			<ul class="menu-lateral">
-				<li id="coronaEfect"><s:message code="menu.services.coronaEfect"/></li>
+			<ul class="menu-lateral services corona">
+				<li id="coronaEfect" class="active"><s:message code="menu.services.coronaEfect"/></li>
 				<li id="equipment"><s:message code="menu.services.coronaEfect.equipment"/></li>
 				<li id="systems"><s:message code="menu.services.coronaEfect.systems"/></li>
 				<li id="examples"><s:message code="menu.services.coronaEfect.examples"/></li>

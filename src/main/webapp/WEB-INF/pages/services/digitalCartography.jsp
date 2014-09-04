@@ -11,8 +11,8 @@
 	</div>
 	<div class="row-fluid container margintop-50">
 		<div class="span3">
-			<ul class="menu-lateral">
-				<li id="terraRemote"><s:message code="menu.services.digitalCartography.terraRemote"/></li>
+			<ul class="menu-lateral services cartography">
+				<li id="terraRemote" class="active"><s:message code="menu.services.digitalCartography.terraRemote"/></li>
 				<li id="technology"><s:message code="menu.services.digitalCartography.technology"/></li>
 				<li id="usesAdvantages"><s:message code="menu.services.digitalCartography.usesAdvantages"/></li>
 				<li id="examples"><s:message code="menu.services.digitalCartography.examples"/></li>
