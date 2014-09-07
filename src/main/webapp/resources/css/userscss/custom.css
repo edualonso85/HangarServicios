@@ -7,7 +7,6 @@ Last change:	03/25/2013
 Assigned to:	You
 
 -------------------------------------------------------------------*/
-
 .editIcon{
 	height:24px;
 	width:24px;
@@ -100,4 +99,23 @@ Assigned to:	You
 	background-position: right;
 	padding-left: 10px;
 	text-align: left;
+}
+
+.jqte{
+	margin:10px 0px !important;
+	border: #999 1px solid !important;
+}
+
+.jqte_focused {
+	border-color:#f0b70c !important;
+	box-shadow:0 0 10px #f0b70c!important; -webkit-box-shadow:0 0 10px #f0b70c!important; -moz-box-shadow:0 0 10px #f0b70c!important;
+}
+
+select.form-control:focus,input.form-control:focus {
+	border-color:#f0b70c !important;
+	box-shadow:0 0 10px #f0b70c!important; -webkit-box-shadow:0 0 10px #f0b70c!important; -moz-box-shadow:0 0 10px #f0b70c!important;
+}
+
+.odd{
+	background-color:#D8CA9E!important;
 }

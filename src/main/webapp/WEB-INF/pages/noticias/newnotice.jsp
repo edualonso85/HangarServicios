@@ -15,41 +15,25 @@
 		</div> <!-- /.widget-header -->
 		<div class="widget-content">		    
 			<form modelAttribute="noticeDto" onSubmit="return validateData()" enctype="multipart/form-data" id="newNoticeForm" action="savenewnotice" method="post">
-				<div class="row" style="padding-left: 10%">
-					<div class="col-md-4"">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="input-group">
-								<input type="text" style="display:none" name="languageId" id="languageId" value="" class="form-control" />
-									<span class="input-group-addon" style="width:20%">Idioma</span>
-									<select id="language" class="form-control">
-										<option id="fakeOption" disabled selected value="">Seleccione...</option>
-										<option id="es">Español</option>
-										<option id="en">Ingles</option>
-										<option id="por">Portugues</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						</br>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="form-group">
-									<label>Titulo</label>
-									<input type="text" name="title" id="title" value="" class="form-control" />
-								</div> <!-- /.form-group -->
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-								<div class="form-group">
-									<label>Contenido</label>
-									<textarea name="content" id="content" class="form-control" rows="6"></textarea>
-								</div> <!-- /.form-group -->	
-							</div>
-						</div>
+				<div class="row-fluid">
+					<div class="col-md-5">						
+						<div class="input-group">
+							<input type="text" style="display:none" name="languageId" id="languageId" value="" class="form-control" />
+							<span class="input-group-addon" style="width:20%">Idioma</span>
+							<select id="language" class="form-control">
+								<option id="fakeOption" disabled selected value="">Seleccione...</option>
+								<option id="es">Español</option>
+								<option id="en">Ingles</option>
+								<option id="por">Portugues</option>
+							</select>
+						</div>						
+						</br>						
+						<div class="form-group">
+							<label>Titulo</label>
+							<input type="text" name="title" id="title" value="" class="form-control" />
+						</div> <!-- /.form-group -->							
 					</div>
-					<div id="fileDiv" class="col-md-8" style="padding-left: 10%;">
+					<div id="fileDiv" class="col-md-7">
 						<div id="fileRow" class="col-md-12">
 							<div class="input-group">
 								<span class="input-group-btn">
@@ -67,9 +51,17 @@
 							</div>
 						</div>
 					</div>
+				</div>				
+				<div class="row-fluid">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label>Contenido</label>
+							<textarea name="content" id="content" class="form-control" rows="15"></textarea>
+						</div> <!-- /.form-group -->	
+					</div>
 				</div>
 				</br>
-				<div class="row" align="center">
+				<div class="row-fluid" align="center">
 					<button class="btn btn-primary save" type="submit" id="save">Guardar</button>
 				</div>
 			</form>
@@ -77,8 +69,8 @@
 	</div>	
 </div>
 <script type='text/javascript' src='../resources/js/usersjs/libs/jquery.form.min.js'></script>
-<script type='text/javascript' src="../resources/js/jquery/jQueryTE/jquery-te-1.4.0.min.js"></script>
 <link href="../resources/css/userscss/jquery-te-1.4.0.css" rel="stylesheet">
+<script type='text/javascript' src="../resources/js/jquery/jQueryTE/jquery-te-1.4.0.min.js"></script>
 <script type='text/javascript' src='../resources/js/custom-functions/newnotice.js'></script>
 </body>
 </html>
