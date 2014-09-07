@@ -3,6 +3,14 @@
 <head>
 </head>
 <body>
+<script>
+jQuery(document).ready(function(){
+	jQuery("#menu-header li").removeClass("active");
+	jQuery("#menu-header li ul li").removeClass("active");
+	jQuery("#productMenu ul #onLoadTapChangerMenu").addClass("active");
+	jQuery("#productMenu").addClass("active");
+});
+</script>
 	<header class="entry-header sectiontitlepost">
 		<h1 class="entry-title"><s:message code="menu.products.onloadTapChangers"/></h1>
 	</header><!-- .entry-header -->

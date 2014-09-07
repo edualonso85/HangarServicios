@@ -40,27 +40,27 @@
 						<div class="row-nav navbar">
 							<div class="navbar-inner">
 								<ul id="menu-header" class="nav">
-									<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item active menu-item-12"><a href="index"><s:message code="menu.home"/></a></li>
-									<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-12"><a href="about"><s:message code="menu.company"/></a></li>
-									<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13 dropdown"><a href="#" data-toggle="dropdown" data-target="#" class="dropdown-toggle"><s:message code="menu.services"/><span class="caret"></span></a>
+									<li id="inicioMenu" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-12"><a href="index"><s:message code="menu.home"/></a></li>
+									<li id="aboutMenu" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-12"><a href="about"><s:message code="menu.company"/></a></li>
+									<li id="servicesMenu" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13 dropdown"><a href="#" data-toggle="dropdown" data-target="#" class="dropdown-toggle"><s:message code="menu.services"/><span class="caret"></span></a>
 										<ul class="dropdown-menu">
 											
-											<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="visualInspection"><s:message code="menu.services.visualInspection"/></a></li>
-											<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="thermography"><s:message code="menu.services.thermography"/></a></li>
+											<li id="visualInspectionMenu" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="visualInspection"><s:message code="menu.services.visualInspection"/></a></li>
+											<li id="thermographyMenu" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="thermography"><s:message code="menu.services.thermography"/></a></li>
 											
-											<li id="menu-item-40" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="coronaEfect"><s:message code="menu.services.coronaEfect"/></a></li>
-											<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="digitalCartography"><s:message code="menu.services.digitalCartography"/></a></li>
-											<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="otherServices"><s:message code="menu.services.otherServices"/></a></li>
+											<li id="coronaEfectMenu" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40"><a href="coronaEfect"><s:message code="menu.services.coronaEfect"/></a></li>
+											<li id="digitalCartographyMenu" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="digitalCartography"><s:message code="menu.services.digitalCartography"/></a></li>
+											<li id="otherServicesMenu" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="otherServices"><s:message code="menu.services.otherServices"/></a></li>
 										</ul>
 									</li>
-									<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13 dropdown"><a href="#" data-toggle="dropdown" data-target="#" class="dropdown-toggle"><s:message code="menu.products"/><span class="caret"></span></a>
+									<li id="productMenu" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-13 dropdown"><a href="#" data-toggle="dropdown" data-target="#" class="dropdown-toggle"><s:message code="menu.products"/><span class="caret"></span></a>
 										<ul class="dropdown-menu">
-											<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="on-LoadTapChangers"><s:message code="menu.products.onloadTapChangers"/></a></li>
-											<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="automaticControllers"><s:message code="menu.products.automaticControllers"/></a></li>
+											<li id="onLoadTapChangerMenu" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="on-LoadTapChangers"><s:message code="menu.products.onloadTapChangers"/></a></li>
+											<li id="automaticControllersMenu" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="automaticControllers"><s:message code="menu.products.automaticControllers"/></a></li>
 										</ul>
 									</li>
-									<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item  menu-item-12"><a href="news"><s:message code="menu.news"/></a></li>
-									<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item  menu-item-12"><a href="contact"><s:message code="menu.contact"/></a></li>
+									<li id="newsMenu" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item  menu-item-12"><a href="news"><s:message code="menu.news"/></a></li>
+									<li id="contactMenu" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item  menu-item-12"><a href="contact"><s:message code="menu.contact"/></a></li>
 								</ul>	
 							</div>
 						</div>					
