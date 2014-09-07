@@ -9,7 +9,6 @@
 	<meta charset="UTF-8">
 	<title>Hangar Servicios</title>
 	<link rel="icon" type="image/png"  href="<c:url value='/resources/images/LogoWeb.png'/>" />
-	<%@include file="javascripts.jsp"%>
 	<%@include file="stylesheets.jsp"%>
 	<decorator:head></decorator:head>
 </head>
@@ -72,6 +71,8 @@
 		</div>
 		<!-- /end header -->
 		<!-- .container -->
+		
+		<%@include file="javascripts.jsp"%>
 		<div class="body">
 		<div class="site-content">
 			<div class="content-area">
@@ -168,6 +169,5 @@
 	</div><!-- #page -->
 </div><!-- .body -->
 </body>
-
 <!-- Mirrored from www.wowthemes.net/demo-biscaya/ by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 10 Jan 2014 13:10:42 GMT -->
 </html>

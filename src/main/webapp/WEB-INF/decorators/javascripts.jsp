@@ -1,5 +1,9 @@
-	<script type='text/javascript' src='resources/js/jquery/jquery-1.10.2.min.js'></script>
-	<script type='text/javascript' src='resources/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+	
+	<script type='text/javascript' src='resources/js/jquery/jquery-1.11.1.min.js'></script>
+	<script type="text/javascript">
+	var $=jQuery.noConflict();
+	</script>
+<!-- 	<script type='text/javascript' src='resources/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script> -->
 	<script type='text/javascript' src='resources/js/plugins/wp-customer-review.js?ver=2.4.8'></script>
 	<script type='text/javascript' src='resources/js/plugins/comment-reply.min.js?ver=3.8'></script>
 	<script type='text/javascript' src='resources/js/bootstrap.js'></script>
@@ -13,5 +17,5 @@
 	<script type='text/javascript' src='resources/js/plugins/tabs.js?ver=3.8'></script>
 	<script type='text/javascript' src='resources/js/plugins/flexslider.js?ver=3.8'></script>
 	<script type='text/javascript' src='resources/js/plugins/testimonial.js?ver=3.8'></script>
-	<script src="resources/js/usersjs/libs/jquery-ui.js"></script>
+<!-- 	<script src="resources/js/usersjs/libs/jquery-ui.js"></script> -->
 	<script src="resources/js/usersjs/libs/jquery.form.min.js"></script>

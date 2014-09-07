@@ -1,8 +1,5 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>  
 <html>
-<head>
-	<script type='text/javascript' src='resources/js/custom-functions/homeAboutUsManager.js'></script>
-</head>
 <body>
 	<div class="row-fluid">		
 		<div class="span12">			
@@ -86,4 +83,5 @@
 			<img  src="resources/img/page/quality2.jpg" class="margintop-15" alt="Experiencia" />
 		</div>
 	</div>
+	<script type='text/javascript' src='resources/js/custom-functions/homeAboutUsManager.js'></script>
 </body>
