@@ -4,6 +4,12 @@
 <%@include file="includesPlugins/lightbox.jsp"%>
 </head>
 <body>
+<script>
+jQuery(document).ready(function(){
+	jQuery("#menu-header li").removeClass("active");
+	jQuery("#contactMenu").addClass("active");
+});
+</script>
 	<header class="entry-header sectiontitlepost">
 		<h1 class="entry-title"><s:message code="menu.contact"/></h1>
 	</header><!-- .entry-header -->

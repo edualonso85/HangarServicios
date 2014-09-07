@@ -1,9 +1,14 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>  
 <html>
-<head>
-	<script type='text/javascript' src='resources/js/custom-functions/homeThermographyManager.js'></script>
-</head>
 <body>
+<script>
+jQuery(document).ready(function(){
+	jQuery("#menu-header li").removeClass("active");
+	jQuery("#menu-header li ul li").removeClass("active");
+	jQuery("#servicesMenu ul #thermographyMenu").addClass("active");
+	jQuery("#servicesMenu").addClass("active");
+});
+</script>
 	<div class="row-fluid">		
 		<div class="span12">			
 			<img id="imageHeader" src="resources/img/header/TERMOGRAFIA-ESP.jpg" alt="Inspeccion Visual" />
@@ -11,13 +16,13 @@
 	</div>
 	<div class="row-fluid container margintop-50">
 		<div class="span3">
-			<ul class="menu-lateral services thermography">
+			<ul id='lateralMenu' class="menu-lateral services thermography">
 				<li id="thermography" class="active"><s:message code="menu.services.thermography"/></li>
 				<li id="equipment"><s:message code="menu.services.thermography.equipment"/></li>
 				<li id="examples"><s:message code="menu.services.thermography.examples"/></li>
 			</ul>
 		</div>
-		
+		<div id='content'>
 		<div id="thermography-content" class="span9">
 			<h5><s:message code="title.services.thermography.thermography"/></h5>
 			<p><s:message code="text.services.thermography.thermography.p1"/></p>
@@ -40,10 +45,12 @@
 		<div id="examples-content" class="span9 hidden">
 			VER QUE VA ACA
 		</div>	
+		</div>
 	</div>
 	<div class="row-fluid container">
 		<div class="span12">
 			ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIAACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIAACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA
 		</div>
 	</div>
+	<script type='text/javascript' src='resources/js/custom-functions/servicesLateralMenu.js'></script>
 </body>

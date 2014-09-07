@@ -7,6 +7,12 @@
 <head>
 </head>
 <body class="home page page-id-10 page-template page-template-template-home-php boxed group-blog">	
+<script>
+jQuery(document).ready(function(){
+	jQuery("#menu-header li").removeClass("active");
+	jQuery("#inicioMenu").addClass("active");
+});
+</script>
 	<div class="row-fluid">
 		<div class="span12">
 			<img src="resources/img/header/home.jpg" alt="">

@@ -1,6 +1,12 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>  
 <html>
 <body>
+<script>
+jQuery(document).ready(function(){
+	jQuery("#menu-header li").removeClass("active");
+	jQuery("#aboutMenu").addClass("active");
+});
+</script>
 	<div class="row-fluid">		
 		<div class="span12">			
 			<img id="imageHeader" src="resources/img/header/hangarservicios.jpg" alt="Empresa" />

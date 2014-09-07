@@ -1,9 +1,14 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>  
 <html>
-<head>
-	<script type='text/javascript' src='resources/js/custom-functions/homeVisualInspectionManager.js'></script>
-</head>
 <body>
+<script>
+jQuery(document).ready(function(){
+	jQuery("#menu-header li").removeClass("active");
+	jQuery("#menu-header li ul li").removeClass("active");
+	jQuery("#servicesMenu ul #visualInspectionMenu").addClass("active");
+	jQuery("#servicesMenu").addClass("active");
+});
+</script>
 	<div class="row-fluid">		
 		<div class="span12">			
 			<img id="imageHeader" src="resources/img/header/VISUAL-ESP.jpg" alt="Inspeccion Visual" />
@@ -11,7 +16,7 @@
 	</div>
 	<div class="row-fluid container margintop-50">
 		<div class="span3">
-			<ul class="menu-lateral services visualInspection">
+			<ul id='lateralMenu' class="menu-lateral services visualInspection">
 				<li class="active" id="procedures"><s:message code="menu.services.visualInspection.procedures"/></li>
 				<li id="systems"><s:message code="menu.services.visualInspection.systems"/></li>
 				<li id="objetives"><s:message code="menu.services.visualInspection.objetives"/></li>
@@ -19,6 +24,7 @@
 			</ul>
 		</div>
 		
+		<div id='content'>
 		<div id="procedures-content" class="span9">
 			<h5><s:message code="menu.services.visualInspection.procedures"/></h5>
 			<p><s:message code="text.services.visualInspection.procedures.p1"/> <s:message code="text.services.visualInspection.procedures.p2"/></p>
@@ -52,10 +58,12 @@
 		<div id="examples-content" class="span9 hidden">
 			VER QUE VA ACA
 		</div>	
+		</div>
 	</div>
 	<div class="row-fluid container">
 		<div class="span12">
 			ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIAACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIAACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA ACA VA LA GALERIA
 		</div>
 	</div>
+	<script type='text/javascript' src='resources/js/custom-functions/servicesLateralMenu.js'></script>
 </body>
