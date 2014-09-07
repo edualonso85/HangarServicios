@@ -1,12 +1,6 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>  
 <html>
 <body>
-<script>
-jQuery(document).ready(function(){
-	jQuery("#menu-header li").removeClass("active");
-	jQuery("#aboutMenu").addClass("active");
-});
-</script>
 	<div class="row-fluid">		
 		<div class="span12">			
 			<img id="imageHeader" src="resources/img/header/hangarservicios.jpg" alt="Empresa" />
@@ -90,4 +84,12 @@ jQuery(document).ready(function(){
 		</div>
 	</div>
 	<script type='text/javascript' src='resources/js/custom-functions/homeAboutUsManager.js'></script>
+	<script>
+	jQuery(document).ready(function(){
+		jQuery("#menu-header li").removeClass("active");
+		jQuery("#aboutMenu").addClass("active");
+		if (window.location.hash != "")
+			jQuery(window.location.hash).click();
+	});
+	</script>
 </body>

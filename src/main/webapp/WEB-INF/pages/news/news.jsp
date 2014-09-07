@@ -9,6 +9,7 @@ jQuery(document).ready(function(){
 	jQuery("#newsMenu").addClass("active");
 });
 </script>
+<div class="container">
 	<header class="entry-header sectiontitlepost">
 		<h1 class="entry-title"><s:message code="menu.news"/></h1>
 	</header><!-- .entry-header -->
@@ -56,4 +57,5 @@ jQuery(document).ready(function(){
 			</div><!-- .span8 -->		
 		</div><!-- .row-fluid -->
 	</div><!-- .entry-content -->	
+</div>
 </body>

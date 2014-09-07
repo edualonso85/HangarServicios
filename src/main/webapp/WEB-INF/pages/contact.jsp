@@ -10,6 +10,7 @@ jQuery(document).ready(function(){
 	jQuery("#contactMenu").addClass("active");
 });
 </script>
+<div class="container">
 	<header class="entry-header sectiontitlepost">
 		<h1 class="entry-title"><s:message code="menu.contact"/></h1>
 	</header><!-- .entry-header -->
@@ -17,8 +18,6 @@ jQuery(document).ready(function(){
 	<div class="entry-content">
 		<div class="row-fluid">
 		<div class="span12">
-				
-			
 				<div class="box1">
 					<div class="striped"></div>
 						<h6 class="fontbold"><i class="icon-map-marker "></i><s:message code="label.contact.headquarters"/>:<s:message code="label.contact.argentina"/></h6>
@@ -40,4 +39,5 @@ jQuery(document).ready(function(){
 				</div>
 			</div>
 	</div><!-- .entry-content -->		
+</div>
 </body>

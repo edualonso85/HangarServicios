@@ -5,6 +5,7 @@
 <%@include file="../includesPlugins/lightbox.jsp"%>
 </head>
 <body>
+<div class="container">
 	<div class="headerdivider"></div>	
 	<div class="entry-content">
 		<div class="row-fluid">
@@ -59,5 +60,6 @@
 				</div>
 			</div>
 		</div>
+	</div>
 </div>		
 </body>

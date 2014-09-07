@@ -20,8 +20,8 @@ jQuery(document).ready(function(){
 	</div>
 	<main id="main" class="container site-main" role="main">
 		<article id="post-10" class="post-10 page type-page status-publish hentry">
-			<div class="entry-content" align="center">				
-				<div style="height: 10px"></div>
+			<div class="entry-content">				
+				</br></br>
 				<div class="row-fluid">
 					<div class="span8">					
 						<!-- HANGAR AL SERVICIO -->
@@ -30,8 +30,8 @@ jQuery(document).ready(function(){
 								<img src="resources/img/page/al-servicio.jpg" alt="Hangar Servicios" style="float: left; padding-right: 2em;" />
 							</div>
 							<div class="span8">
-								<h5><s:message code="title.1"/></h5>						
-								<span class="justify"><s:message code="text.1"/>
+								<h5><s:message code="title.1"/></h5>	
+								<s:message code="text.1"/><a href="about">(+)</a>
 							</div>
 						</div>	
 						<!-- IMAGENES -->
@@ -52,15 +52,15 @@ jQuery(document).ready(function(){
 					
 					<div class="span4">
 						<div class="row-fluid">
-							<div class="span12 span4notice">
+							<div class="span12 noticeBox">
 								<div class="h6">
 									<s:message code="title.lastnotice"/>
 								</div>
-								<div id="s-latest" class="lastnotice justify">						
+								<div id="s-latest" class="lastnotice">						
 									<c:url value="new" var="url"><c:param name="id" value="${notice.id_notice}"/></c:url>							
-									<a href="<c:out value="${url}"/>"><h7 style="font-weight: bold; color: black;">${notice.title}</h7></a>								
-									<div style="font-size: 0.769em;">${notice.createdDate}</div>
-									<div style="font-size: 0.923em; line-height: 1,38em;">
+									<a class="title" href="<c:out value="${url}"/>"> ${notice.title}</a>								
+									<div class="date">${notice.createdDate}</div>
+									<div class="content">
 										${notice.content}<a href="<c:out value="${url}"/>" >(+)</a>
 									</div>
 								</div>														
@@ -70,11 +70,9 @@ jQuery(document).ready(function(){
 							<div class="span12">
 								<img src="${urlnoticeimg}"/>
 							</div>
-						</div>
-							
+						</div>							
 					</div><!--span4-->	
-				</div>
-				
+				</div>				
 				<div class="row-fluid margintop-25">
 					<div class="span8">
 						<!-- CALIDAD -->
@@ -83,12 +81,12 @@ jQuery(document).ready(function(){
 								<a href="about#quality"><img src="resources/img/page/quality1.jpg"/></a>
 							</div>
 							<div class="span8">
-								<div class="fontmediumsmall"><s:message code="text.quality"/></div> 
+								<div class="fontmediumsmall"><s:message code="text.quality"/><a href="about#quality">(+)</a></div> 
 							</div>
 						</div>	
 					</div>
 					<div class="span4">
-						<a href="about#intheworld"><img  src="resources/img/page/enelmundo.jpg" alt="satellite-67718_640" /></a>
+						<a href="about#inTheWorld"><img  src="resources/img/page/enelmundo.jpg" alt="satellite-67718_640" /></a>
 					</div>
 				</div>
 			</div>	

@@ -40,8 +40,8 @@ public class BaseController {
 		List<Notice> notices = noticeService.getLatestNoticesByLanguage(1, RequestContextUtils.getLocale(request).getLanguage());
 
 		if (notices != null) {
-			if (notices.get(0).getContent().length() > 201) {
-				String descripcionCorta = notices.get(0).getContent().substring(0, 200);
+			if (notices.get(0).getContent().length() > 301) {
+				String descripcionCorta = notices.get(0).getContent().substring(0, 300);
 				notices.get(0).setContent(descripcionCorta);
 			}
 			notice = notices.get(0);

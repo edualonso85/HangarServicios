@@ -170,12 +170,12 @@ div.header {
 }
 
 
-.span4notice{
+.noticeBox{
 	background:#E5E4E0;
-	height:230px;
-	padding:30px;
+	height:221px;
+	padding:25px;
 	overflow:hidden;
-	min-height:230px !important;
+	min-height:221px !important;
 	min-width:290px !important;
 }
 .margintop-15{
@@ -337,23 +337,33 @@ h7{
 	font-family: 'soho-bold'; 	
 	color: #6E6E62;
 }
-.lastnotice{
-	
+.lastnotice{	
 	line-height: 18px;
 }
+.lastnotice .date {
+	font-size: 9px;
+	margin-top: 4px;
+	
+}
+.lastnotice .content {
+	font-size: 11px;
+	line-height: 17px;
+	color: #50504E;
+	font-family: sans-serif;
+}
 
+.lastnotice .title {
+	font-weight: bold; color: black;
+	font-size: 14px;
+}
 .justify {	
 	text-align: justify;
 }
 
  .fontmediumsmall{
- 	font-size: 0.923em; 
-	line-height: 1.384em;
+ 	font-size: 11px;
+	line-height: 20px;
 	margin-top: 0.692em;
-	text-align: justify;
- 	/* font-size: 12px; 
-	line-height: 18px;
-	margin-top: 9px; */
  }
  
  p{
@@ -1467,12 +1477,12 @@ a.prev span,a.next span {
 .recent-posts h4 a {
 	color:#444;
 }
-.date {
+/* .date {
 	float:left;
 	margin-right:10px;
 	margin-top:8px;
 	text-align:center;
-}
+} */
 article .day {
 	background:#e7402f;
 	color:#fff;
