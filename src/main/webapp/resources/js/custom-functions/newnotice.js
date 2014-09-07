@@ -1,4 +1,4 @@
-$("#content").jqte();
+$("#content").jqte({css:"jqte"});
 $('#language,#title,#content').on('click',function(){
 	$(this).removeClass("errorElement");
 })

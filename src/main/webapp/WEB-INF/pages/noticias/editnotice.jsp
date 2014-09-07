@@ -6,54 +6,39 @@
 			</div>
 			<div class="widget stacked ">
 				<div class="widget-header">
+				<i class="icon-pencil"></i>
 					<h3>Editar Noticia</h3>
 				</div>
 				<div id="saveMessageDiv">
 				</div>
-				<div class="widget-content" style="padding: 50px">
+				<div class="widget-content">
 					<form modelAttribute="noticeDto" onSubmit="return validateData()" enctype="multipart/form-data" id="editNoticeForm" action="saveEditNotice" method="post">
-						<div class="row" style="padding-left: 10%">
-							<div class="col-md-4"">
-								<div class="row">
-									<div class="col-md-12">
-										<div class="input-group">
-											<input type="text" style="display:none" name="id_notice" id="id" value="${id}" class="form-control" />
-											<input type="text" style="display:none" name="languageId" id="languageId" value="${languageId}" class="form-control" />
-											<span class="input-group-addon" style="width:20%">Idioma</span>
-											<select id="language" class="form-control">
-												<option id="fakeOption" disabled selected value="">Seleccione...</option>
-												<option id="es">Español</option>
-												<option id="en">Ingles</option>
-												<option id="por">Portugues</option>
-											</select>
-										</div>
-									</div>
+						<div class="row-fluid">
+							<div class="col-md-5">								
+								<div class="input-group">
+									<input type="text" style="display:none" name="id_notice" id="id" value="${id}" class="form-control" />
+									<input type="text" style="display:none" name="languageId" id="languageId" value="${languageId}" class="form-control" />
+									<span class="input-group-addon" style="width:20%">Idioma</span>
+									<select id="language" class="form-control">
+										<option id="fakeOption" disabled selected value="">Seleccione...</option>
+										<option id="es">Español</option>
+										<option id="en">Ingles</option>
+										<option id="por">Portugues</option>
+									</select>								
 								</div>
 								</br>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<label>Titulo</label>
-											<input type="text" name="title" id="title" value="${title}" class="form-control" />
-										</div> <!-- /.form-group -->
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<div class="form-group">
-											<label>Contenido</label>
-											<textarea name="content" id="content" class="form-control" rows="6">${content}</textarea>
-										</div> <!-- /.form-group -->	
-									</div>
-								</div>
+								<div class="form-group">
+									<label>Titulo</label>
+									<input type="text" name="title" id="title" value="${title}" class="form-control" />
+								</div> <!-- /.form-group -->
 							</div>
-							<div id="fileDiv" class="col-md-8" style="padding-left: 10%;">
+							<div id="fileDiv" class="col-md-7" style="padding-left: 10%;">
 								<div class="col-md-12">
 									<b>Listado de archivos agregados</b>
 								</div>
 								</br>
-								<div id="addedFilesDiv" class="row">
-										<c:forEach items="${files}" var="file" varStatus="counter">
+								<div id="addedFilesDiv" class="row-fluid">
+								<c:forEach items="${files}" var="file" varStatus="counter">
 									<div id="addedFiles" class="col-md-12">
 											<div class="input-group">
 												<span class="input-group-addon" style="width:20%" id="${file.id}">${file.name}</span>
@@ -63,14 +48,14 @@
 												</span>
 											</div>
 									</div>
-										</c:forEach>
+								</c:forEach>
 								</div>
 								</br>
 								<div class="col-md-12">
 									<b>Agregar nuevos archivos</b>
 								</div>
 								</br>
-								<div class="row" id="newFileDiv">
+								<div class="row-fluid" id="newFileDiv">
 									<div id="fileRow" class="col-md-12">
 										<div class="input-group">
 											<span class="input-group-btn">
@@ -90,8 +75,16 @@
 								</div>
 							</div>
 						</div>
+						<div class="row-fluid">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label>Contenido</label>
+									<textarea name="content" id="content" class="form-control" rows="6">${content}</textarea>
+								</div> <!-- /.form-group -->	
+							</div>
+						</div>
 						</br>
-						<div class="row" align="center">
+						<div class="row-fluid" align="center">
 							<button class="btn btn-primary save" type="submit" id="save">Guardar</button>
 							<button class="btn btn-primary save" type="button" id="cancel">Cancelar</button>
 						</div>

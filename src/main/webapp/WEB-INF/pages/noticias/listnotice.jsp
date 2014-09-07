@@ -6,12 +6,13 @@
 	</div>
 	<div class="widget stacked ">
 		<div class="widget-header">
+			<i class="icon-list-alt"></i>		
 			<h3>Listado de Noticias</h3>
 		</div>
 		<div id="saveMessageDiv">
 		</div>
 		<div class="widget-content" style="padding: 50px">
-			<table id="noticeTable" width="50%">
+			<table id="noticeTable" width="100%">
 			</table>
 		</div>
 	</div>
