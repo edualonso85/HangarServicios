@@ -155,6 +155,24 @@ public class NoticeDao {
 
 	}
 
+	@SuppressWarnings("unchecked")
+	@Transactional
+	public List<Notice> getAllNoticesOrdered() {
+
+		Session session = null;
+		String query = "FROM Notice n ORDER BY n.createdDate DESC";
+		try {
+			session = sessionFactory.getCurrentSession();
+			return (List<Notice>) session.createQuery(query).list();
+		} catch (HibernateException e) {
+			logger.error("HibernateException in Notice" + ".getAll " + e.getMessage());
+		} catch (Exception e) {
+			logger.error("Exception in Notice" + ".getAll " + e.getMessage());
+		}
+		return null;
+
+	}
+
 	@Transactional
 	public Notice getById(Long id) {
 

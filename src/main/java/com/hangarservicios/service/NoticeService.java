@@ -44,6 +44,10 @@ public class NoticeService {
 		return noticeDao.getAllNotices();
 	}
 
+	public List<Notice> getAllNoticesOrdered() {
+		return noticeDao.getAllNoticesOrdered();
+	}
+
 	public List<Notice> getLatestNotices(int amount) {
 		return noticeDao.getLatestNotices(amount);
 	}

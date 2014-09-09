@@ -2,7 +2,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-<%@include file="../includesPlugins/lightbox.jsp"%>
 </head>
 <body>
 <div class="container">
@@ -46,7 +45,6 @@
 							<c:url value="new" var="url"><c:param name="id" value="${n.id_notice}"/></c:url>
 								<ul class="sidebar-latest">
 									<li class="post-104 post type-post status-publish format-standard hentry category-medical category-news category-science tag-sleep-disorder"> 
-										<a class="entry-thumbnail" href="<c:out value="${url}"/>" title="Sleep Paralysis"><img width="150" height="150" src="http://www.wowthemes.net/demo-biscaya/wp-content/uploads/sites/8/2013/08/satellite-67718_640-150x150.jpg" class="attachment-thumbnail wp-post-image" alt="satellite-67718_640" /></a>
 										<a class="entry-title" rel="bookmark" href="<c:out value="${url}"/>">${n.title}</a><br />
 										<small>${n.createdDate}</small><br/>
 										${n.content} 										
@@ -62,4 +60,6 @@
 		</div>
 	</div>
 </div>		
+<script type='text/javascript' src='resources/js/custom-functions/oneNoticeManager.js'></script>
+<%@include file="../includesPlugins/lightbox.jsp"%>
 </body>

@@ -1,7 +1,11 @@
 package com.hangarservicios.controller;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 
@@ -12,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,7 +41,6 @@ public class BaseController {
 		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
 		response.setHeader("Pragma", "no-cache");
 		Notice notice = null;
-		String img = "resources/img_notices/default.jpg";
 		List<Notice> notices = noticeService.getLatestNoticesByLanguage(1, RequestContextUtils.getLocale(request).getLanguage());
 
 		if (notices != null) {
@@ -45,16 +49,31 @@ public class BaseController {
 				notices.get(0).setContent(descripcionCorta);
 			}
 			notice = notices.get(0);
-			List<Image> images = notice.getImages();
-			if (notice.getImages().size() > 0)
-				img = "resources/img_notices/" + notice.getImages().get(0).getName();
-
 		}
 
-		request.setAttribute("urlnoticeimg", img);
 		request.setAttribute("notice", notice);
 		return "index";
 
+	}
+
+	@RequestMapping(value = "/getLastImage/{id}")
+	@ResponseBody
+	public byte[] getLastImage(@PathVariable long id, HttpServletRequest request) {
+		Notice notice = noticeService.getById(id);
+		if (notice.getImages().size() > 0) {
+			byte[] image = notice.getImages().get(0).getImage();
+			return image;
+		}
+
+		Path path;
+		byte[] data = null;
+		try {
+			path = Paths.get(this.getClass().getResource("/default.jpg").toURI());
+			data = Files.readAllBytes(path);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		return data;
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -307,6 +326,36 @@ public class BaseController {
 		}
 
 		return new ModelAndView("redirect:/index");
+
+	}
+
+	@RequestMapping(value = "/loadNoticeList")
+	public @ResponseBody
+	List<Notice> loadNoticeList(HttpServletRequest request, HttpServletResponse response) {
+
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
+		List<Notice> notices = noticeService.getAllNoticesOrdered();
+		int i = 0;
+		for (Iterator iterator = notices.iterator(); iterator.hasNext();) {
+			Notice notice = (Notice) iterator.next();
+			List<Image> images = notice.getImages();
+			for (Iterator iterator2 = images.iterator(); iterator2.hasNext();) {
+				Image image = (Image) iterator2.next();
+				image.setNotice(null);
+			}
+			if (i == 0) {
+				if (notice.getContent().length() > 650)
+					notice.setContent(notice.getContent().substring(0, 650) + " [...]");
+			} else {
+				if (notice.getContent().length() > 201) {
+					String descripcionCorta = notice.getContent().substring(0, 200);
+					notice.setContent(descripcionCorta);
+				}
+			}
+			i++;
+		}
+		return notices;
 
 	}
 }

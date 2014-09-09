@@ -68,7 +68,7 @@ jQuery(document).ready(function(){
 						</div>
 						<div class="row-fluid">
 							<div class="span12">
-								<img src="${urlnoticeimg}"/>
+									<img src="<c:url value="/getLastImage/${notice.id_notice}"></c:url>" />
 							</div>
 						</div>							
 					</div><!--span4-->	

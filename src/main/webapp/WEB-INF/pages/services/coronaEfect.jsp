@@ -68,6 +68,18 @@ jQuery(document).ready(function(){
                   <div class="item">
                     <img src="resources/img/corona/3g.jpg" alt="">
                   </div>
+                  <div class="item">
+                    <img src="resources/img/corona/4g.jpg" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="resources/img/corona/5g.jpg" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="resources/img/corona/6g.jpg" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="resources/img/corona/7g.jpg" alt="">
+                  </div>
                 </div>
                 <a class="left carousel-control" href="#myCarousel" style="border-radius:23px;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;" data-slide="prev">&lsaquo;</a>
                 <a class="right carousel-control" href="#myCarousel" style="border-radius:23px;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;" data-slide="next">&rsaquo;</a>
