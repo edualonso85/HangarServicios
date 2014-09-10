@@ -5,6 +5,7 @@
 </head>
 <body>
 <div class="container">
+	<input id="idNotice" type="hidden" value="${notice.id_notice}"/>
 	<div class="headerdivider"></div>	
 	<div class="entry-content">
 		<div class="row-fluid">
@@ -14,31 +15,33 @@
 						<article class="post-84 post type-post status-publish format-standard hentry category-news category-science tag-newton singlepost" id="post-84">
 							<header class="entry-header sectiontitlepost">
 								<h1 class="entry-title">${notice.title}</h1>
-								<span class="comments-link pull-right font13 fontregular"></span>
 							</header><!-- .entry-header -->	
+							<footer class="entry-meta">
+								 | ${notice.createdDate}  | 									
+							</footer><!-- .entry-meta -->
 							<div class="headerdivider"></div>
 							<div class="entry-content">
-							<a class="entry-thumbnail pull-left paddingright top10" data-lightbox="notice" href="resources/img/fallas/falla3g.jpg" title="${principal.title}"><img width="187" height="150" src="http://www.wowthemes.net/demo-biscaya/wp-content/uploads/sites/8/2013/08/atlantis-79793_640-200x160.jpg" class="attachment-sticky-thumb wp-post-image" alt="atlantis-79793_640" /></a>
 								${notice.content}
 							</div><!-- .entry-content -->
-								<footer class="entry-meta">
-									 | ${notice.createdDate}  | 									
-								</footer><!-- .entry-meta -->
 						</article><!-- #post-## -->
-		
-						<nav role="navigation" id="nav-below" class="post-navigation">
-							<h1 class="screen-reader-text"></h1>
-						</nav><!-- #nav-below -->
-						<div class="clearfix"></div>
 					</main><!-- #main -->
 				</div><!-- #primary -->
+				<br>
+				<div id="myCarousel" align="center" style="background-color:black;display:none" class="carousel slide">
+	                <ol id="indicators" class="carousel-indicators">
+	                </ol>
+	                <div id="images" class="carousel-inner">
+	                </div>
+	                <a class="left carousel-control" href="#myCarousel" style="border-radius:23px;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;" data-slide="prev">&lsaquo;</a>
+	                <a class="right carousel-control" href="#myCarousel" style="border-radius:23px;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;" data-slide="next">&rsaquo;</a>
+              </div>	
 			</div>
 			<div class="span4">
 				<div id="secondary" class="widget-area" role="complementary">
 					<aside class="multi-sidebar-container">
 						<div class="multi-sidebar clearfix">
 							<ul class="tabs clearfix">
-								<li><a href="#s-latest"><s:message code="label.latest"/></a></li>						
+								<li><a style="color: black" href="#s-latest"><s:message code="label.latest"/></a></li>						
 							</ul>				
 							<div id="s-latest" class="widget clearfix">
 							<c:forEach var="n" items="${notices}">
@@ -51,6 +54,7 @@
 										<a href="<c:out value="${url}"/>"> [...] </a>
 									</li>									
 								</ul>
+								<br>
 							</c:forEach>
 							</div><!-- #s-latest -->
 						</div>

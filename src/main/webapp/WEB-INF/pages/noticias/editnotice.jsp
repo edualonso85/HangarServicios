@@ -60,7 +60,7 @@
 										<div class="input-group">
 											<span class="input-group-btn">
 												<button id="fakeUpload" onClick="uploadFile(this)" type="button" class="btn btn-default">Adjuntar Archivo</button>
-												<input id="upload" name="files[0]" type="file" value="" style="display:none"
+												<input id="upload" accept="image/x-png, image/jpg, image/jpeg" name="files[0]" type="file" value="" style="display:none"
 													onChange="$(this).parent().parent().find('#fileUrl').val($(this).parent().find('#upload').val());"/>
 											</span>
 											<input id="fileUrl" type="text" class="form-control">

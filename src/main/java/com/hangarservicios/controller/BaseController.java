@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -300,7 +301,7 @@ public class BaseController {
 		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
 		response.setHeader("Pragma", "no-cache");
 		Notice notice = noticeService.getById(id);
-		List<Notice> notices = noticeService.getNoticesByLanguage(RequestContextUtils.getLocale(request).getLanguage());
+		List<Notice> notices = noticeService.getLatestNoticesByLanguage(5, RequestContextUtils.getLocale(request).getLanguage());
 		if (notices != null) {
 			for (int i = 0; i < notices.size(); i++) {
 				if (notices.get(i).getContent().length() > 201) {
@@ -335,7 +336,7 @@ public class BaseController {
 
 		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
 		response.setHeader("Pragma", "no-cache");
-		List<Notice> notices = noticeService.getAllNoticesOrdered();
+		List<Notice> notices = noticeService.getNoticesByLanguage(RequestContextUtils.getLocale(request).getLanguage());
 		int i = 0;
 		for (Iterator iterator = notices.iterator(); iterator.hasNext();) {
 			Notice notice = (Notice) iterator.next();
@@ -356,6 +357,16 @@ public class BaseController {
 			i++;
 		}
 		return notices;
+
+	}
+
+	@RequestMapping(value = "/loadNoticeImageDetail", method = RequestMethod.POST)
+	public @ResponseBody
+	Notice loadNoticeImageDetail(@RequestBody Long id, HttpServletResponse response, HttpServletRequest request) {
+
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
+		return noticeService.getById(id);
 
 	}
 }
