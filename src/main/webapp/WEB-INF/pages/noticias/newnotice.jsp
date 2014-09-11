@@ -24,7 +24,7 @@
 								<option id="fakeOption" disabled selected value="">Seleccione...</option>
 								<option id="es">Español</option>
 								<option id="en">Ingles</option>
-								<option id="por">Portugues</option>
+								<option id="pt">Portugues</option>
 							</select>
 						</div>						
 						</br>						

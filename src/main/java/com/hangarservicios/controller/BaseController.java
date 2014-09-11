@@ -44,7 +44,7 @@ public class BaseController {
 		Notice notice = null;
 		List<Notice> notices = noticeService.getLatestNoticesByLanguage(1, RequestContextUtils.getLocale(request).getLanguage());
 
-		if (notices != null) {
+		if (notices != null && !notices.isEmpty()) {
 			if (notices.get(0).getContent().length() > 301) {
 				String descripcionCorta = notices.get(0).getContent().substring(0, 300);
 				notices.get(0).setContent(descripcionCorta);
@@ -103,7 +103,7 @@ public class BaseController {
 		response.setHeader("Pragma", "no-cache");
 		List<Notice> notices = noticeService.getLatestNoticesByLanguage(4, RequestContextUtils.getLocale(request).getLanguage());
 		List<Notice> results = notices;
-		if (results != null) {
+		if (results != null && !results.isEmpty()) {
 			for (int i = 0; i < results.size(); i++) {
 				if (((Notice) results.get(i)).getContent().length() > 201) {
 					String descripcionCorta = ((Notice) results.get(i)).getContent().substring(0, 200);
@@ -117,11 +117,11 @@ public class BaseController {
 			String lang = RequestContextUtils.getLocale(request).getLanguage();
 			notice.setTitle("");
 			if (lang == "es") {
-				notice.setContent("No hay novedades para mostrar");
+				notice.setContent("No hay novedades para mostrar ");
 			} else if (lang == "pt") {
-				notice.setContent("Sem notícias para exibir..");
+				notice.setContent("Sem notícias para exibir ");
 			} else
-				notice.setContent("No news to display..");
+				notice.setContent("No news to display ");
 			List<Notice> n = new ArrayList<Notice>();
 			n.add(notice);
 			results = n;

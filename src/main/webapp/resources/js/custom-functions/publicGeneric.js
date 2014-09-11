@@ -20,23 +20,6 @@ jQuery(document).ready(function() {
 		   }	
 	});		
 });
-// Funcion que valida el correcto ingreso de usuario y pass
-function validateUser(){
-	
-	var ok = true;
-	var username = document.getElementById("username").value;
-	var password = document.getElementById("password").value;
-	if ((username == '')||(password == '')){
-		alert("Usuario o Pass vacios");
-		ok = false;
-	}else if (username.indexOf("@")!=-1){
-		alert("Ingrese solo el nombre de usuario, sin \"@hangarservicios.com\"");
-		ok = false;
-	}
-	
-	return ok;
-	
-}
 
 function createLoginModal(){
 	

@@ -1,0 +1,47 @@
+.modalLanguage {
+left: 1480px !important;
+top: 84px !important;
+width: 240px !important;
+margin-left: -299px !important;
+background-color: #ffffff !important;
+border: 1px solid #999 !important;
+border: 1px solid rgba(0, 0, 0, 0.3) !important;
+-webkit-background-clip: padding-box !important;
+-moz-background-clip: padding-box !important;
+background-clip: padding-box !important;
+outline: none !important;
+}
+
+
+.modal-headerLanguage {
+height: 28px;
+padding: 9px 24px;
+border-bottom: 1px solid #eee;
+}
+
+.spanishIcon{
+	background-image: url('../img/flags.jpg');
+	width: 16px;
+	height: 16px;
+	background-position: -103px -180px;
+	margin-left: 0px;
+	margin-right: 4px;
+}
+
+.spanishIcon2{
+	background-image: url('../img/flags.jpg');
+	width: 16px;
+	height: 16px;
+	background-position: -383px -180px;
+	margin-left: 0px;
+	margin-right: 4px;
+}
+
+.spanishIcon3{
+	background-image: url('../img/flags.jpg');
+	width: 16px;
+	height: 16px;
+	background-position: -271px -69px;
+	margin-left: 0px;
+	margin-right: 4px;
+}

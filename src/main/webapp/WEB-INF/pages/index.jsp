@@ -56,19 +56,23 @@ jQuery(document).ready(function(){
 								<div class="h6">
 									<s:message code="title.lastnotice"/>
 								</div>
-								<div id="s-latest" class="lastnotice">						
-									<c:url value="new" var="url"><c:param name="id" value="${notice.id_notice}"/></c:url>							
-									<a class="title" href="<c:out value="${url}"/>"> ${notice.title}</a>								
-									<div class="date">${notice.createdDate}</div>
-									<div class="content">
-										${notice.content}<a href="<c:out value="${url}"/>" >(+)</a>
-									</div>
+								<div id="s-latest" class="lastnotice">	
+									<c:if test="${notice.id_notice != null}">					
+										<c:url value="new" var="url"><c:param name="id" value="${notice.id_notice}"/></c:url>							
+										<a class="title" href="<c:out value="${url}"/>"> ${notice.title}</a>								
+										<div class="date">${notice.createdDate}</div>
+										<div class="content">
+											${notice.content}<a href="<c:out value="${url}"/>" >(+)</a>
+										</div>
+									</c:if>
 								</div>														
 							</div>
 						</div>
 						<div class="row-fluid">
 							<div class="span12">
+								<c:if test="${notice.id_notice != null}">
 									<img src="<c:url value="/getLastImage/${notice.id_notice}"></c:url>" />
+								</c:if>		
 							</div>
 						</div>							
 					</div><!--span4-->	
