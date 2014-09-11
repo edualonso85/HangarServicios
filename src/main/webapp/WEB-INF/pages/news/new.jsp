@@ -44,7 +44,7 @@
 								<li><a style="color: black" href="#s-latest"><s:message code="label.latest"/></a></li>						
 							</ul>				
 							<div id="s-latest" class="widget clearfix">
-							<c:forEach var="n" items="${notices}">
+							<c:forEach var="n" items="${notices}" varStatus="loop">
 							<c:url value="new" var="url"><c:param name="id" value="${n.id_notice}"/></c:url>
 								<ul class="sidebar-latest">
 									<li class="post-104 post type-post status-publish format-standard hentry category-medical category-news category-science tag-sleep-disorder"> 
@@ -54,7 +54,7 @@
 										<a href="<c:out value="${url}"/>"> [...] </a>
 									</li>									
 								</ul>
-								<br>
+								<c:if test="${!loop.last}"><br></c:if>
 							</c:forEach>
 							</div><!-- #s-latest -->
 						</div>
