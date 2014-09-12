@@ -58,6 +58,7 @@ jQuery(document).ready(function(){
 					<li>- <s:message code="text.services.digitalCartography.advantages.p5"/></li>
 					<li>- <s:message code="text.services.digitalCartography.advantages.p6"/></li>
 				</ul>
+				<br>
 			</div>
 			<div id="examples-content" class="span9 hidden">
 				VER QUE VA ACA

@@ -271,7 +271,7 @@ public class BaseController {
 		response.setHeader("Pragma", "no-cache");
 		List<Notice> notices = noticeService.getNoticesByLanguage(RequestContextUtils.getLocale(request).getLanguage());
 		Notice principal = null;
-		if (notices != null) {
+		if (notices != null && !notices.isEmpty()) {
 			// Extraigo la noticia principal, la mas reciente.
 			principal = notices.get(0);
 			// Genero descripcion corta noticia principal
@@ -302,7 +302,7 @@ public class BaseController {
 		response.setHeader("Pragma", "no-cache");
 		Notice notice = noticeService.getById(id);
 		List<Notice> notices = noticeService.getLatestNoticesByLanguage(5, RequestContextUtils.getLocale(request).getLanguage());
-		if (notices != null) {
+		if (notices != null && !notices.isEmpty()) {
 			for (int i = 0; i < notices.size(); i++) {
 				if (notices.get(i).getContent().length() > 201) {
 					String descripcionCorta = notices.get(i).getContent().substring(0, 200);

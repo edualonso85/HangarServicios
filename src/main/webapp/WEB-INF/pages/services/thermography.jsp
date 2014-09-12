@@ -39,7 +39,8 @@ jQuery(document).ready(function(){
 				<li>- <s:message code="text.services.thermography.equipment.p3"/></li>
 				<li>- <s:message code="text.services.thermography.equipment.p4"/></li>
 				<li>- <s:message code="text.services.thermography.equipment.p5"/></li>
-			</ul>	
+			</ul>
+			<br>	
 		</div>	
 		
 		<div id="examples-content" class="span9 hidden">

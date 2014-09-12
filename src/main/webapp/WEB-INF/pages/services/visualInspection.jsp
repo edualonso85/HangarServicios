@@ -47,6 +47,7 @@ jQuery(document).ready(function(){
 				<li>- <s:message code="text.services.visualInspection.informaticSystems.p9"/></li>
 				<li>- <s:message code="text.services.visualInspection.informaticSystems.p10"/></li>
 			</ul>	
+			<br>
 		</div>
 		
 		<div id="objetives-content" class="span9 hidden">
@@ -60,6 +61,7 @@ jQuery(document).ready(function(){
 		</div>	
 		</div>
 	</div>
+<!-- 	<br> -->
 	<div class="row-fluid container">
 		<div id="myCarousel" align="center" style="background-color:black" class="carousel slide">
                 <ol class="carousel-indicators">
