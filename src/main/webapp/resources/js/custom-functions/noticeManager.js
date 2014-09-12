@@ -22,6 +22,7 @@ function loadNoticeList(){
 					$('#mainCreatedDate').append(notice.createdDate);
 					$('#mainContent').append(notice.content);
 					$('#mainImageLink').attr('title',notice.title);
+					$('#mainImageLink').attr('href',$('#mainNoticeId').attr('href')+notice.id_notice);
 					$('#mainNoticeId').attr('href',$('#mainNoticeId').attr('href')+notice.id_notice);
 					if(notice.images.length != null && notice.images.length > 0){
 						$('#mainImage').show();

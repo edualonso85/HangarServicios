@@ -17,13 +17,13 @@ jQuery(document).ready(function(){
 	<div class="entry-content">
 			<div class="row-fluid">
 				<div class="span12">				
-					<div class="hero-unit box effect2">
+					<div class="hero-unit box effect2" style="min-height: 250px;">
 						<h1 id="mainTitle"></h1>
 						<div class="entry-meta">
 							<div class="pull-left" id="mainCreatedDate"><i class="icon-calendar"></i>&nbsp; </div>
 						</div><!-- .entry-meta -->
 						<p id="mainContent">
-							<a class="entry-thumbnail pull-left paddingright top10" id="mainImageLink" href="<c:out value="${url}"/>" title="">
+							<a class="entry-thumbnail pull-left paddingright top10" id="mainImageLink" href="<c:out value="${url}?id="/>" title="">
 								<img width="187" style="display:none" height="150" id="mainImage" src="" class="attachment-sticky-thumb wp-post-image"/>
 							</a>
 						</p>
