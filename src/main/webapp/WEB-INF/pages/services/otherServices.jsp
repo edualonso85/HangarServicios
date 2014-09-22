@@ -25,18 +25,18 @@ jQuery(document).ready(function(){
 			<h5><s:message code="menu.services.otherServices.polymericInsulators"/></h5>
 			<p><s:message code="text.services.otherServices.polymericInsulators.p1"/></p>
 			<p><s:message code="text.services.otherServices.polymericInsulators.p2"/></p>
-			<ul>
-				<li>- <s:message code="text.services.otherServices.polymericInsulators.p3"/></li>
-				<li>- <s:message code="text.services.otherServices.polymericInsulators.p4"/></li>
-				<li>- <s:message code="text.services.otherServices.polymericInsulators.p5"/></li>
+			<ul class="listElements">
+				<li><s:message code="text.services.otherServices.polymericInsulators.p3"/></li>
+				<li><s:message code="text.services.otherServices.polymericInsulators.p4"/></li>
+				<li><s:message code="text.services.otherServices.polymericInsulators.p5"/></li>
 			</ul>	
 			<br/>
 			<h5><s:message code="menu.services.otherServices.windVibrations"/></h5>
 			<p><s:message code="text.services.otherServices.windVibrations.p1"/></p>
 			<p><s:message code="text.services.otherServices.windVibrations.p2"/></p>
-			<ul>
-				<li>- <s:message code="text.services.otherServices.windVibrations.p3"/></li>
-				<li>- <s:message code="text.services.otherServices.windVibrations.p4"/></li>
+			<ul class="listElements">
+				<li><s:message code="text.services.otherServices.windVibrations.p3"/></li>
+				<li><s:message code="text.services.otherServices.windVibrations.p4"/></li>
 			</ul>
 		</div>	
 	</div>

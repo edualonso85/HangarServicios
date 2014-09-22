@@ -40,23 +40,23 @@ jQuery(document).ready(function(){
 			<div id="usesAdvantages-content" class="span9 hidden">
 				<h5><s:message code="title.services.digitalCartography.uses"/></h5>
 				<p><s:message code="text.services.digitalCartography.uses.p1"/></p>			
-				<ul>
-					<li>- <s:message code="text.services.digitalCartography.uses.p2"/></li>
-					<li>- <s:message code="text.services.digitalCartography.uses.p3"/></li>
-					<li>- <s:message code="text.services.digitalCartography.uses.p4"/></li>
-					<li>- <s:message code="text.services.digitalCartography.uses.p5"/></li>
-					<li>- <s:message code="text.services.digitalCartography.uses.p6"/></li>
-					<li>- <s:message code="text.services.digitalCartography.uses.p7"/></li>
+				<ul class="listElements">
+					<li><s:message code="text.services.digitalCartography.uses.p2"/></li>
+					<li><s:message code="text.services.digitalCartography.uses.p3"/></li>
+					<li><s:message code="text.services.digitalCartography.uses.p4"/></li>
+					<li><s:message code="text.services.digitalCartography.uses.p5"/></li>
+					<li><s:message code="text.services.digitalCartography.uses.p6"/></li>
+					<li><s:message code="text.services.digitalCartography.uses.p7"/></li>
 				</ul>	
 							
-				<h5><s:message code="menu.services.digitalCartography.advantages"/></h5>
+				<h5 style="margin-top: 15px;"><s:message code="menu.services.digitalCartography.advantages"/></h5>
 				<p><s:message code="text.services.digitalCartography.advantages.p1"/></p>			
-				<ul>
-					<li>- <s:message code="text.services.digitalCartography.advantages.p2"/></li>
-					<li>- <s:message code="text.services.digitalCartography.advantages.p3"/></li>
-					<li>- <s:message code="text.services.digitalCartography.advantages.p4"/></li>
-					<li>- <s:message code="text.services.digitalCartography.advantages.p5"/></li>
-					<li>- <s:message code="text.services.digitalCartography.advantages.p6"/></li>
+				<ul class="listElements">
+					<li><s:message code="text.services.digitalCartography.advantages.p2"/></li>
+					<li><s:message code="text.services.digitalCartography.advantages.p3"/></li>
+					<li><s:message code="text.services.digitalCartography.advantages.p4"/></li>
+					<li><s:message code="text.services.digitalCartography.advantages.p5"/></li>
+					<li><s:message code="text.services.digitalCartography.advantages.p6"/></li>
 				</ul>
 				<br>
 			</div>

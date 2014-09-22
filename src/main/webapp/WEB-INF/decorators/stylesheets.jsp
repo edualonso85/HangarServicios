@@ -13,5 +13,7 @@
 		.box1 i, .fancybox2 i, .sbutton i, .intro i  {margin-right:5px;}
 		.boxlink i {margin-right:0px;}
 		.captionicons {margin-right:5px;}
-		input, button, select, textarea {font-family:'open_sansregular';}		
+		input, button, select, textarea {font-family:'open_sansregular';}
+		.listElements li{list-style: outside;}	
+		p{margin: 0 0 10px;}	
 	</style>

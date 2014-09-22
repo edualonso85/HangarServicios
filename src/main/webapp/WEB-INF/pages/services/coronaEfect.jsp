@@ -38,10 +38,10 @@ jQuery(document).ready(function(){
 			<div id="systems-content" class="span9 hidden">
 				<h5><s:message code="title.services.digitalCartography.uses"/></h5>
 				<p><s:message code="text.services.coronaEfect.informaticSystem.p1"/></p>			
-				<ul>
-					<li>- <s:message code="text.services.coronaEfect.informaticSystem.p2"/></li>
-					<li>- <s:message code="text.services.coronaEfect.informaticSystem.p3"/></li>
-					<li>- <s:message code="text.services.coronaEfect.informaticSystem.p4"/></li>
+				<ul class="listElements">
+					<li><s:message code="text.services.coronaEfect.informaticSystem.p2"/></li>
+					<li><s:message code="text.services.coronaEfect.informaticSystem.p3"/></li>
+					<li><s:message code="text.services.coronaEfect.informaticSystem.p4"/></li>
 				</ul>				
 				<p><s:message code="text.services.coronaEfect.informaticSystem.p5"/></p>			
 			</div>

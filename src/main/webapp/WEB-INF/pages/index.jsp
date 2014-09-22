@@ -29,21 +29,21 @@ jQuery(document).ready(function(){
 							<div class="span4">
 								<img src="resources/img/page/al-servicio.jpg" alt="Hangar Servicios" style="float: left; padding-right: 2em;" />
 							</div>
-							<div class="span8">
+							<div class="span8" style="padding-left: 20px">
 								<h5><s:message code="title.1"/></h5>	
 								<s:message code="text.1"/><a href="about">(+)</a>
 							</div>
 						</div>	
 						<!-- IMAGENES -->
 						<div class="row-fluid">	
-							<div class="span4">
+							<div class="span4" style="margin:1px">
 							   <a href="visualInspection"><img src="resources/img/page/inspecciones.jpg" alt="Hangar Servicios" class="img" /></a>	
 							</div>
-							<div class="span4">
+							<div class="span4" style="margin:1px">
 							    <a href="on-LoadTapChangers"><img src="resources/img/page/conmutadores.jpg" alt="Hangar Servicios" class="img" />
 								</a>
 							</div>
-							<div class="span4">
+							<div class="span4" style="margin:1px">
 							    <a href="automaticControllers"><img src="resources/img/page/reguladores.jpg" alt="Hangar Servicios" class="img" />
 								</a>	
 							</div>

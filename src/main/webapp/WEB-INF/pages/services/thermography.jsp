@@ -34,11 +34,11 @@ jQuery(document).ready(function(){
 		<div id="equipment-content" class="span9 hidden">
 			<h5><s:message code="title.services.thermography.equipment"/></h5>
 			<p><s:message code="text.services.thermography.equipment.p1"/></p>			
-			<ul>
-				<li>- <s:message code="text.services.thermography.equipment.p2"/></li>
-				<li>- <s:message code="text.services.thermography.equipment.p3"/></li>
-				<li>- <s:message code="text.services.thermography.equipment.p4"/></li>
-				<li>- <s:message code="text.services.thermography.equipment.p5"/></li>
+			<ul class="listElements">
+				<li><s:message code="text.services.thermography.equipment.p2"/></li>
+				<li><s:message code="text.services.thermography.equipment.p3"/></li>
+				<li><s:message code="text.services.thermography.equipment.p4"/></li>
+				<li><s:message code="text.services.thermography.equipment.p5"/></li>
 			</ul>
 			<br>	
 		</div>	
