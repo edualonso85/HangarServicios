@@ -23,7 +23,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.hangarservicios.dao.UserDao;
 import com.hangarservicios.dto.NoticeDto;
+import com.hangarservicios.entity.DBUser;
 import com.hangarservicios.entity.Image;
 import com.hangarservicios.entity.Notice;
 import com.hangarservicios.security.CustomUserDetail;
@@ -37,6 +39,8 @@ public class NoticeController {
 
 	@Autowired
 	NoticeService noticeService;
+	@Autowired
+	UserDao userDao;
 
 	@RequestMapping(value = "/users/notices", method = RequestMethod.GET)
 	public ModelAndView getNotices(HttpServletRequest request, HttpServletResponse response) {
@@ -45,6 +49,8 @@ public class NoticeController {
 		response.setHeader("Pragma", "no-cache");
 		CustomUserDetail user = (CustomUserDetail) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		request.setAttribute("name", user.getFirstName() + " " + user.getLastName());
+
+		request.setAttribute("user", user);
 		return new ModelAndView("noticias/listnotice");
 
 	}
@@ -90,6 +96,30 @@ public class NoticeController {
 		CustomUserDetail user = (CustomUserDetail) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		request.setAttribute("name", user.getFirstName() + " " + user.getLastName());
 		return new ModelAndView("noticias/newnotice");
+
+	}
+
+	@RequestMapping(value = "/users/account")
+	public ModelAndView getUserAccount(HttpServletRequest request, HttpServletResponse response) {
+
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
+		CustomUserDetail user = (CustomUserDetail) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		request.setAttribute("name", user.getFirstName() + " " + user.getLastName());
+		DBUser dbUser = userDao.getLoggedUser(user.getUsername(), user.getPassword());
+		request.setAttribute("user", dbUser);
+		return new ModelAndView("users/account");
+
+	}
+
+	@RequestMapping(value = "/users/loginToMail")
+	public ModelAndView loginToMail(HttpServletRequest request, HttpServletResponse response) {
+
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
+		CustomUserDetail user = (CustomUserDetail) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		request.setAttribute("name", user.getFirstName() + " " + user.getLastName());
+		return new ModelAndView("users/loginToMail");
 
 	}
 
@@ -163,6 +193,16 @@ public class NoticeController {
 		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
 		response.setHeader("Pragma", "no-cache");
 		return "{\"message\":" + noticeService.delete(notice) + "}";
+
+	}
+
+	@RequestMapping(value = "users/editUserData", method = RequestMethod.POST)
+	public @ResponseBody
+	String editUserData(@RequestBody DBUser user, HttpServletResponse response, HttpServletRequest request) {
+
+		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
+		response.setHeader("Pragma", "no-cache");
+		return "{\"message\":" + userDao.editUser(user) + "}";
 
 	}
 

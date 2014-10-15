@@ -13,6 +13,16 @@ jQuery(document).ready(function(){
 	jQuery("#inicioMenu").addClass("active");
 });
 </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55331682-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 	<div class="row-fluid">
 		<div class="span12">
 			<img src="resources/img/header/home.jpg" alt="">
@@ -30,21 +40,23 @@ jQuery(document).ready(function(){
 								<img src="resources/img/page/al-servicio.jpg" alt="Hangar Servicios" style="float: left; padding-right: 2em;" />
 							</div>
 							<div class="span8" style="padding-left: 20px">
-								<h5><s:message code="title.1"/></h5>	
+								<h5 style="line-height: 35px;"><s:message code="title.1"/></h5>	
 								<s:message code="text.1"/><a href="about">(+)</a>
 							</div>
 						</div>	
 						<!-- IMAGENES -->
 						<div class="row-fluid">	
 							<div class="span4" style="margin:1px">
-							   <a href="visualInspection"><img src="resources/img/page/inspecciones.jpg" alt="Hangar Servicios" class="img" /></a>	
+							   <a href="visualInspection" class="<s:message code='class.visualInspection'></s:message>" style="background-image: <s:message code='main.inspecciones'></s:message>;height: 195px;width: 195px;display: block;"></a>	
 							</div>
 							<div class="span4" style="margin:1px">
-							    <a href="on-LoadTapChangers"><img src="resources/img/page/conmutadores.jpg" alt="Hangar Servicios" class="img" />
+							   <a href="on-LoadTapChangers" class="<s:message code='class.conmutadores'></s:message>" style="background-image: <s:message code='main.conmutadores'></s:message>;height: 195px;width: 195px;display: block;"></a>	
+<!-- 							    <a href="on-LoadTapChangers"><img src="resources/img/page/conmutadores.jpg" alt="Hangar Servicios" class="img loadTapImg" /> -->
 								</a>
 							</div>
 							<div class="span4" style="margin:1px">
-							    <a href="automaticControllers"><img src="resources/img/page/reguladores.jpg" alt="Hangar Servicios" class="img" />
+							   <a href="automaticControllers" class="<s:message code='class.reguladores'></s:message>" style="background-image: <s:message code='main.reguladores'></s:message>;height: 195px;width: 195px;display: block;"></a>	
+<!-- 							    <a href="automaticControllers"><img src="resources/img/page/reguladores.jpg" alt="Hangar Servicios" class="img autoContrImg" /> -->
 								</a>	
 							</div>
 						</div>				

@@ -14,6 +14,7 @@
 		.boxlink i {margin-right:0px;}
 		.captionicons {margin-right:5px;}
 		input, button, select, textarea {font-family:'open_sansregular';}
-		.listElements li{list-style: outside;}	
-		p{margin: 0 0 10px;}	
+		.listElements li{list-style: outside;padding-bottom: 5px;}	
+		p{margin: 0 0 10px;}
+		.lateralOption:hover{font-weight: bold !important;color:black !important;}	
 	</style>

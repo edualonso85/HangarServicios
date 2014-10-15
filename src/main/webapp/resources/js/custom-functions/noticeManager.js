@@ -39,7 +39,7 @@ function loadNoticeList(){
 					var entryData = '<div id="entryData'+index+'" class="entry-meta"></div>';
 					$('#header'+index).append(h1);
 					$('#header'+index).append(entryData);
-					var createdDateDiv = '<div id="createdDateDiv'+index+'" class="pull-left"><i class="icon-calendar"></i>&nbsp; '+notice.createdDate+'</div>';
+					var createdDateDiv = '<div id="createdDateDiv'+index+'"><i class="icon-calendar"></i>&nbsp; '+notice.createdDate+'</div>';
 					$('#entryData'+index).append(createdDateDiv);
 					var contentDiv = '<div id="contentDiv'+index+'"  class="entry-content">';
 					$('#innerDiv'+index).append(contentDiv);

@@ -54,7 +54,7 @@ public class UserDao {
 		return "\"success\"";
 	}
 
-	private DBUser getLoggedUser(String userName, String password) {
+	public DBUser getLoggedUser(String userName, String password) {
 
 		Session session = null;
 		String query = "FROM DBUser user WHERE user.userName = ? AND user.password = ?";
@@ -94,6 +94,7 @@ public class UserDao {
 			}
 			user.setFirstName(dbUser.getFirstName());
 			user.setLastName(dbUser.getLastName());
+			user.setPassword(dbUser.getPassword());
 
 			user.setAuthorities(authorities);
 			return user;
@@ -123,15 +124,42 @@ public class UserDao {
 		return null;
 	}
 
-	public String editUser(DBUser user) {
-
+	public DBUser getById(long id) {
 		Session session = null;
+		String query = "FROM DBUser WHERE id = ?";
 		try {
 			session = sessionFactory.getCurrentSession();
 			session.beginTransaction();
-			DBUser userUpdated = (DBUser) session.merge(user);
+			@SuppressWarnings("unchecked")
+			DBUser user = (DBUser) session.createQuery(query).setParameter(0, id).uniqueResult();
 			if (!session.getTransaction().wasCommitted())
 				session.getTransaction().commit();
+			return user;
+		} catch (HibernateException e) {
+			logger.error("HibernateException in UserDao" + ".getAll " + e.getMessage());
+			session.getTransaction().rollback();
+		} catch (Exception e) {
+			logger.error("Exception in UserDao" + ".getAll " + e.getMessage());
+			session.getTransaction().rollback();
+		}
+		return null;
+	}
+
+	public String editUser(DBUser user) {
+
+		Session session = null;
+		DBUser oldUser = getById(user.getId());
+		oldUser.setFirstName(user.getFirstName());
+		oldUser.setLastName(user.getLastName());
+		oldUser.setPassword(user.getPassword());
+		oldUser.setUserName(user.getUserName());
+		try {
+			session = sessionFactory.getCurrentSession();
+			session.beginTransaction();
+			session.update(oldUser);
+			if (!session.getTransaction().wasCommitted())
+				session.getTransaction().commit();
+			session.flush();
 		} catch (ConstraintViolationException e) {
 			session.getTransaction().rollback();
 			return "\"El nombre de usuario ya existe\"";

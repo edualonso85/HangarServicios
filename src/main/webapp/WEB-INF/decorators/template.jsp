@@ -24,15 +24,15 @@
 					<div class="row-fluid">
 						<div class="span12">
 							<h1 class="brandlogo">
-								<a href="index.html" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/hangarhead.png" alt="Hangar Servicios" /></a>							
+								<a href="index" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/hangarhead.png" alt="Hangar Servicios" /></a>							
 							</h1>		
 							<div class="topinfo">
 								<ul class="social-icons list-soc">						
-									<li><a href="https://www.facebook.com/profile.php?id=100001895700065&fref=ts" target="_blank" title = "<s:message code="title.fb"/>" ><i class="icon-facebook"></i></a></li>
+<%-- 									<li><a href="https://www.facebook.com/profile.php?id=100001895700065&fref=ts" target="_blank" title = "<s:message code="title.fb"/>" ><i class="icon-facebook"></i></a></li> --%>
 									<li><a href="#" id="login" title ="<s:message code="title.login"/>"><i class="icon-signin"></i></a></li>
 									<li><a href="#" target="_blank" title ="<s:message code="title.changeLenguage"/>"  data-toggle="modal" data-target="#modalLanguage" ><i class="icon-globe"></i></a></li>											
 								</ul>					
-								<a href="index.html" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/anios.png" alt="Hangar Servicios 20 años" /></a>
+								<a href="index" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/anios.png" alt="Hangar Servicios 20 años" /></a>
 							</div>
 						</div>						
 						<!-- Navigation -->
@@ -99,10 +99,10 @@
 								<h1><s:message code="menu.company.aboutUs"/></h1>
 								<hr>			
 								<div class="textwidget">
-									<p>Hangar Servicios es una empresa que brinda servicios de inspección aéreos especializados. La más avanzada tecnología, el know how y un staff altamente calificado permiten a Hangar Servicios auditar las redes de transmisión eléctrica para su efectivo mantenimiento correctivo y una justificada planificación del mantenimiento preventivo. </p>
+									<p><s:message code="footer.text"/></p>
 									
 									<p class="footerlogo">
-										<a href="index.html" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/hangarfoot.png" alt="Hangar Servicios" /></a>
+										<a href="index" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/hangarfoot.png" alt="Hangar Servicios" /></a>
 									</p>
 								</div>
 							</aside>
@@ -149,7 +149,7 @@
 						<div class="span8 smallspacetop">
 							<div class="pull-right smaller">
 								<ul id="menu-footer" class="footermenu">
-									<li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-49"><a href="index.html"><s:message code="menu.home"/></a></li>
+									<li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-49"><a href="index"><s:message code="menu.home"/></a></li>
 									<li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a href="about"><s:message code="menu.company"/></a></li>
 									<li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48"><a href="visualInspection"><s:message code="menu.services"/></a></li>
 									<li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47"><a href="on-LoadTapChangers"><s:message code="menu.products"/></a></li>

@@ -6,5 +6,8 @@ jQuery(document).ready(function(){
 		jQuery(this).addClass('active');
 		jQuery('#content div').addClass('hidden');
 		jQuery('#'+selectedDiv).removeClass('hidden');
+		jQuery('.procedures,.systems,.examples,.objetives').css('display','none');
+		jQuery('.'+selectedOption).css('display','block');
+		
 	});
 });

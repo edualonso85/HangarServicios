@@ -20,8 +20,8 @@ jQuery(document).ready(function(){
 					<div class="hero-unit box effect2" style="min-height: 250px;">
 						<h1 id="mainTitle"></h1>
 						<div class="entry-meta">
-							<div class="pull-left" id="mainCreatedDate"><i class="icon-calendar"></i>&nbsp; </div>
-						</div><!-- .entry-meta -->
+							<span class="entry-date" id="mainCreatedDate"><i class="icon-calendar"></i>&nbsp; </span>
+						</div>
 						<p id="mainContent">
 							<a class="entry-thumbnail pull-left paddingright top10" id="mainImageLink" href="<c:out value="${url}?id="/>" title="">
 								<img width="187" style="display:none" height="150" id="mainImage" src="" class="attachment-sticky-thumb wp-post-image"/>
@@ -29,7 +29,7 @@ jQuery(document).ready(function(){
 						</p>
 						<p>
 						<c:url value="new" var="url"></c:url>
-						<a id="mainNoticeId" href="<c:out value="${url}?id="/>" class="btn btn-primary btn-large">Leer más &rsaquo;</a> 
+						<a id="mainNoticeId" href="<c:out value="${url}?id="/>" class="btn btn-primary btn-large"><s:message code="button.readMore"></s:message></a> 
 						</p>
 					</div>						
 

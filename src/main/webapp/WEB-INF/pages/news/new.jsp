@@ -6,7 +6,7 @@
 <body>
 <div class="container">
 	<input id="idNotice" type="hidden" value="${notice.id_notice}"/>
-	<div class="headerdivider"></div>	
+	<div style="height: 7px;margin-bottom: 15px;"></div>	
 	<div class="entry-content">
 		<div class="row-fluid">
 			<div class="span8">
@@ -27,15 +27,42 @@
 					</main><!-- #main -->
 				</div><!-- #primary -->
 				<br>
-				<div id="myCarousel" align="center" style="background-color:black;display:none" class="carousel slide">
-	                <ol id="indicators" class="carousel-indicators">
-	                </ol>
-	                <div id="images" class="carousel-inner">
-	                </div>
-	                <a class="left carousel-control" href="#myCarousel" style="border-radius:23px;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;" data-slide="prev">&lsaquo;</a>
-	                <a class="right carousel-control" href="#myCarousel" style="border-radius:23px;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;" data-slide="next">&rsaquo;</a>
-              </div>	
-			</div>
+				<div id="slider2_container" align="center" style="background-color: blanchedalmond;position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; ">
+			        <!-- Loading Screen -->
+			        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+			            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+			                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+			            </div>
+			            <div style="position: absolute; display: block; background: url(./resources/img/loading.gif) no-repeat center center;
+			                top: 0px; left: 0px;width: 100%;height:100%;">
+			            </div>
+			        </div>
+			
+			        <!-- Slides Container -->
+			        <div u="slides" id="mainImages" align="center" style="cursor: move; left: 0px; top: 0px; width: 600px; height: 300px; overflow: hidden;">
+			        </div>
+			        
+			        <!-- Arrow Left -->
+			        <span u="arrowleft" class="jssora02l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
+			        </span>
+			        <!-- Arrow Right -->
+			        <span u="arrowright" class="jssora02r" style="width: 55px; height: 55px; top: 123px; right: 8px">
+			        </span>
+			        <!-- Arrow Navigator Skin End -->
+			        
+			        <!-- ThumbnailNavigator Skin Begin -->
+			        <div u="thumbnavigator" class="jssort03" style="position: absolute; width: 600px; height: 60px; left:0px; bottom: 0px;">
+			            <div style=" background-color: #000; filter:alpha(opacity=30); opacity:.3; width: 100%; height:100%;"></div>
+			            <div u="slides" style="position:cursor: move;">
+			                <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 62px; HEIGHT: 32px; TOP: 0; LEFT: 0;">
+			                    <div class=w><ThumbnailTemplate style=" WIDTH: 100%; HEIGHT: 100%; border: none;position:absolute; TOP: 0; LEFT: 0;"></ThumbnailTemplate></div>
+			                    <div class=c style="POSITION: absolute; BACKGROUND-COLOR: #000; TOP: 0; LEFT: 0">
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			   </div> 
 			<div class="span4">
 				<div id="secondary" class="widget-area" role="complementary">
 					<aside class="multi-sidebar-container">
@@ -61,9 +88,11 @@
 					</aside>
 				</div>
 			</div>
-		</div>
 	</div>
 </div>		
-<script type='text/javascript' src='resources/js/custom-functions/oneNoticeManager.js'></script>
-<%@include file="../includesPlugins/lightbox.jsp"%>
+	<script type='text/javascript' src='resources/js/custom-functions/servicesLateralMenu.js'></script>
+	<script type='text/javascript' src='resources/js/plugins/jssor.slider.mini.js'></script>
+	<link rel='stylesheet' href='resources/css/home/carousel.css' type='text/css'/>
+	<%@include file="../includesPlugins/lightbox.jsp"%>
+	<script type='text/javascript' src='resources/js/custom-functions/oneNoticeManager.js'></script>
 </body>

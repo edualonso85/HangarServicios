@@ -136,6 +136,43 @@ div.header {
 {
 	float: bottom;
 }
+
+.visualInspImg:hover{
+	background-image: url('../../img/page/inspecciones-on.jpg') !important;
+}
+
+.loadTapImg:hover{
+	background-image: url('../../img/page/conmutadores-on.jpg') !important;
+}
+
+.autoContrImg:hover{
+	background-image: url('../../img/page/reguladores-on.jpg') !important;
+}
+
+.visualInspImg-en:hover{
+	background-image: url('../../img/page/inspection-en-on.jpg') !important;
+}
+
+.loadTapImg-en:hover{
+	background-image: url('../../img/page/changers-en-on.jpg') !important;
+}
+
+.autoContrImg-en:hover{
+	background-image: url('../../img/page/controllers-en-on.jpg') !important;
+}
+
+.visualInspImg-por:hover{
+	background-image: url('../../img/page/inspecao-por-on.jpg') !important;
+}
+
+.loadTapImg-por:hover{
+	background-image: url('../../img/page/comutadores-por-on.jpg') !important;
+}
+
+.autoContrImg-por:hover{
+	background-image: url('../../img/page/reguladores-por-on.jpg') !important;
+}
+
 .tabimage {
 	background: #f0b70c;
 	color: #fff;
@@ -203,7 +240,7 @@ div.header {
 }
 
 .menu-lateral.services li{
-	text-transform: uppercase;	
+/* 	text-transform: uppercase;	 */
 	font-weight:bold;
 }
 
@@ -2023,7 +2060,7 @@ font-size:13px!important;
 margin:0 10px 5px 0;
 padding:0 10px 2px;
 background:#333;
-font-family:'open_sansitalic';
+font-family:'open_sanslight';
 }
 a.tagcloud:hover,.tagcloud a:hover {
 background:#e7402f
@@ -2518,11 +2555,11 @@ margin-bottom:10px
 }
 .nav-previous {
 float:left;
-font-family:'open_sansitalic';
+font-family:'open_sanslight';
 }
 .nav-next {
 text-align:right;
-font-family: 'open_sansitalic';
+font-family: 'open_sanslight';
 }
 /* Section Title*/
 .sectiontitlepost {
@@ -2604,7 +2641,7 @@ padding:3px;
 blockquote p {
 line-height:inherit;
 font-size:13px;
-font-family:open_sansitalic;
+font-family:open_sanslight;
 }
 cite {
 margin-left:20px;
@@ -2960,10 +2997,10 @@ font-family:open_sansregular;
 font-family:open_sansbold;
 }
 .fontitalic {
-font-family:open_sansitalic;
+font-family:open_sanslight;
 }
 i {
-font-family: open_sansitalic,arial;
+font-family: open_sanslight,arial;
 }
 /* WORDPRESS CSS */
 .bypostauthor {

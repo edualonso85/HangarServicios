@@ -7,85 +7,21 @@ jQuery(document).ready(function(){
 	jQuery("#menu-header li ul li").removeClass("active");
 	jQuery("#servicesMenu ul #visualInspectionMenu").addClass("active");
 	jQuery("#servicesMenu").addClass("active");
-	jQuery(document).ready(function ($) {
-        var options = {
-        	$FillMode: 1,
-            $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-            $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
-            $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-            $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
-
-            $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
-            $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
-            $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
-            //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
-            //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
-            $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
-            $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
-            $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
-            $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
-            $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
-            $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
-
-            $ArrowNavigatorOptions: {
-                $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
-                $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-                $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
-            },
-
-            $ThumbnailNavigatorOptions: {
-                $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
-                $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
-
-                $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
-                $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
-                $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
-                $SpacingX: 3,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
-                $SpacingY: 3,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
-                $DisplayPieces: 9,                              //[Optional] Number of pieces to display, default value is 1
-                $ParkingPosition: 260,                          //[Optional] The offset position to park thumbnail
-                $Orientation: 1,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
-                $DisableDrag: false                            //[Optional] Disable drag or not, default value is false
-            }
-        };
-
-        var jssor_slider2 = new $JssorSlider$("slider2_container", options);
-        //responsive code begin
-        //you can remove responsive code if you don't want the slider scales while window resizes
-        function ScaleSlider() {
-            var parentWidth = jssor_slider2.$Elmt.parentNode.clientWidth;
-            if (parentWidth)
-                jssor_slider2.$SetScaleWidth(Math.min(parentWidth, 1040));
-            else
-                window.setTimeout(ScaleSlider, 30);
-        }
-
-        ScaleSlider();
-
-        if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
-            $(window).bind('resize', ScaleSlider);
-        }
-
-
-        //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
-        //    $(window).bind("orientationchange", ScaleSlider);
-        //}
-        //responsive code end
-    });
+    
 });
 </script>
 	<div class="row-fluid">		
 		<div class="span12">			
-			<img id="imageHeader" src="resources/img/header/VISUAL-ESP.jpg" alt="Inspeccion Visual" />
+			<img id="imageHeader" src="<s:message code="label.visualInspection.image"/>" alt="Inspeccion Visual" />
 		</div>
 	</div>
 	<div class="row-fluid container margintop-50">
 		<div class="span3">
 			<ul id='lateralMenu' class="menu-lateral services visualInspection">
-				<li class="active" id="procedures"><s:message code="menu.services.visualInspection.procedures"/></li>
-				<li id="systems"><s:message code="menu.services.visualInspection.systems"/></li>
-				<li id="objetives"><s:message code="menu.services.visualInspection.objetives"/></li>
-				<li id="examples"><s:message code="menu.services.visualInspection.examples"/></li>
+				<li class="active lateralOption" id="procedures"><s:message code="menu.services.visualInspection.procedures"/></li>
+				<li id="systems" class="lateralOption"><s:message code="menu.services.visualInspection.systems"/></li>
+				<li id="objetives" class="lateralOption"><s:message code="menu.services.visualInspection.objetives"/></li>
+				<li id="examples" class="lateralOption"><s:message code="menu.services.visualInspection.examples"/></li>
 			</ul>
 		</div>
 		
@@ -122,26 +58,11 @@ jQuery(document).ready(function(){
 		</div>
 		
 		<div id="examples-content" class="span9 hidden">
-			VER QUE VA ACA
 		</div>	
 		</div>
 	</div>
-<!-- 	<br> -->
-<!-- 	<div class="row-fluid container"> -->
-<!-- 		<div id="myCarousel" align="center" style="background-color:black" class="carousel slide"> -->
-<!--                 <ol class="carousel-indicators"> -->
-<!--                   <li data-target="#myCarousel" style="border-radius:5px" data-slide-to="0" class="active"></li> -->
-<!--                 </ol> -->
-<!--                 <div class="carousel-inner"> -->
-<!--                   <div class="item active"> -->
-<!--                     <img src="resources/img/visual/visual1g.jpg" alt=""> -->
-<!--                   </div> -->
-<!--                 </div> -->
-<!--                 <a class="left carousel-control" href="#myCarousel" style="border-radius:23px;font-family:Helvetica Neue, Helvetica, Arial, sans-serif;" data-slide="prev">&lsaquo;</a> -->
-<!--                 <a class="right carousel-control" href="#myCarousel" style="border-radius:23px;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;" data-slide="next">&rsaquo;</a> -->
-<!--               </div> -->
-<!-- 	</div> -->
-	<div id="slider2_container" align="center" style="background-color: blanchedalmond;position: relative; top: 0px; left: 0px; width: 1040px; height: 300px; overflow: hidden; ">
+	<br>
+	<div id="slider1_container" class="procedures" align="center" style="background-color: blanchedalmond;position: relative; top: 0px; left: 0px; width: 1040px; height: 300px; overflow: hidden; ">
 
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -155,38 +76,32 @@ jQuery(document).ready(function(){
 
         <!-- Slides Container -->
         <div u="slides" align="center" style="cursor: move; left: 0px; top: 0px; width: 1040px; height: 300px; overflow: hidden;">
-            <div align="center" style="position:relative !important">
-                <img u="image" src="resources/img/visual/visual1g.jpg" />
-                <img u="thumb" src="resources/img/visual/visual1g.jpg" />
+            <div align="center">
+                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-01.jpg" />
+                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-01.jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-02.jpg" />
+                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-02.jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-03.jpg" />
+                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-03.jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-04.jpg" />
+                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-04.jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-05.jpg" />
+                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-05.jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-06.jpg" />
+                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-06.jpg" />
             </div>
         </div>
         
-        <!-- Arrow Navigator Skin Begin -->
-        <style>
-            /* jssor slider arrow navigator skin 02 css */
-            /*
-            .jssora02l              (normal)
-            .jssora02r              (normal)
-            .jssora02l:hover        (normal mouseover)
-            .jssora02r:hover        (normal mouseover)
-            .jssora02ldn            (mousedown)
-            .jssora02rdn            (mousedown)
-            */
-            .jssora02l, .jssora02r, .jssora02ldn, .jssora02rdn
-            {
-            	position: absolute;
-            	cursor: pointer;
-            	display: block;
-                background: url(./resources/img/a02.png) no-repeat;
-                overflow:hidden;
-            }
-            .jssora02l { background-position: -3px -33px; }
-            .jssora02r { background-position: -63px -33px; }
-            .jssora02l:hover { background-position: -123px -33px; }
-            .jssora02r:hover { background-position: -183px -33px; }
-            .jssora02ldn { background-position: -243px -33px; }
-            .jssora02rdn { background-position: -303px -33px; }
-        </style>
         <!-- Arrow Left -->
         <span u="arrowleft" class="jssora02l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
         </span>
@@ -198,55 +113,510 @@ jQuery(document).ready(function(){
         <!-- ThumbnailNavigator Skin Begin -->
         <div u="thumbnavigator" class="jssort03" style="position: absolute; width: 1040px; height: 60px; left:0px; bottom: 0px;">
             <div style=" background-color: #000; filter:alpha(opacity=30); opacity:.3; width: 100%; height:100%;"></div>
+            <div u="slides" style="position:cursor: move;">
+                <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 62px; HEIGHT: 32px; TOP: 0; LEFT: 0;">
+                    <div class=w><ThumbnailTemplate style=" WIDTH: 100%; HEIGHT: 100%; border: none;position:absolute; TOP: 0; LEFT: 0;"></ThumbnailTemplate></div>
+                    <div class=c style="POSITION: absolute; BACKGROUND-COLOR: #000; TOP: 0; LEFT: 0">
+                    </div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- ThumbnailNavigator Skin End -->
+<!--         <a style="display: none" href="http://www.jssor.com">javascript</a> -->
+    </div>
+	<div id="slider2_container" class="systems" align="center" style="display:none;background-color: blanchedalmond;position: relative; top: 0px; left: 0px; width: 1040px; height: 300px; overflow: hidden; ">
 
-            <!-- Thumbnail Item Skin Begin -->
-            <style>
-                /* jssor slider thumbnail navigator skin 03 css */
-                /*
-                .jssort03 .p            (normal)
-                .jssort03 .p:hover      (normal mouseover)
-                .jssort03 .pav          (active)
-                .jssort03 .pav:hover    (active mouseover)
-                .jssort03 .pdn          (mousedown)
-                */
-                .jssort03 .w, .jssort03 .pav:hover .w
-                {
-                	position: absolute;
-                	width: 60px;
-                	height: 30px;
-                	border: white 1px dashed;
-                }
-                * html .jssort03 .w
-                {
-                	width /**/: 62px;
-                	height /**/: 32px;
-                }
-                .jssort03 .pdn .w, .jssort03 .pav .w { border-style: solid; }
-                .jssort03 .c
-                {
-                	width: 62px;
-                	height: 32px;
-                	filter:  alpha(opacity=45);
-                	opacity: .45;
-                	
-                	transition: opacity .6s;
-                    -moz-transition: opacity .6s;
-                    -webkit-transition: opacity .6s;
-                    -o-transition: opacity .6s;
-                }
-                .jssort03 .p:hover .c, .jssort03 .pav .c
-                {
-                	filter:  alpha(opacity=0);
-                	opacity: 0;
-                }
-                .jssort03 .p:hover .c
-                {
-                	transition: none;
-                    -moz-transition: none;
-                    -webkit-transition: none;
-                    -o-transition: none;
-                }
-            </style>
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(./resources/img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" align="center" style="cursor: move; left: 0px; top: 0px; width: 1040px; height: 300px; overflow: hidden;">
+            <div align="center">
+                <img u="image" src="resources/img/visual/systems/SISTEMAS-01.jpg" />
+                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-01.jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/systems/SISTEMAS-02.jpg" />
+                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-02.jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/systems/SISTEMAS-03.jpg" />
+                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-03.jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/systems/SISTEMAS-04.jpg" />
+                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-04.jpg" />
+            </div>
+        </div>
+        
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora02l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora02r" style="width: 55px; height: 55px; top: 123px; right: 8px">
+        </span>
+        <!-- Arrow Navigator Skin End -->
+        
+        <!-- ThumbnailNavigator Skin Begin -->
+        <div u="thumbnavigator" class="jssort03" style="position: absolute; width: 1040px; height: 60px; left:0px; bottom: 0px;">
+            <div style=" background-color: #000; filter:alpha(opacity=30); opacity:.3; width: 100%; height:100%;"></div>
+            <div u="slides" style="position:cursor: move;">
+                <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 62px; HEIGHT: 32px; TOP: 0; LEFT: 0;">
+                    <div class=w><ThumbnailTemplate style=" WIDTH: 100%; HEIGHT: 100%; border: none;position:absolute; TOP: 0; LEFT: 0;"></ThumbnailTemplate></div>
+                    <div class=c style="POSITION: absolute; BACKGROUND-COLOR: #000; TOP: 0; LEFT: 0">
+                    </div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- ThumbnailNavigator Skin End -->
+<!--         <a style="display: none" href="http://www.jssor.com">javascript</a> -->
+    </div>
+	<div id="slider3_container" class="objetives" align="center" style="display:none;background-color: blanchedalmond;position: relative; top: 0px; left: 0px; width: 1040px; height: 300px; overflow: hidden; ">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(./resources/img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" align="center" style="cursor: move; left: 0px; top: 0px; width: 1040px; height: 300px; overflow: hidden;">
+            <div align="center">
+                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(1).jpg" />
+                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(1).jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(2).jpg" />
+                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(2).jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(3).jpg" />
+                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(3).jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(4).jpg" />
+                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(4).jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(5).jpg" />
+                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(5).jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(6).jpg" />
+                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(6).jpg" />
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(7).jpg" />
+                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(7).jpg" />
+            </div>
+        </div>
+        
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora02l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora02r" style="width: 55px; height: 55px; top: 123px; right: 8px">
+        </span>
+        <!-- Arrow Navigator Skin End -->
+        
+        <!-- ThumbnailNavigator Skin Begin -->
+        <div u="thumbnavigator" class="jssort03" style="position: absolute; width: 1040px; height: 60px; left:0px; bottom: 0px;">
+            <div style=" background-color: #000; filter:alpha(opacity=30); opacity:.3; width: 100%; height:100%;"></div>
+            <div u="slides" style="position:cursor: move;">
+                <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 62px; HEIGHT: 32px; TOP: 0; LEFT: 0;">
+                    <div class=w><ThumbnailTemplate style=" WIDTH: 100%; HEIGHT: 100%; border: none;position:absolute; TOP: 0; LEFT: 0;"></ThumbnailTemplate></div>
+                    <div class=c style="POSITION: absolute; BACKGROUND-COLOR: #000; TOP: 0; LEFT: 0">
+                    </div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- ThumbnailNavigator Skin End -->
+<!--         <a style="display: none" href="http://www.jssor.com">javascript</a> -->
+    </div>
+	<div id="slider4_container" class="examples" align="center" style="display:none;background-color: blanchedalmond;position: relative; top: 0px; left: 0px; width: 1040px; height: 300px; overflow: hidden; ">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(./resources/img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" align="center" style="cursor: move; left: 0px; top: 0px; width: 1040px; height: 300px; overflow: hidden;">
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorConDescarga.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorConDescarga.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Con Descarga
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorContorneado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorContorneado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Contorneado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorContorneado2.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorContorneado2.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Contorneado 2
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorDeteriorado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorDeteriorado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Deteriorado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorDeVidrioContorneado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorDeVidrioContorneado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador De Vidrio Contorneado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladoresRotos.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladoresRotos.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aisladores Rotos
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladoresRotos2.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladoresRotos2.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aisladores Rotos 2
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladoresRotos3.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladoresRotos3.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aisladores Rotos 3
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorLinePostComidoPorPajaros.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorLinePostComidoPorPajaros.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Line Post Comido Pájaros
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorLinePostConDescarga.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorLinePostConDescarga.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Line Post Con Descarga
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorLinePostDanado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorLinePostDanado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Line Post Dañado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorLinePostDanado2.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorLinePostDanado2.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Line Post Dañado 2
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorOrganicoComidoPorPajaros.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorOrganicoComidoPorPajaros.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Orgánico Comido Por Pájaros
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorOrganicoConDescarga.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorOrganicoConDescarga.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Orgánico Con Descarga
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorOrganicoDanado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorOrganicoDanado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Orgánico Dañado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorOrganicoDanado2.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorOrganicoDanado2.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Orgánico Dañado 2
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorOrganicoPerforado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorOrganicoPerforado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Orgánico Perforado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorRoto.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorRoto.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Roto
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorRoto2.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorRoto2.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Roto 2
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorRoto3.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorRoto3.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Roto 3
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorRoto4.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorRoto4.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Roto 4
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorRoto5.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorRoto5.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Roto 5
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/AisladorRoto6.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/AisladorRoto6.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Aislador Roto 6
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/BaseDescalzada.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/BaseDescalzada.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Base Descalzada
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/BaseDescalzada2.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/BaseDescalzada2.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Base Descalzada 2
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/ChavetaSalida.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/ChavetaSalida.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Chaveta Salida
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/ChavetaSalida2.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/ChavetaSalida2.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Chaveta Salida 2
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/ConductorDanado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/ConductorDanado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Conductor Dañado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Conductor Deshilachado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado2.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado2.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Conductor Deshilachado 2
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado3.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado3.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Conductor Deshilachado 3
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado4.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado4.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Conductor Deshilachado 4
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado5.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado5.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Conductor Deshilachado 5
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado6.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado6.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Conductor Deshilachado 6
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/ElementoExtranoEnConductor.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/ElementoExtranoEnConductor.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Elemento Extraño en Conductor
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/ElementoExtranoEnHiloDeGuardia.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/ElementoExtranoEnHiloDeGuardia.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Elemento Extraño en Hilo de Guardia
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/EspaciadorDanado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/EspaciadorDanado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Espaciador Dañado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/EspaciadorDanado2.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/EspaciadorDanado2.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Espaciador Dañado 2
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/EspaciadorDesprendido.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/EspaciadorDesprendido.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Espaciador Desprendido
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/FaltaTuercaEnMorseto.JPG" />
+                <img u="thumb" src="resources/img/visual/examples/FaltaTuercaEnMorseto.JPG" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Falta Tuerca en Morseto
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/FaltaTuercaMorsaSuspension.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/FaltaTuercaMorsaSuspension.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Falta Tuerca en Morsa Suspensión
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/HiloDeGuardiaDeshilachado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/HiloDeGuardiaDeshilachado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Hilo de Guardia Deshilachado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/NidoEnPoste.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/NidoEnPoste.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Nido en Poste
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/PerfilSalido.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/PerfilSalido.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Perfil Salido
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/PosteDeteriorado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/PosteDeteriorado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Poste Deteriorado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/PosteDeteriorado2.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/PosteDeteriorado2.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Poste Deteriorado 2
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/PosteInclinado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/PosteInclinado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Poste Inclinado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/StockBridgeDanado.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/StockBridgeDanado.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                StockBridge Dañado
+                </div> 
+            </div>
+            <div align="center">
+                <img u="image" src="resources/img/visual/examples/TuercaFloja.jpg" />
+                <img u="thumb" src="resources/img/visual/examples/TuercaFloja.jpg" />
+                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
+                Tuerca Floja
+                </div> 
+            </div>
+        </div>
+        
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora02l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora02r" style="width: 55px; height: 55px; top: 123px; right: 8px">
+        </span>
+        <!-- Arrow Navigator Skin End -->
+        
+        <!-- ThumbnailNavigator Skin Begin -->
+        <div u="thumbnavigator" class="jssort03" style="position: absolute; width: 1040px; height: 60px; left:0px; bottom: 0px;">
+            <div style=" background-color: #000; filter:alpha(opacity=30); opacity:.3; width: 100%; height:100%;"></div>
             <div u="slides" style="position:cursor: move;">
                 <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 62px; HEIGHT: 32px; TOP: 0; LEFT: 0;">
                     <div class=w><ThumbnailTemplate style=" WIDTH: 100%; HEIGHT: 100%; border: none;position:absolute; TOP: 0; LEFT: 0;"></ThumbnailTemplate></div>
@@ -260,5 +630,7 @@ jQuery(document).ready(function(){
 <!--         <a style="display: none" href="http://www.jssor.com">javascript</a> -->
     </div>
 	<script type='text/javascript' src='resources/js/custom-functions/servicesLateralMenu.js'></script>
+	<script type='text/javascript' src='resources/js/custom-functions/visualInspectionCarousel.js'></script>
 	<script type='text/javascript' src='resources/js/plugins/jssor.slider.mini.js'></script>
+	<link rel='stylesheet' href='resources/css/home/carousel.css' type='text/css'/>
 </body>

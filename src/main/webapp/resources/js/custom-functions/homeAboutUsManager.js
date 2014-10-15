@@ -1,7 +1,7 @@
 var $ =jQuery.noConflict();
 $(document).ready(function(){
 	$('#hangarServicios').click(function(){
-		$("li[class=active]").removeClass("active");		
+		$(".menu-lateral li").removeClass("active");
 		$(this).addClass("active");
 		$("#imageHeader").attr("src","resources/img/header/hangarservicios.jpg");
 		$("div[id^=about]").each(function(){
@@ -13,7 +13,7 @@ $(document).ready(function(){
 	});
 	
 	$('#knowHow').click(function(){
-		$("li[class=active]").removeClass("active");		
+		$(".menu-lateral li").removeClass("active");
 		$(this).addClass("active");
 		$("#imageHeader").attr("src","resources/img/header/tecnificacion.jpg");
 		$("div[id^=about]").each(function(){
@@ -25,7 +25,7 @@ $(document).ready(function(){
 	});
 	
 	$('#methodology').click(function(){
-		$("li[class=active]").removeClass("active");		
+		$(".menu-lateral li").removeClass("active");
 		$(this).addClass("active");
 		$("#imageHeader").attr("src","resources/img/header/metodologia.jpg");
 		$("div[id^=about]").each(function(){
@@ -37,7 +37,7 @@ $(document).ready(function(){
 	});
 	
 	$('#experience').click(function(){
-		$("li[class=active]").removeClass("active");		
+		$(".menu-lateral li").removeClass("active");
 		$(this).addClass("active");
 		$("#imageHeader").attr("src","resources/img/header/experiencia.jpg");
 		$("div[id^=about]").each(function(){
@@ -49,7 +49,7 @@ $(document).ready(function(){
 	});
 	
 	$('#inTheWorld').click(function(){
-		$("li[class=active]").removeClass("active");		
+		$(".menu-lateral li").removeClass("active");
 		$(this).addClass("active");
 		$("#imageHeader").attr("src","resources/img/header/en-el-mundo.jpg");
 		$("div[id^=about]").each(function(){
@@ -60,8 +60,8 @@ $(document).ready(function(){
 		})
 	});
 	
-	$('#quality').click(function(){
-		$("li[class=active]").removeClass("active");		
+	$('#quality').click(function(){	
+		$(".menu-lateral li").removeClass("active");	
 		$(this).addClass("active");
 		$("#imageHeader").attr("src","resources/img/header/calidad.jpg");
 		$("div[id^=about]").each(function(){

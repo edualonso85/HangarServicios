@@ -293,7 +293,7 @@ margin-bottom: 31px;
 }
 
 .striped {
-background: url(../img/bisimg/stripes.png) repeat;
+/* background: url(../img/bisimg/stripes.png) repeat; */
 min-height: 40px;
 margin-top: -20px;
 padding-left: 20px;

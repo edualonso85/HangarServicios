@@ -11,17 +11,17 @@ jQuery(document).ready(function(){
 </script>
 	<div class="row-fluid">		
 		<div class="span12">			
-			<img id="imageHeader" src="resources/img/header/OTROS-ESP.jpg" alt="Inspeccion Visual" />
+			<img id="imageHeader" src="<s:message code="label.otherServices.image"/>" alt="Otros Servicios" />
 		</div>
 	</div>
 	<div class="row-fluid container margintop-50">
 		<div class="span3">
 			<ul id='lateralMenu' class="menu-lateral services">
-				<li id="otherServices" class="active"><s:message code="menu.services.otherServices.otherServices"/></li>
+				<li id="otherServices" class="active lateralOption"><s:message code="menu.services.otherServices.otherServices"/></li>
 			</ul>
 		</div>
 		<div id="content">
-		<div id="otherServices-content" class="span9">
+		<div id="otherServices-content" style="margin-left:20px" class="span9">
 			<h5><s:message code="menu.services.otherServices.polymericInsulators"/></h5>
 			<p><s:message code="text.services.otherServices.polymericInsulators.p1"/></p>
 			<p><s:message code="text.services.otherServices.polymericInsulators.p2"/></p>
