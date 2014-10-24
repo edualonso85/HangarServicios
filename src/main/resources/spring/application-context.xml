@@ -31,11 +31,11 @@
     </bean> 
     
        <!-- Nos permite cambiar el “Locale” actual en cada petición al servidor, mediante el uso de un parámetro que debemos especificar. -->
-    <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
-	    <property name="paramName">
-	        <value>siteLanguage</value>
-	    </property>
-	</bean> 
+<!--     <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"> -->
+<!-- 	    <property name="paramName"> -->
+<!-- 	        <value>siteLanguage</value> -->
+<!-- 	    </property> -->
+<!-- 	</bean>  -->
 	
     <!-- “SessionLocaleResolver”  utiliza la sesión del usuario para especificar el “Locale” actual.  -->  
     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
@@ -43,13 +43,13 @@
     </bean>
     
     <!-- Se carga el interceptor en el “urlMapping” de nuestra aplicación. -->
-    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
-	    <property name="interceptors">
-	        <list>
-	            <ref bean="localeChangeInterceptor"/>
-	        </list>
-	    </property>
-	</bean>
+<!--     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"> -->
+<!-- 	    <property name="interceptors"> -->
+<!-- 	        <list> -->
+<!-- 	            <ref bean="localeChangeInterceptor"/> -->
+<!-- 	        </list> -->
+<!-- 	    </property> -->
+<!-- 	</bean> -->
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
         destroy-method="close">

@@ -239,29 +239,33 @@ div.header {
 	font-weight:bold;
 }
 
-.menu-lateral.services li{
-/* 	text-transform: uppercase;	 */
-	font-weight:bold;
-}
+/* .menu-lateral.services li{ */
+/* /* 	text-transform: uppercase;	 */ */
+/* 	font-weight:bold; */
+/* } */
 
-.menu-lateral.services.visualInspection li{
+.menu-lateral.services.visualInspection li.active{
 	color:#FDC300;
 }
 
-.menu-lateral.services.cartography li{
+.menu-lateral.services.cartography li.active{
 	color:#56AA5D;
 }
 
-.menu-lateral.services.corona li{
+.menu-lateral.services.corona li.active{
 	color:#13B3E3;
 }
 
-.menu-lateral.services.thermography li{
-	color:#FF961E;
+.menu-lateral.services.thermography li.active{
+	color:#d34539;
 }
 
-.menu-lateral.services li.active{
-	color:#C2C2C4;
+.menu-lateral.products.onTapLoadChanger li.active{
+	color:#2f56a3;
+}
+
+.menu-lateral.products.automaticController li.active{
+	color:#F1921F;
 }
 
 span.bold {

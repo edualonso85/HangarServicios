@@ -15,6 +15,8 @@
 		.captionicons {margin-right:5px;}
 		input, button, select, textarea {font-family:'open_sansregular';}
 		.listElements li{list-style: outside;padding-bottom: 5px;}	
+		.listElements.numbers li{font-weight:bold;color:black; list-style-type: decimal;padding-bottom: 5px;}	
+		.listElements.numbers li span{font-weight:normal;color:#888888;}	
 		p{margin: 0 0 10px;}
 		.lateralOption:hover{font-weight: bold !important;color:black !important;}	
 	</style>

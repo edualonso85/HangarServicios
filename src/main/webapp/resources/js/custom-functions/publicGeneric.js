@@ -13,7 +13,7 @@ jQuery(document).ready(function() {
 				   jQuery('#quotes').append(
 						   '<div class="textItem">'+							
 							'<b>'+object.title+'</b>'+
-							'<p><span style="font-family:arial;">"</span>'+object.content+'[...] <span style="font-family:arial;">"</span></p>'+
+							'<p><span style="font-family:arial;">"</span>'+object.content+' [...] <span style="font-family:arial;">"</span></p>'+
 							'</div>');
 				});			
 			   jQuery('.textItem').quovolver();	

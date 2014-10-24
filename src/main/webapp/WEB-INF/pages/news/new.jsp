@@ -27,7 +27,7 @@
 					</main><!-- #main -->
 				</div><!-- #primary -->
 				<br>
-				<div id="slider2_container" align="center" style="background-color: blanchedalmond;position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; ">
+				<div id="slider2_container" align="center" style="display:none;background-color: blanchedalmond;position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; ">
 			        <!-- Loading Screen -->
 			        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
 			            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;

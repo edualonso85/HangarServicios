@@ -90,7 +90,7 @@
 		</div>
 		<div id="about-quality-images" class="span4 hidden">
 			<img src="resources/img/page/quality1.jpg" class="margintop-15" alt="Calidad" />
-			<a href="resources/pdf/certificado_ISO.pdf"><img  src="resources/img/page/quality2.jpg" class="margintop-15" alt="Calidad" /></a>
+			<a target="_blanck" href="resources/pdf/certificado_ISO.pdf"><img  src="resources/img/page/quality2.jpg" class="margintop-15" alt="Calidad" /></a>
 		</div>
 	</div>
 	<script type='text/javascript' src='resources/js/custom-functions/homeAboutUsManager.js'></script>

@@ -16,9 +16,9 @@ jQuery(document).ready(function(){
 	</div>
 	<div class="row-fluid container margintop-50">
 		<div class="span3">
-			<ul id='lateralMenu' class="menu-lateral services">
-				<li id="otherServices" class="active lateralOption"><s:message code="menu.services.otherServices.otherServices"/></li>
-			</ul>
+<!-- 			<ul id='lateralMenu' class="menu-lateral services"> -->
+<%-- 				<li id="otherServices" class="active lateralOption"><s:message code="menu.services.otherServices.otherServices"/></li> --%>
+<!-- 			</ul> -->
 		</div>
 		<div id="content">
 		<div id="otherServices-content" style="margin-left:20px" class="span9">

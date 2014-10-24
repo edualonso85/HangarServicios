@@ -8,7 +8,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Hangar Servicios</title>
-	<link rel="icon" type="image/png"  href="<c:url value='/resources/images/LogoWeb.png'/>" />
+	<link rel="shortcut icon"  href="<c:url value='/resources/img/Iso-01.png'/>" />
+	<link rel="icon" href="<c:url value='/resources/img/Iso-01.png'/>"/>
 	<%@include file="stylesheets.jsp"%>
 	<decorator:head></decorator:head>
 </head>
@@ -27,10 +28,18 @@
 								<a href="index" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/hangarhead.png" alt="Hangar Servicios" /></a>							
 							</h1>		
 							<div class="topinfo">
-								<ul class="social-icons list-soc">						
-<%-- 									<li><a href="https://www.facebook.com/profile.php?id=100001895700065&fref=ts" target="_blank" title = "<s:message code="title.fb"/>" ><i class="icon-facebook"></i></a></li> --%>
-									<li><a href="#" id="login" title ="<s:message code="title.login"/>"><i class="icon-signin"></i></a></li>
-									<li><a href="#" target="_blank" title ="<s:message code="title.changeLenguage"/>"  data-toggle="modal" data-target="#modalLanguage" ><i class="icon-globe"></i></a></li>											
+								<ul style="height: 26px" class="social-icons list-soc">	
+									<a style="padding-right: 5px;color:white" href="<c:url value='/changeLanguage'><c:param name='lang' value='es_ES'/></c:url>">
+						      			<s:message code="label.spanish"/>
+						      		</a>					
+									<a style="padding-right: 5px;color:white" href="<c:url value='/changeLanguage'><c:param name='lang' value='en_US'/></c:url>">
+						      			<s:message code="label.english"/>
+						      		</a>					
+									<a style="padding-right: 5px;color:white" href="<c:url value='/changeLanguage'><c:param name='lang' value='pt_PT'/></c:url>">
+						      			<s:message code="label.portuguese"/>
+						      		</a>					
+									<li style="float:right"><a href="#" id="login" title ="<s:message code="title.login"/>"><i class="icon-signin"></i></a></li>
+<%-- 									<li><a href="#" target="_blank" title ="<s:message code="title.changeLenguage"/>"  data-toggle="modal" data-target="#modalLanguage" ><i class="icon-globe"></i></a></li>											 --%>
 								</ul>					
 								<a href="index" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/anios.png" alt="Hangar Servicios 20 años" /></a>
 							</div>

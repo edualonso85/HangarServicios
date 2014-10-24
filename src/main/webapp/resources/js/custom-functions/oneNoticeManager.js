@@ -26,7 +26,10 @@ function loadNoticeImageDetail(){
 				$('#div'+index).append(newThumb);	
 			});
 			
-			createCarousel();
+			if(notice.images.length>0){
+				createCarousel();
+				
+			}
 				
 		}
 	});
@@ -60,7 +63,7 @@ function createCarousel(){
 
 	        $ThumbnailNavigatorOptions: {
 	        	$Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
-	            $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+	            $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
 	            $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
 	            $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
 	            $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
@@ -89,4 +92,7 @@ function createCarousel(){
 	    if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
 	    	$(window).bind('resize', ScaleSlider);
 	    }
+	    
+	    $('#slider2_container').css('display','block');
+	    
 }

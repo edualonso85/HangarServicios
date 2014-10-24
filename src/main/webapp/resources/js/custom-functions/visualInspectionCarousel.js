@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
 
 	        $ThumbnailNavigatorOptions: {
 	        	$Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
-	            $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+	            $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
 	            $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
 	            $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
 	            $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
@@ -50,28 +50,28 @@ jQuery(document).ready(function($){
 	        if (parentWidth)
 	        	jssor_slider1.$SetScaleWidth(Math.min(parentWidth, 1040));
 	        else
-	            window.setTimeout(ScaleSlider, 30);
+	            window.setTimeout(ScaleSlider1, 30);
 	    }
 	    function ScaleSlider2() {
 	    	var parentWidth = jssor_slider2.$Elmt.parentNode.clientWidth;
 	    	if (parentWidth)
 	    		jssor_slider2.$SetScaleWidth(Math.min(parentWidth, 1040));
 	    	else
-	    		window.setTimeout(ScaleSlider, 30);
+	    		window.setTimeout(ScaleSlider2, 30);
 	    }
 	    function ScaleSlider3() {
 	    	var parentWidth = jssor_slider3.$Elmt.parentNode.clientWidth;
 	    	if (parentWidth)
 	    		jssor_slider3.$SetScaleWidth(Math.min(parentWidth, 1040));
 	    	else
-	    		window.setTimeout(ScaleSlider, 30);
+	    		window.setTimeout(ScaleSlider3, 30);
 	    }
 	    function ScaleSlider4() {
 	    	var parentWidth = jssor_slider4.$Elmt.parentNode.clientWidth;
 	    	if (parentWidth)
-	    		jssor_slider4.$SetScaleWidth(Math.min(parentWidth, 1040));
+	    		jssor_slider4.$SetScaleWidth(Math.min(parentWidth, 774));
 	    	else
-	    		window.setTimeout(ScaleSlider, 30);
+	    		window.setTimeout(ScaleSlider4, 30);
 	    }
 
 	    ScaleSlider1();

@@ -50,7 +50,8 @@ jQuery(document).ready(function(){
 		</div>
 	</div>
 	<br>
-	<div id="slider2_container" align="center" style="background-color: blanchedalmond;position: relative; top: 0px; left: 0px; width: 1040px; height: 300px; overflow: hidden; ">
+	<div style="padding-top:20px;">
+	<div id="slider2_container" align="center" style="background-color: white;position: relative; top: 0px; left: 0px; width: 1040px; height: 300px; overflow: hidden; ">
 
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -113,6 +114,7 @@ jQuery(document).ready(function(){
                 </div>
             </div>
         </div>
+    </div>
     </div>
 	<script type='text/javascript' src='resources/js/custom-functions/servicesLateralMenu.js'></script>
 	<script type='text/javascript' src='resources/js/plugins/jssor.slider.mini.js'></script>

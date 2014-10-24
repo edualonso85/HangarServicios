@@ -74,7 +74,7 @@ jQuery(document).ready(function(){
 										<a class="title" href="<c:out value="${url}"/>"> ${notice.title}</a>								
 										<div class="date">${notice.createdDate}</div>
 										<div class="content">
-											${notice.content}<a href="<c:out value="${url}"/>" >(+)</a>
+											${notice.content}<a href="<c:out value="${url}"/>" > (+)</a>
 										</div>
 									</c:if>
 								</div>														
