@@ -29,13 +29,13 @@
 							</h1>		
 							<div class="topinfo">
 								<ul style="height: 26px" class="social-icons list-soc">	
-									<a style="padding-right: 5px;color:white" href="<c:url value='/changeLanguage'><c:param name='lang' value='es_ES'/></c:url>">
+									<a style="font-size:10px;padding-right: 5px;color:white" href="<c:url value='/changeLanguage'><c:param name='lang' value='es_ES'/></c:url>">
 						      			<s:message code="label.spanish"/>
 						      		</a>					
-									<a style="padding-right: 5px;color:white" href="<c:url value='/changeLanguage'><c:param name='lang' value='en_US'/></c:url>">
+									<a style="font-size:10px;padding-right: 5px;color:white" href="<c:url value='/changeLanguage'><c:param name='lang' value='en_US'/></c:url>">
 						      			<s:message code="label.english"/>
 						      		</a>					
-									<a style="padding-right: 5px;color:white" href="<c:url value='/changeLanguage'><c:param name='lang' value='pt_PT'/></c:url>">
+									<a style="font-size:10px;padding-right: 5px;color:white" href="<c:url value='/changeLanguage'><c:param name='lang' value='pt_PT'/></c:url>">
 						      			<s:message code="label.portuguese"/>
 						      		</a>					
 									<li style="float:right"><a href="#" id="login" title ="<s:message code="title.login"/>"><i class="icon-signin"></i></a></li>
@@ -176,6 +176,7 @@
 		</footer>
 		<!-- FOOTER END 	-->
 	</div><!-- #page -->
+<!-- 	<div align="center"><p style="color:#f0b70c;margin-left:154.5px">Diseñado Por: Juan Pablo Olivieri. Programado Por: Eduardo Alonso</p></div>	 -->
 </div><!-- .body -->
 </body>
 <!-- Mirrored from www.wowthemes.net/demo-biscaya/ by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 10 Jan 2014 13:10:42 GMT -->

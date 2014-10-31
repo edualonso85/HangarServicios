@@ -45,8 +45,8 @@ public class BaseController {
 		List<Notice> notices = noticeService.getLatestNoticesByLanguage(1, RequestContextUtils.getLocale(request).getLanguage());
 
 		if (notices != null && !notices.isEmpty()) {
-			if (notices.get(0).getContent().length() > 301) {
-				String descripcionCorta = notices.get(0).getContent().substring(0, 300);
+			if (notices.get(0).getContent().length() > 202) {
+				String descripcionCorta = notices.get(0).getContent().substring(0, 201);
 				notices.get(0).setContent(descripcionCorta);
 			}
 			notice = notices.get(0);
@@ -300,19 +300,7 @@ public class BaseController {
 
 		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
 		response.setHeader("Pragma", "no-cache");
-		Notice notice = noticeService.getById(id);
-		List<Notice> notices = noticeService.getLatestNoticesByLanguage(5, RequestContextUtils.getLocale(request).getLanguage());
-		if (notices != null && !notices.isEmpty()) {
-			for (int i = 0; i < notices.size(); i++) {
-				if (notices.get(i).getContent().length() > 201) {
-					String descripcionCorta = notices.get(i).getContent().substring(0, 200);
-					notices.get(i).setContent(descripcionCorta);
-				}
-			}
-		}
-		request.setAttribute("notice", notice);
-		request.setAttribute("notices", notices);
-		return new ModelAndView("news/new");
+		return new ModelAndView("news/news");
 
 	}
 
@@ -337,7 +325,7 @@ public class BaseController {
 		response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0");
 		response.setHeader("Pragma", "no-cache");
 		List<Notice> notices = noticeService.getNoticesByLanguage(RequestContextUtils.getLocale(request).getLanguage());
-		int i = 0;
+		// int i = 0;
 		for (Iterator iterator = notices.iterator(); iterator.hasNext();) {
 			Notice notice = (Notice) iterator.next();
 			List<Image> images = notice.getImages();
@@ -345,16 +333,17 @@ public class BaseController {
 				Image image = (Image) iterator2.next();
 				image.setNotice(null);
 			}
-			if (i == 0) {
-				if (notice.getContent().length() > 650)
-					notice.setContent(notice.getContent().substring(0, 650) + " [...]");
-			} else {
-				if (notice.getContent().length() > 201) {
-					String descripcionCorta = notice.getContent().substring(0, 200);
-					notice.setContent(descripcionCorta);
-				}
-			}
-			i++;
+			// if (i == 0) {
+			// if (notice.getContent().length() > 650)
+			// notice.setContent(notice.getContent().substring(0, 650) +
+			// " [...]");
+			// } else {
+			// if (notice.getContent().length() > 201) {
+			// String descripcionCorta = notice.getContent().substring(0, 200);
+			// notice.setContent(descripcionCorta);
+			// }
+			// }
+			// i++;
 		}
 		return notices;
 

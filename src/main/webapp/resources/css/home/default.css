@@ -1,3 +1,27 @@
+.pagination a{
+	padding: 3px !important;
+	background-color: white !important;
+	color: #f0b70c !important;	
+	font-family: 'open_sansbold' !important;
+}
+
+.pagination a:hover{
+	color: black !important;	
+}
+
+.pagination a.active_page{
+	color: gray !important;
+}
+
+.loadingDiv{
+	height: 100%;
+	width: 82%;
+	z-index: 9999;
+	display: none;
+	position: fixed;
+	background: url('../../img/loading.gif') 50% 10% no-repeat;
+}
+
 @font-face
 {
     font-family: 'soho-regular';
@@ -171,6 +195,16 @@ div.header {
 
 .autoContrImg-por:hover{
 	background-image: url('../../img/page/reguladores-por-on.jpg') !important;
+}
+
+.downloadReport-es:hover{
+	background-image: url('../../img/visual/reports/DESCARGAR_INFORMEoN.jpg') !important;
+}
+.downloadReport-en:hover{
+	background-image: url('../../img/visual/reports/DOWNLOADREPORT.jpg') !important;
+}
+.downloadReport-pt:hover{
+	background-image: url('../../img/visual/reports/BAIXARRELATORIO.jpg') !important;
 }
 
 .tabimage {

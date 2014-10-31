@@ -9,6 +9,14 @@ jQuery(document).ready(function(){
 	jQuery("#servicesMenu").addClass("active");
     
 });
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-55331682-1', 'auto');
+	  ga('send', 'pageview');
 </script>
 	<div class="row-fluid">		
 		<div class="span12">			
@@ -44,343 +52,343 @@ jQuery(document).ready(function(){
 		                <img u="image" src="resources/img/visual/examples/AisladorConDescarga.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorConDescarga.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Con Descarga
+		                	<s:message code="label.services.examples.1"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorContorneado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorContorneado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Contorneado
+		                	<s:message code="label.services.examples.2"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorContorneado2.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorContorneado2.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Contorneado 2
+		                	<s:message code="label.services.examples.3"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorDeteriorado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorDeteriorado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Deteriorado
+		                	<s:message code="label.services.examples.4"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorDeVidrioContorneado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorDeVidrioContorneado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador De Vidrio Contorneado
+		                	<s:message code="label.services.examples.5"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladoresRotos.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladoresRotos.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aisladores Rotos
+		                	<s:message code="label.services.examples.6"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladoresRotos2.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladoresRotos2.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aisladores Rotos 2
+		                	<s:message code="label.services.examples.7"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladoresRotos3.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladoresRotos3.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aisladores Rotos 3
+		                	<s:message code="label.services.examples.8"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorLinePostComidoPorPajaros.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorLinePostComidoPorPajaros.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Line Post Comido Pájaros
+		                	<s:message code="label.services.examples.9"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorLinePostConDescarga.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorLinePostConDescarga.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Line Post Con Descarga
+		                	<s:message code="label.services.examples.10"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorLinePostDanado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorLinePostDanado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Line Post Dañado
+		                	<s:message code="label.services.examples.11"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorLinePostDanado2.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorLinePostDanado2.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Line Post Dañado 2
+		                	<s:message code="label.services.examples.12"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorOrganicoComidoPorPajaros.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorOrganicoComidoPorPajaros.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Orgánico Comido Por Pájaros
+		                	<s:message code="label.services.examples.13"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorOrganicoConDescarga.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorOrganicoConDescarga.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Orgánico Con Descarga
+		                	<s:message code="label.services.examples.14"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorOrganicoDanado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorOrganicoDanado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Orgánico Dañado
+		                	<s:message code="label.services.examples.15"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorOrganicoDanado2.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorOrganicoDanado2.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Orgánico Dañado 2
+		                	<s:message code="label.services.examples.16"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorOrganicoPerforado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorOrganicoPerforado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Orgánico Perforado
+		                	<s:message code="label.services.examples.17"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorRoto.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorRoto.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Roto
+		                	<s:message code="label.services.examples.18"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorRoto2.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorRoto2.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Roto 2
+		                	<s:message code="label.services.examples.19"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorRoto3.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorRoto3.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Roto 3
+		                	<s:message code="label.services.examples.20"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorRoto4.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorRoto4.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Roto 4
+		                	<s:message code="label.services.examples.21"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorRoto5.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorRoto5.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Roto 5
+		                	<s:message code="label.services.examples.22"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/AisladorRoto6.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/AisladorRoto6.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Aislador Roto 6
+		                	<s:message code="label.services.examples.23"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/BaseDescalzada.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/BaseDescalzada.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Base Descalzada
+		                	<s:message code="label.services.examples.24"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/BaseDescalzada2.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/BaseDescalzada2.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Base Descalzada 2
+		                	<s:message code="label.services.examples.25"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/ChavetaSalida.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/ChavetaSalida.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Chaveta Salida
+		                	<s:message code="label.services.examples.26"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/ChavetaSalida2.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/ChavetaSalida2.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Chaveta Salida 2
+		                	<s:message code="label.services.examples.27"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/ConductorDanado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/ConductorDanado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Conductor Dañado
+		                	<s:message code="label.services.examples.28"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Conductor Deshilachado
+		                	<s:message code="label.services.examples.29"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado2.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado2.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Conductor Deshilachado 2
+		                	<s:message code="label.services.examples.30"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado3.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado3.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Conductor Deshilachado 3
+		                	<s:message code="label.services.examples.31"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado4.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado4.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Conductor Deshilachado 4
+		                	<s:message code="label.services.examples.32"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado5.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado5.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Conductor Deshilachado 5
+		                	<s:message code="label.services.examples.33"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/ConductorDeshilachado6.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/ConductorDeshilachado6.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Conductor Deshilachado 6
+		                	<s:message code="label.services.examples.34"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/ElementoExtranoEnConductor.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/ElementoExtranoEnConductor.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Elemento Extraño en Conductor
+		                	<s:message code="label.services.examples.35"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/ElementoExtranoEnHiloDeGuardia.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/ElementoExtranoEnHiloDeGuardia.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Elemento Extraño en Hilo de Guardia
+		                	<s:message code="label.services.examples.36"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/EspaciadorDanado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/EspaciadorDanado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Espaciador Dañado
+		                	<s:message code="label.services.examples.37"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/EspaciadorDanado2.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/EspaciadorDanado2.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Espaciador Dañado 2
+		                	<s:message code="label.services.examples.38"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/EspaciadorDesprendido.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/EspaciadorDesprendido.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Espaciador Desprendido
+		                	<s:message code="label.services.examples.39"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/FaltaTuercaEnMorseto.JPG" />
 		                <img u="thumb" src="resources/img/visual/examples/FaltaTuercaEnMorseto.JPG" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Falta Tuerca en Morseto
+		                	<s:message code="label.services.examples.40"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/FaltaTuercaMorsaSuspension.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/FaltaTuercaMorsaSuspension.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Falta Tuerca en Morsa Suspensión
+		                	<s:message code="label.services.examples.41"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/HiloDeGuardiaDeshilachado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/HiloDeGuardiaDeshilachado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Hilo de Guardia Deshilachado
+		                	<s:message code="label.services.examples.42"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/NidoEnPoste.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/NidoEnPoste.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Nido en Poste
+		                	<s:message code="label.services.examples.43"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/PerfilSalido.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/PerfilSalido.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Perfil Salido
+		                	<s:message code="label.services.examples.44"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/PosteDeteriorado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/PosteDeteriorado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Poste Deteriorado
+		                	<s:message code="label.services.examples.45"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/PosteDeteriorado2.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/PosteDeteriorado2.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Poste Deteriorado 2
+		                	<s:message code="label.services.examples.46"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/PosteInclinado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/PosteInclinado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Poste Inclinado
+		                	<s:message code="label.services.examples.47"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/StockBridgeDanado.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/StockBridgeDanado.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                StockBridge Dañado
+		                	<s:message code="label.services.examples.48"></s:message>
 		                </div> 
 		            </div>
 		            <div align="center">
 		                <img u="image" src="resources/img/visual/examples/TuercaFloja.jpg" />
 		                <img u="thumb" src="resources/img/visual/examples/TuercaFloja.jpg" />
 		                <div u=caption t="L|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; width:100%; height:25px;"> 
-		                Tuerca Floja
+		                	<s:message code="label.services.examples.49"></s:message>
 		                </div> 
 		            </div>
 		        </div>
@@ -411,19 +419,20 @@ jQuery(document).ready(function(){
 			
 			<div class="span3" style="margin-left:0px">
 				<img src="<s:message code="label.visualInspection.report1"/>"/>
-				<a target="_blanck" href="resources/pdf/visual/visual1.pdf"><img style="margin-top: 10px;cursor:pointer" src="<s:message code="label.visualInspection.downloadReport"/>"/></a>
+<%-- 				<a target="_blanck" href="resources/pdf/visual/visual1.pdf"><img style="margin-top: 10px;cursor:pointer" src="<s:message code="label.visualInspection.downloadReport"/>"/></a> --%>
+				<a target="_blanck" href="resources/pdf/visual/visual1.pdf" class="<s:message code='class.downloadReport'></s:message>" style="background-image: <s:message code='label.visualInspection.downloadReport'></s:message>;height: 20px;width: 155px;display: block; margin-top:10px;"></a>
 			</div>
 			<div class="span3" style="margin-left:15px">
 				<img src="<s:message code="label.visualInspection.report2"/>"/>
-				<a target="_blanck" href="resources/pdf/visual/visual2.pdf"><img style="margin-top: 10px;cursor:pointer" src="<s:message code="label.visualInspection.downloadReport"/>"/></a>
+				<a target="_blanck" href="resources/pdf/visual/visual2.pdf" class="<s:message code='class.downloadReport'></s:message>" style="background-image: <s:message code='label.visualInspection.downloadReport'></s:message>;height: 20px;width: 155px;display: block; margin-top:10px;"></a>
 			</div>
 			<div class="span3" style="margin-left:15px">
 				<img src="<s:message code="label.visualInspection.report3"/>"/>
-				<a target="_blanck" href="resources/pdf/visual/visual3.pdf"><img style="margin-top: 10px;cursor:pointer" src="<s:message code="label.visualInspection.downloadReport"/>"/></a>
+				<a target="_blanck" href="resources/pdf/visual/visual3.pdf" class="<s:message code='class.downloadReport'></s:message>" style="background-image: <s:message code='label.visualInspection.downloadReport'></s:message>;height: 20px;width: 155px;display: block; margin-top:10px;"></a>
 			</div>
 			<div class="span3" style="margin-left:15px">
 				<img src="<s:message code="label.visualInspection.report4"/>"/>
-				<a target="_blanck" href="resources/pdf/visual/visual4.pdf"><img style="margin-top: 10px;cursor:pointer" src="<s:message code="label.visualInspection.downloadReport"/>"/></a>
+				<a target="_blanck" href="resources/pdf/visual/visual4.pdf" class="<s:message code='class.downloadReport'></s:message>" style="background-image: <s:message code='label.visualInspection.downloadReport'></s:message>;height: 20px;width: 155px;display: block; margin-top:10px;"></a>
 			</div>
 			
 		</div>

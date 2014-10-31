@@ -1,43 +1,37 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>  
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
-<head></head>
 <body>
-<script>
-jQuery(document).ready(function(){
-	jQuery("#menu-header li").removeClass("active");
-	jQuery("#newsMenu").addClass("active");
-});
-</script>
-<div class="container">
-	<header class="entry-header sectiontitlepost">
-		<h1 class="entry-title"><s:message code="menu.news"/></h1>
-	</header><!-- .entry-header -->
-	<div class="headerdivider"></div>	
-	<div class="entry-content">
-			<div class="row-fluid">
-				<div class="span12">				
-					<div class="hero-unit box effect2" style="min-height: 250px;">
-						<h1 id="mainTitle"></h1>
-						<div class="entry-meta">
-							<span class="entry-date" id="mainCreatedDate"><i class="icon-calendar"></i>&nbsp; </span>
-						</div>
-						<p id="mainContent">
-							<a class="entry-thumbnail pull-left paddingright top10" id="mainImageLink" href="<c:out value="${url}?id="/>" title="">
-								<img width="187" style="display:none" height="150" id="mainImage" src="" class="attachment-sticky-thumb wp-post-image"/>
-							</a>
-						</p>
-						<p>
-						<c:url value="new" var="url"></c:url>
-						<a id="mainNoticeId" href="<c:out value="${url}?id="/>" class="btn btn-primary btn-large"><s:message code="button.readMore"></s:message></a> 
-						</p>
-					</div>						
-
-					<div id="content" class="blogindex content-area">
-				</div>			
-			</div><!-- .span8 -->		
-		</div><!-- .row-fluid -->
-	</div><!-- .entry-content -->	
+<div id="loader" class="loadingDiv">
 </div>
-<script type='text/javascript' src='resources/js/custom-functions/noticeManager.js'></script>
+<script>
+	jQuery(document).ready(function(){
+		jQuery("#menu-header li").removeClass("active");
+		jQuery("#newsMenu").addClass("active");
+	});
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55331682-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	<div class="row-fluid container" style="padding-top:50px">
+		<div class="span2" style="width: 15%;padding-top:15px">
+			<ul id="noticeList" class="menu-lateral">
+			</ul>
+			<div align="center" style="text-align: center;" id='page_navigation' class="pagination"></div> 
+			<input type='hidden' id='current_page' />  
+			<input type='hidden' id='show_per_page' />  
+		</div>
+		
+		<div class="span10" id="fullNoticeBody" style="width: 80%;padding-right: 10px;">
+			<h2 style="margin-bottom:30px" id="noticeTitle"></h2>
+			<div style="margin-bottom:50px" id="noticeBody"></div>
+			<div id="noticeGallery"></div>
+		</div>	
+	</div>	
+	<script type='text/javascript' src='resources/js/custom-functions/noticeManager.js'></script>
 </body>

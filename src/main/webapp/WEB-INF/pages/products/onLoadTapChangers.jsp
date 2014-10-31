@@ -39,7 +39,7 @@
 			<img  src="resources/img/product/conmutadores/stock.jpg" class="margintop-15"/>
 		</div>
 		<div id="about-huaming-content" class="span5 hidden" style="padding-right: 10px;">
-			<h5 style="line-height: 35px;"><s:message code="title.products.onloadTapChangers.huaming.1"/></h5>
+			<h5 style="line-height: 35px;width: 300px;"><s:message code="title.products.onloadTapChangers.huaming.1"/></h5>
 			<p><s:message code="text.products.onloadTapChangers.huaming.p1"/></p>
 			<p><s:message code="text.products.onloadTapChangers.huaming.p2"/></p>
 			<p><s:message code="text.products.onloadTapChangers.huaming.p3"/></p>
@@ -49,7 +49,7 @@
 		</div>
 		<div id="about-huaming-images" class="span4 hidden">
 			<img  src="resources/img/product/conmutadores/cbc.jpg" class="margintop-15"/>
-			<img  src="resources/img/product/conmutadores/logo-huaming.jpg" class="margintop-15" alt="Know How" />
+			<img  src="resources/img/product/conmutadores/logo-huaming.jpg" style="margin-top:40px" class="margintop-15" alt="Know How" />
 			<p style="text-align: center;margin-top: 20px"><a style="color:#0058A3;" target="blanck" href="http://www.huaming.com">www.huaming.com</a></p>
 		</div>		
 		<div id="about-instalations-content" class="span5 hidden" style="padding-right: 10px;">
@@ -84,7 +84,7 @@
 				<img src="resources/img/product/conmutadores/CV.jpg"/>
 				<a target="_blanck" href="<s:message code="conmutadores.manual.cv.download"/>"><img style="margin-top: 10px;cursor:pointer" src="<s:message code="label.conmutadores.download"/>"/></a>
 			</div>
-			<div class="span12" style="margin: 25px 0 25px 0;background-color: lightgrey;height: 1px;min-height: 1px"></div>
+			<div class="span12" style="width: 95%;margin: 25px 0 25px 0;background-color: lightgrey;height: 1px;min-height: 1px"></div>
 			<div id="about-models-content" class="span8 hidden" style="margin-left:0px">
 				<h6 style="color:#0058A3;"><s:message code="subtitle.products.onloadTapChangers.models.2"/></h6>
 				<p><s:message code="text.products.onloadTapChangers.models.p3"/></p>
@@ -95,7 +95,7 @@
 				<img src="resources/img/product/conmutadores/CM.jpg"/>
 				<a target="_blanck" href="<s:message code="conmutadores.manual.cm.download"/>"><img style="margin-top: 10px;cursor:pointer" src="<s:message code="label.conmutadores.download"/>"/></a>
 			</div>
-			<div class="span12" style="margin:30px 0px"><img src="resources/img/product/conmutadores/separador.gif"/></div>
+			<div class="span12" style="width: 95%;margin:30px 0px"><img src="resources/img/product/conmutadores/separador.gif"/></div>
 			<div class="span12" style="margin: 0px"><h5 style="line-height: 35px;"><s:message code="title.products.onloadTapChangers.models.2"/></h5></div>
 			<div id="about-models-content" class="span8 hidden" style="margin-left:0px">
 				<h6 style="color:#0058A3;"><s:message code="subtitle.products.onloadTapChangers.models.3"/></h6>
@@ -105,8 +105,8 @@
 				<img src="resources/img/product/conmutadores/SHM.jpg"/>
 				<a target="_blanck" href="<s:message code="conmutadores.manual.shm.download"/>"><img style="margin-top: 10px;cursor:pointer" src="<s:message code="label.conmutadores.download"/>"/></a>
 			</div>
-			<div class="span12" style="margin: 20px 0 20px 0;background-color: lightgrey;height: 1px;min-height: 1px"></div>
-			<div id="about-models-content" class="span6 hidden" style="margin-left:0px;width: 47%">
+			<div class="span12" style="width: 95%;margin: 20px 0 20px 0;background-color: lightgrey;height: 1px;min-height: 1px"></div>
+			<div id="about-models-content" class="span6 hidden" style="margin-left:0px;width: 43%">
 				<h6 style="color:#0058A3;"><s:message code="subtitle.products.onloadTapChangers.models.4"/></h6>
 				<p><s:message code="text.products.onloadTapChangers.models.p7"/></p>
 				<p><s:message code="text.products.onloadTapChangers.models.p8"/></p>
@@ -121,7 +121,7 @@
 				<img src="resources/img/product/conmutadores/CMA9.jpg"/>
 				<a target="_blanck" href="<s:message code="conmutadores.manual.cma9.download"/>"><img style="margin-top: 10px;cursor:pointer" src="<s:message code="label.conmutadores.download"/>"/></a>
 			</div>
-			<div class="span12" style="margin:30px 0px"><img src="resources/img/product/conmutadores/separador.gif"/></div>
+			<div class="span12" style="width: 95%;margin:30px 0px"><img src="resources/img/product/conmutadores/separador.gif"/></div>
 			<div class="span12" style="margin: 0px"><h5 style="line-height: 35px;"><s:message code="title.products.onloadTapChangers.models.3"/></h5></div>
 			<div id="about-models-content" class="span8 hidden" style="margin-left:0px">
 				<h6 style="color:#0058A3;"><s:message code="subtitle.products.onloadTapChangers.models.5"/></h6>

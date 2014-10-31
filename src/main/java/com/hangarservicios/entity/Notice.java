@@ -26,6 +26,7 @@ public class Notice {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_notice;
 	private String title;
+	@Column(name = "content", length = 20000)
 	private String content;
 	@JsonSerialize(using = JsonDateSerializer.class)
 	@JsonDeserialize(using = JsonDateDeserializer.class)

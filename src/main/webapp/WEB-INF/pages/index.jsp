@@ -24,9 +24,60 @@ jQuery(document).ready(function(){
 
 </script>
 	<div class="row-fluid">
-		<div class="span12">
-			<img src="resources/img/header/home.jpg" alt="">
-		</div>
+<!-- 		<div class="span12"> -->
+<!-- 			<img src="resources/img/header/home.jpg" alt=""> -->
+<!-- 		</div> -->
+		<div id="main_slider" class="gallery" align="center" style="background-color: white;position: relative; top: 0px; left: 0px; width: 1040px; height: 550px; overflow: hidden; ">
+	        <!-- Loading Screen -->
+	        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+	            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+	                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+	            </div>
+	            <div style="position: absolute; display: block; background: url(./resources/img/loading.gif) no-repeat center center;
+	                top: 0px; left: 0px;width: 100%;height:100%;">
+	            </div>
+	        </div>
+	        <!-- Slides Container -->
+	        <div u="slides" align="center" style="cursor: move; left: 0px; top: 0px; width: 1040px; height: 550px; overflow: hidden;">
+	            <div align="center">
+	                <img u="image" src="resources/img/mainCarousel/1.jpg" />
+	                <img u="thumb" src="resources/img/mainCarousel/1.jpg" />
+	            </div>
+	            <div align="center">
+	                <img u="image" src="resources/img/mainCarousel/2.jpg" />
+	                <img u="thumb" src="resources/img/mainCarousel/2.jpg" />
+	            </div>
+	            <div align="center">
+	                <img u="image" src="resources/img/mainCarousel/3.jpg" />
+	                <img u="thumb" src="resources/img/mainCarousel/3.jpg" />
+	            </div>
+	            <div align="center">
+	                <img u="image" src="resources/img/mainCarousel/4.jpg" />
+	                <img u="thumb" src="resources/img/mainCarousel/4.jpg" />
+	            </div>
+	        </div>
+	        <!-- Arrow Left -->
+	        <span u="arrowleft" class="jssora02l" style="width: 55px; height: 55px; top: 45%; left: 8px;">
+	        </span>
+	        <!-- Arrow Right -->
+	        <span u="arrowright" class="jssora02r" style="width: 55px; height: 55px; top: 45%; right: 8px">
+	        </span>
+	        <!-- Arrow Navigator Skin End -->
+	        <!-- ThumbnailNavigator Skin Begin -->
+	        <div u="thumbnavigator" class="jssort03" style="position: absolute; width: 1040px; height: 60px; left:0px; bottom: 0px;">
+	            <div style=" background-color: #000; filter:alpha(opacity=30); opacity:.3; width: 100%; height:100%;"></div>
+	            <div u="slides" style="position:cursor: move;">
+	                <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 62px; HEIGHT: 32px; TOP: 0; LEFT: 0;">
+	                    <div class=w><ThumbnailTemplate style=" WIDTH: 100%; HEIGHT: 100%; border: none;position:absolute; TOP: 0; LEFT: 0;"></ThumbnailTemplate></div>
+	                    <div class=c style="POSITION: absolute; BACKGROUND-COLOR: #000; TOP: 0; LEFT: 0">
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- Thumbnail Item Skin End -->
+	        </div>
+	        <!-- ThumbnailNavigator Skin End -->
+	<!--         <a style="display: none" href="http://www.jssor.com">javascript</a> -->
+	    </div>
 	</div>
 	<main id="main" class="container site-main" role="main">
 		<article id="post-10" class="post-10 page type-page status-publish hentry">
@@ -108,5 +159,8 @@ jQuery(document).ready(function(){
 			</div>	
 		</article><!-- #post-## -->
 	</main><!-- #main -->			
+	<script type='text/javascript' src='resources/js/plugins/jssor.slider.mini.js'></script>
+	<script type='text/javascript' src='resources/js/custom-functions/indexManager.js'></script>
+	<link rel='stylesheet' href='resources/css/home/carousel.css' type='text/css'/>
 </body>
 </html>
