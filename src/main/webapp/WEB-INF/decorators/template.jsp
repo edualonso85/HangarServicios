@@ -15,7 +15,6 @@
 </head>
 
 <body class="home page page-id-10 page-template page-template-template-home-php boxed group-blog">
-<%@include file="../pages/includesPlugins/modalLanguage.jsp"%>
 <%@include file="../pages/login.jsp"%>
 	<div class="header">
 		<div id="page" class="hfeed site">			

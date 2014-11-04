@@ -1,4 +1,4 @@
-	<link rel='stylesheet' id='wp-customer-reviews-css'  href='resources/css/home/wp-customer-review.css?ver=2.4.8' type='text/css' media='all' />
+<!-- 	<link rel='stylesheet' id='wp-customer-reviews-css'  href='resources/css/home/wp-customer-review.css?ver=2.4.8' type='text/css' media='all' /> -->
 	<link rel='stylesheet' id='biscaya-stylebootstrap-css'  href='resources/css/home/bootstrap.css?ver=3.8' type='text/css' media='all' />
 	<link rel='stylesheet' id='biscaya-styledefault-css'  href='resources/css/home/default.css?ver=3.8' type='text/css' media='all' />
 	<link rel='stylesheet' id='biscaya-styleicons-css'  href='resources/css/home/font-awesome.css?ver=3.8' type='text/css' media='all' />

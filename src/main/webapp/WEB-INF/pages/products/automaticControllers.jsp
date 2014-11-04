@@ -26,7 +26,7 @@
 		</div>
 		
 		<div id="about-controllers-content" class="span5" style="padding-right: 10px;">
-			<h5 style="line-height: 35px;"><s:message code="menu.products.onloadTapChangers.cbc"/></h5>
+			<h5 style="line-height: 35px;"><s:message code="menu.products.automaticControllers.controllers"/></h5>
 			<p><s:message code="text.products.automaticControllers.automaticControllers.p1"/></p>
 			<p><s:message code="text.products.automaticControllers.automaticControllers.p2"/></p>
 			<p style="margin-top:30px;"><a style="color:#F1921F;" target="blanck" href="http://www.a-eberle.de">www.a-eberle.de</a></p>
