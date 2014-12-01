@@ -1,14 +1,6 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>  
 <html>
-<!-- <head> -->
-<!-- </head> -->
-<body>
-<script>
-jQuery(document).ready(function(){
-	jQuery("#menu-header li").removeClass("active");
-	jQuery("#contactMenu").addClass("active");
-});
-</script>
+<head>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -19,6 +11,15 @@ jQuery(document).ready(function(){
   ga('send', 'pageview');
 
 </script>
+</head>
+<body>
+<script>
+jQuery(document).ready(function(){
+	jQuery("#menu-header li").removeClass("active");
+	jQuery("#contactMenu").addClass("active");
+});
+</script>
+
 	<div class="row-fluid">		
 <!-- 		<div class="span12" style="height: 250px;background-position: -410px -327px;background-repeat:no-repeat; background-image: url(resources/img/contact/mapa.jpg)">			 -->
 		<iframe width="1040px" height="250px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ar/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Calle+517+N%C2%B0+2048&amp;aq=&amp;sll=-34.922203,-57.994706&amp;sspn=0.016169,0.033023&amp;g=Av+31+100-198,+San+Carlos,+Buenos+Aires&amp;ie=UTF8&amp;hq=&amp;hnear=Calle+517+2048,+Gonnet,+Buenos+Aires&amp;ll=-34.895931,-57.994776&amp;spn=0.005931,0.011362&amp;t=m&amp;z=14&amp;output=embed"></iframe>

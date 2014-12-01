@@ -15,6 +15,9 @@
 </head>
 
 <body class="home page page-id-10 page-template page-template-template-home-php boxed group-blog">
+
+<div id="loader" class="loadingDiv">
+</div>
 <%@include file="../pages/login.jsp"%>
 	<div class="header">
 		<div id="page" class="hfeed site">			
@@ -109,7 +112,7 @@
 								<div class="textwidget">
 									<p><s:message code="footer.text"/></p>
 									
-									<p class="footerlogo">
+									<p class="footerlogo" style="margin-top: 20px;">
 										<a href="index" title="Hangar Servicios" rel="home"><img class="img-responsive" src="resources/img/logos/hangarfoot.png" alt="Hangar Servicios" /></a>
 									</p>
 								</div>
@@ -150,12 +153,13 @@
 						<!-- left -->
 						<div class="span4 smallspacetop">
 								<p class="smaller">
-									<span class='copyright'>&copy; </span> <s:message code="label.copyright"/>					
+									<span class='copyright'>&copy; </span> <s:message code="label.copyright"/><br>					
+									<span style="font-size:8px"><s:message code="label.design"></s:message></span>					
 								</p>
 						</div>
 						<!-- right -->
 						<div class="span8 smallspacetop">
-							<div class="pull-right smaller">
+							<div class="pull-right smaller" style="margin-top: 8px;">
 								<ul id="menu-footer" class="footermenu">
 									<li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-49"><a href="index"><s:message code="menu.home"/></a></li>
 									<li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a href="about"><s:message code="menu.company"/></a></li>
@@ -175,7 +179,6 @@
 		</footer>
 		<!-- FOOTER END 	-->
 	</div><!-- #page -->
-<!-- 	<div align="center"><p style="color:#f0b70c;margin-left:154.5px">Diseñado Por: Juan Pablo Olivieri. Programado Por: Eduardo Alonso</p></div>	 -->
 </div><!-- .body -->
 </body>
 <!-- Mirrored from www.wowthemes.net/demo-biscaya/ by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 10 Jan 2014 13:10:42 GMT -->

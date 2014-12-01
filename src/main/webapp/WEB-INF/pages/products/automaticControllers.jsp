@@ -1,6 +1,6 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>  
 <html>
-<body>
+<head>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -11,6 +11,9 @@
   ga('send', 'pageview');
 
 </script>
+</head>
+<body>
+
 	<div class="row-fluid">		
 		<div class="span12">			
 			<img id="imageHeader" src="<s:message code="products.automaticControllers.image"/>" alt="Empresa" />

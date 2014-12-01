@@ -1,5 +1,17 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>  
 <html>
+<head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55331682-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
 <body>
 <script>
 jQuery(document).ready(function(){
@@ -9,13 +21,6 @@ jQuery(document).ready(function(){
 	jQuery("#servicesMenu").addClass("active");
 });
 
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-55331682-1', 'auto');
-	  ga('send', 'pageview');
 </script>
 	<div class="row-fluid">		
 		<div class="span12">			
@@ -31,9 +36,9 @@ jQuery(document).ready(function(){
 				<li id="examples" class="lateralOption"><s:message code="menu.services.digitalCartography.examples"/></li>
 			</ul>
 		</div>
-		<div id="examples-content" style="margin-left:0px" class="span9 hidden">
+		<div id="examples-content" style="margin-left:20px" class="span9 hidden">
 			<h5 style="margin-bottom:30px"><s:message code="label.digitalCartography.resolution"/></h5>
-			<div id="slider4_container" class="examples" align="center" style="background-color: white;position: relative; top: 0px; left: 0px; width: 720px; height: 348px; overflow: hidden; ">
+			<div id="slider4_container" class="examples ex1" align="center" style="background-color: white;position: relative; top: 0px; left: 0px; width: 720px; height: 348px; overflow: hidden; ">
 		
 		        <!-- Loading Screen -->
 		        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -113,7 +118,7 @@ jQuery(document).ready(function(){
 		        </div>
 		    </div>    
 			<h5 style="margin-bottom:30px;margin-top:40px"><s:message code="label.digitalCartography.lidar"/></h5>
-			<div id="slider5_container" class="examples" align="center" style="background-color: white;position: relative; top: 0px; left: 0px; width: 720px; height: 348px; overflow: hidden; ">
+			<div id="slider5_container" class="examples ex2" align="center" style="background-color: white;position: relative; top: 0px; left: 0px; width: 720px; height: 348px; overflow: hidden; ">
 		
 		        <!-- Loading Screen -->
 		        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -236,7 +241,7 @@ jQuery(document).ready(function(){
 			
 		</div>
 		<div id="content">
-			<div id="terraRemote-content" class="span9">
+			<div id="terraRemote-content" class="span9" style="margin-left:20px">
 				<h5><s:message code="title.services.digitalCartography.terraRemote"/></h5>
 				<p><s:message code="text.services.digitalCartography.digitalCartography.p1"/></p>
 				<p><s:message code="text.services.digitalCartography.terraRemote.p1"/></p>
@@ -244,12 +249,12 @@ jQuery(document).ready(function(){
 				<p><s:message code="text.services.digitalCartography.terraRemote.p3"/></p>
 			</div>	
 			
-			<div id="technology-content" class="span9 hidden">
+			<div id="technology-content" class="span9 hidden" style="margin-left:20px">
 				<h5><s:message code="title.services.digitalCartography.technology"/></h5>
 				<p><s:message code="text.services.digitalCartography.technology.p1"/></p>
 			</div>	
 			
-			<div id="usesAdvantages-content" class="span9 hidden">
+			<div id="usesAdvantages-content" class="span9 hidden" style="margin-left:20px">
 				<h5><s:message code="title.services.digitalCartography.uses"/></h5>
 				<p><s:message code="text.services.digitalCartography.uses.p1"/></p>			
 				<ul class="listElements">
@@ -261,7 +266,7 @@ jQuery(document).ready(function(){
 					<li><s:message code="text.services.digitalCartography.uses.p7"/></li>
 				</ul>	
 							
-				<h5 style="margin-top: 15px;"><s:message code="menu.services.digitalCartography.advantages"/></h5>
+				<h5 style="margin-top: 30px;"><s:message code="menu.services.digitalCartography.advantages"/></h5>
 				<p><s:message code="text.services.digitalCartography.advantages.p1"/></p>			
 				<ul class="listElements">
 					<li><s:message code="text.services.digitalCartography.advantages.p2"/></li>
@@ -291,28 +296,16 @@ jQuery(document).ready(function(){
         <!-- Slides Container -->
         <div u="slides" align="center" style="cursor: move; left: 0px; top: 0px; width: 1040px; height: 502px; overflow: hidden;">
             <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-01.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-01.jpg" />
+                <img u="image" src="resources/img/cartografia/terra/1.jpg" />
+                <img u="thumb" src="resources/img/cartografia/terra/1.jpg" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-02.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-02.jpg" />
+                <img u="image" src="resources/img/cartografia/terra/2.jpg" />
+                <img u="thumb" src="resources/img/cartografia/terra/2.jpg" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-03.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-03.jpg" />
-            </div>
-            <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-04.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-04.jpg" />
-            </div>
-            <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-05.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-05.jpg" />
-            </div>
-            <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-06.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-06.jpg" />
+                <img u="image" src="resources/img/cartografia/terra/3.jpg" />
+                <img u="thumb" src="resources/img/cartografia/terra/3.jpg" />
             </div>
         </div>
         
@@ -354,20 +347,16 @@ jQuery(document).ready(function(){
         <!-- Slides Container -->
         <div u="slides" align="center" style="cursor: move; left: 0px; top: 0px; width: 1040px; height: 502px; overflow: hidden;">
             <div align="center">
-                <img u="image" src="resources/img/visual/systems/SISTEMAS-01.jpg" />
-                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-01.jpg" />
+                <img u="image" src="resources/img/cartografia/tecnologia/1.jpg" />
+                <img u="thumb" src="resources/img/cartografia/tecnologia/1.jpg" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/systems/SISTEMAS-02.jpg" />
-                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-02.jpg" />
+                <img u="image" src="resources/img/cartografia/tecnologia/2.jpg" />
+                <img u="thumb" src="resources/img/cartografia/tecnologia/2.jpg" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/systems/SISTEMAS-03.jpg" />
-                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-03.jpg" />
-            </div>
-            <div align="center">
-                <img u="image" src="resources/img/visual/systems/SISTEMAS-04.jpg" />
-                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-04.jpg" />
+                <img u="image" src="resources/img/cartografia/tecnologia/3.jpg" />
+                <img u="thumb" src="resources/img/cartografia/tecnologia/3.jpg" />
             </div>
         </div>
         
@@ -409,32 +398,16 @@ jQuery(document).ready(function(){
         <!-- Slides Container -->
         <div u="slides" align="center" style="cursor: move; left: 0px; top: 0px; width: 1040px; height: 502px; overflow: hidden;">
             <div align="center">
-                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(1).jpg" />
-                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(1).jpg" />
+                <img u="image" src="resources/img/cartografia/usosYventajas/1.jpg" />
+                <img u="thumb" src="resources/img/cartografia/usosYventajas/1.jpg" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(2).jpg" />
-                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(2).jpg" />
+                <img u="image" src="resources/img/cartografia/usosYventajas/2.jpg" />
+                <img u="thumb" src="resources/img/cartografia/usosYventajas/2.jpg" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(3).jpg" />
-                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(3).jpg" />
-            </div>
-            <div align="center">
-                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(4).jpg" />
-                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(4).jpg" />
-            </div>
-            <div align="center">
-                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(5).jpg" />
-                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(5).jpg" />
-            </div>
-            <div align="center">
-                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(6).jpg" />
-                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(6).jpg" />
-            </div>
-            <div align="center">
-                <img u="image" src="resources/img/visual/objetives/OBJETIVOS(7).jpg" />
-                <img u="thumb" src="resources/img/visual/objetives/OBJETIVOS(7).jpg" />
+                <img u="image" src="<s:message code='cartografia.usosYventajas.img1'></s:message>" />
+                <img u="thumb" src="<s:message code='cartografia.usosYventajas.img1'></s:message>" />
             </div>
         </div>
         

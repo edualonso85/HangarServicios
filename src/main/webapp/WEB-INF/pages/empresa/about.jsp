@@ -1,6 +1,6 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>  
 <html>
-<body>
+<head>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -11,6 +11,9 @@
   ga('send', 'pageview');
 
 </script>
+</head>
+<body>
+
 	<div class="row-fluid">		
 		<div class="span12">			
 			<img id="imageHeader" src="resources/img/header/hangarservicios.jpg" alt="Empresa" />
@@ -78,7 +81,7 @@
 		</div>
 		<div id="about-quality-content" class="span5 hidden" style="padding-right: 10px;">
 			<h5 style="line-height: 35px;"><s:message code="menu.company.quality"/></h5>
-			<p><s:message code="text.company.quality.p1"/></p>
+			<p style="margin-bottom:25px"><s:message code="text.company.quality.p1"/></p>
 			<h7><s:message code="title.company.quality.2"/></h7>
 			<p style="margin-top: 10px;"><s:message code="text.company.quality.p2"/></p>
 			<ul class="listElements">

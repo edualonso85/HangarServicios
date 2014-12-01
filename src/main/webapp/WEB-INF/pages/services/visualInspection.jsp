@@ -1,5 +1,17 @@
 <%@taglib prefix="s" uri="http://www.springframework.org/tags" %>  
 <html>
+<head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55331682-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
 <body>
 <script>
 jQuery(document).ready(function(){
@@ -9,14 +21,6 @@ jQuery(document).ready(function(){
 	jQuery("#servicesMenu").addClass("active");
     
 });
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-55331682-1', 'auto');
-	  ga('send', 'pageview');
 </script>
 	<div class="row-fluid">		
 		<div class="span12">			
@@ -32,8 +36,8 @@ jQuery(document).ready(function(){
 				<li id="examples" class="lateralOption"><s:message code="menu.services.visualInspection.examples"/></li>
 			</ul>
 		</div>
-		<div id="examples-content" style="margin-left:0px" class="span9 hidden">
-			<h5 style="margin-bottom:30px"><s:message code="label.visualInspection.fails"/></h5>
+		<div id="examples-content" style="margin-left:20px" class="span9 hidden">
+			<h5 style="line-height: 35px;margin-bottom:30px"><s:message code="label.visualInspection.fails"/></h5>
 			<div id="slider4_container" class="examples" align="center" style="background-color: white;position: relative; top: 0px; left: 0px; width: 720px; height: 348px; overflow: hidden; ">
 		
 		        <!-- Loading Screen -->
@@ -437,16 +441,16 @@ jQuery(document).ready(function(){
 			
 		</div>
 		<div id='content'>
-			<div id="procedures-content" class="span9">
-				<h5><s:message code="menu.services.visualInspection.procedures"/></h5>
+			<div id="procedures-content" class="span9" style="margin-left:20px;">
+				<h5 style="line-height: 35px;"><s:message code="menu.services.visualInspection.procedures"/></h5>
 				<p><s:message code="text.services.visualInspection.procedures.p1"/> <s:message code="text.services.visualInspection.procedures.p2"/></p>
 				<p><s:message code="text.services.visualInspection.procedures.p3"/></p>
 				<p><s:message code="text.services.visualInspection.procedures.p4"/></p>
 				<p><s:message code="text.services.visualInspection.procedures.p5"/> <s:message code="text.services.visualInspection.procedures.p6"/></p>
 			</div>	
 			
-			<div id="systems-content" class="span9 hidden">
-				<h5><s:message code="menu.services.visualInspection.systems"/></h5>
+			<div id="systems-content" class="span9 hidden" style="margin-left:20px;">
+				<h5 style="line-height: 35px;"><s:message code="menu.services.visualInspection.systems"/></h5>
 				<p><s:message code="text.services.visualInspection.informaticSystems.p1"/></p>
 				<p><s:message code="text.services.visualInspection.informaticSystems.p2"/></p>
 				<ul class="listElements">
@@ -462,7 +466,7 @@ jQuery(document).ready(function(){
 				<br>
 			</div>
 			
-			<div id="objetives-content" class="span9 hidden">
+			<div id="objetives-content" class="span9 hidden" style="margin-left:20px;">
 				<h5 style="line-height: 35px;"><s:message code="title.services.visualInspection.objetives"/></h5>
 				<p><s:message code="text.services.visualInspection.objetives.p1"/></p>
 				<p><s:message code="text.services.visualInspection.objetives.p2"/></p>			
@@ -490,28 +494,28 @@ jQuery(document).ready(function(){
         <!-- Slides Container -->
         <div u="slides" align="center" style="cursor: move; left: 0px; top: 0px; width: 1040px; height: 502px; overflow: hidden;">
             <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-01.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-01.jpg" />
+                <img u="image" src="<s:message code="visualInspection.procedures.img1"></s:message>" />
+                <img u="thumb" src="<s:message code="visualInspection.procedures.img1"></s:message>" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-02.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-02.jpg" />
+                <img u="image" src="<s:message code="visualInspection.procedures.img2"></s:message>" />
+                <img u="thumb" src="<s:message code="visualInspection.procedures.img2"></s:message>" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-03.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-03.jpg" />
+                <img u="image" src="<s:message code="visualInspection.procedures.img3"></s:message>" />
+                <img u="thumb" src="<s:message code="visualInspection.procedures.img3"></s:message>" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-04.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-04.jpg" />
+                <img u="image" src="<s:message code="visualInspection.procedures.img4"></s:message>" />
+                <img u="thumb" src="<s:message code="visualInspection.procedures.img4"></s:message>" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-05.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-05.jpg" />
+                <img u="image" src="<s:message code="visualInspection.procedures.img5"></s:message>" />
+                <img u="thumb" src="<s:message code="visualInspection.procedures.img5"></s:message>" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/procedures/PROCEDIMIENTOS-06.jpg" />
-                <img u="thumb" src="resources/img/visual/procedures/PROCEDIMIENTOS-06.jpg" />
+                <img u="image" src="<s:message code="visualInspection.procedures.img6"></s:message>" />
+                <img u="thumb" src="<s:message code="visualInspection.procedures.img6"></s:message>" />
             </div>
         </div>
         
@@ -553,20 +557,20 @@ jQuery(document).ready(function(){
         <!-- Slides Container -->
         <div u="slides" align="center" style="cursor: move; left: 0px; top: 0px; width: 1040px; height: 502px; overflow: hidden;">
             <div align="center">
-                <img u="image" src="resources/img/visual/systems/SISTEMAS-01.jpg" />
-                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-01.jpg" />
+                <img u="image" src="<s:message code="visualInspection.systems.img1"></s:message>" />
+                <img u="thumb" src="<s:message code="visualInspection.systems.img1"></s:message>" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/systems/SISTEMAS-02.jpg" />
-                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-02.jpg" />
+                <img u="image" src="<s:message code="visualInspection.systems.img2"></s:message>" />
+                <img u="thumb" src="<s:message code="visualInspection.systems.img2"></s:message>" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/systems/SISTEMAS-03.jpg" />
-                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-03.jpg" />
+                <img u="image" src="<s:message code="visualInspection.systems.img3"></s:message>" />
+                <img u="thumb" src="<s:message code="visualInspection.systems.img3"></s:message>" />
             </div>
             <div align="center">
-                <img u="image" src="resources/img/visual/systems/SISTEMAS-04.jpg" />
-                <img u="thumb" src="resources/img/visual/systems/SISTEMAS-04.jpg" />
+                <img u="image" src="<s:message code="visualInspection.systems.img4"></s:message>" />
+                <img u="thumb" src="<s:message code="visualInspection.systems.img4"></s:message>" />
             </div>
         </div>
         

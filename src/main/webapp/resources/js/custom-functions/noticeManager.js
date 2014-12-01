@@ -2,11 +2,11 @@ var $ =jQuery.noConflict();
 var notices = [];
 
 $(document).ready(function(){
+	$('#loader').show();
 	loadNoticeList();
 });
 
 function loadNoticeList(){
-	$('#loader').show();
 	var firstId = 0;
 	$.ajax({
 		type: "post",
@@ -19,10 +19,10 @@ function loadNoticeList(){
 				if(index == 0){
 					firstId = notice.id_notice;
 				}
-				var li = '<li id="notice'+notice.id_notice+'" class="clearfix" style="line-height: 15px;margin-bottom: 10px;"></li>';
+				var li = '<li id="notice'+notice.id_notice+'" class="clearfix" style="line-height: 17px;margin-bottom: 15px;"></li>';
 				$('#noticeList').append(li);
-				var dateField = '<small><span style="font-size:10px" class="entry-date">'+notice.createdDate+'</span></small>';
-				var titleField = '<span class="lateralOption" id="'+notice.id_notice+'">'+notice.title+'</span>';
+				var dateField = '<small><span style="font-size:9px;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;" class="entry-date">'+notice.createdDate+'</span></small>';
+				var titleField = '<span class="lateralOption" style="font-size:12px" id="'+notice.id_notice+'">'+notice.title+'</span>';
 				$('#notice'+notice.id_notice).append(dateField);
 				$('#notice'+notice.id_notice).append('<br>');
 				$('#notice'+notice.id_notice).append(titleField);
@@ -31,10 +31,10 @@ function loadNoticeList(){
 			paginate();
 			manageLateralMenu();
 			$('#notice'+firstId+' .lateralOption').click();
+			$('#loader').hide();
 		}
 	});
 
-	$('#loader').hide();
 }
 
 function manageLateralMenu(){
@@ -49,10 +49,12 @@ function manageLateralMenu(){
 function fillNoticeBody(id){
 	var notice = searchNotice(id);
 	$('#noticeTitle').empty();
+	$('#noticeDate').empty();
 	$('#noticeBody').empty();
 	$('#noticeGallery').empty();
 	
 	$('#noticeTitle').text(notice.title);
+	$('#noticeDate').append(notice.createdDate);
 	$('#noticeBody').append(notice.content);
 	
 	notice.images.forEach(function(image,index){

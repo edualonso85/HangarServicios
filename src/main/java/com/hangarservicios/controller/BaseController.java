@@ -69,7 +69,7 @@ public class BaseController {
 		Path path;
 		byte[] data = null;
 		try {
-			path = Paths.get(this.getClass().getResource("/default.jpg").toURI());
+			path = Paths.get(this.getClass().getResource("/noticias.png").toURI());
 			data = Files.readAllBytes(path);
 		} catch (Exception e1) {
 			e1.printStackTrace();

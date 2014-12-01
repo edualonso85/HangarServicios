@@ -5,14 +5,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 <head>
-</head>
-<body class="home page page-id-10 page-template page-template-template-home-php boxed group-blog">	
-<script>
-jQuery(document).ready(function(){
-	jQuery("#menu-header li").removeClass("active");
-	jQuery("#inicioMenu").addClass("active");
-});
-</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -23,6 +15,15 @@ jQuery(document).ready(function(){
   ga('send', 'pageview');
 
 </script>
+</head>
+<body class="home page page-id-10 page-template page-template-template-home-php boxed group-blog">	
+<script>
+jQuery(document).ready(function(){
+	jQuery("#menu-header li").removeClass("active");
+	jQuery("#inicioMenu").addClass("active");
+});
+</script>
+
 	<div class="row-fluid">
 <!-- 		<div class="span12"> -->
 <!-- 			<img src="resources/img/header/home.jpg" alt=""> -->
@@ -90,23 +91,23 @@ jQuery(document).ready(function(){
 							<div class="span4">
 								<img src="resources/img/page/al-servicio.jpg" alt="Hangar Servicios" style="float: left; padding-right: 2em;" />
 							</div>
-							<div class="span8" style="padding-left: 20px">
+							<div class="span8" style="padding-left: 20px;">
 								<h5 style="line-height: 35px;"><s:message code="title.1"/></h5>	
 								<s:message code="text.1"/><a href="about">(+)</a>
 							</div>
 						</div>	
 						<!-- IMAGENES -->
 						<div class="row-fluid">	
-							<div class="span4" style="margin:1px">
-							   <a href="visualInspection" class="<s:message code='class.visualInspection'></s:message>" style="background-image: <s:message code='main.inspecciones'></s:message>;height: 195px;width: 195px;display: block;"></a>	
+							<div class="span4" style="margin:1px;margin-right: 2px;">
+							   <a href="visualInspection" class="<s:message code='class.visualInspection'></s:message>" style="background-image: <s:message code='main.inspecciones'></s:message>;height: 200px;width: 195px;display: block;"></a>	
 							</div>
 							<div class="span4" style="margin:1px">
-							   <a href="on-LoadTapChangers" class="<s:message code='class.conmutadores'></s:message>" style="background-image: <s:message code='main.conmutadores'></s:message>;height: 195px;width: 195px;display: block;"></a>	
+							   <a href="on-LoadTapChangers" class="<s:message code='class.conmutadores'></s:message>" style="background-image: <s:message code='main.conmutadores'></s:message>;height: 200px;width: 195px;display: block;"></a>	
 <!-- 							    <a href="on-LoadTapChangers"><img src="resources/img/page/conmutadores.jpg" alt="Hangar Servicios" class="img loadTapImg" /> -->
 								</a>
 							</div>
 							<div class="span4" style="margin:1px">
-							   <a href="automaticControllers" class="<s:message code='class.reguladores'></s:message>" style="background-image: <s:message code='main.reguladores'></s:message>;height: 195px;width: 195px;display: block;"></a>	
+							   <a href="automaticControllers" class="<s:message code='class.reguladores'></s:message>" style="background-image: <s:message code='main.reguladores'></s:message>;height: 200px;width: 205px;display: block;"></a>	
 <!-- 							    <a href="automaticControllers"><img src="resources/img/page/reguladores.jpg" alt="Hangar Servicios" class="img autoContrImg" /> -->
 								</a>	
 							</div>
@@ -153,7 +154,7 @@ jQuery(document).ready(function(){
 						</div>	
 					</div>
 					<div class="span4">
-						<a href="about#inTheWorld"><img  src="resources/img/page/enelmundo.jpg" alt="satellite-67718_640" /></a>
+						<a href="about#inTheWorld"><img  src="<s:message code='index.inTheWorld.image'></s:message>" alt="Hangar Servicios" /></a>
 					</div>
 				</div>
 			</div>	

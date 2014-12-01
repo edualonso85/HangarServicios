@@ -1,7 +1,8 @@
 jQuery(document).ready(function($){
 	var options = {
 	       	$FillMode: 1,
-	        $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+	       	$Loop: 0,
+	        $AutoPlay: false,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
 	        $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
 	        $AutoPlayInterval: 6000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
 	        $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
@@ -25,6 +26,7 @@ jQuery(document).ready(function($){
 	        },
 
 	        $ThumbnailNavigatorOptions: {
+	        	$Loop: 0,
 	        	$Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
 	            $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
 	            $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
@@ -95,4 +97,92 @@ jQuery(document).ready(function($){
 	    	$(window).bind('resize', ScaleSlider4);
 	    	$(window).bind('resize', ScaleSlider5);
 	    }	
+	    
+	    jssor_slider1.$On($JssorSlider$.$EVT_PARK, DisplayHideArrow1);
+	    jssor_slider2.$On($JssorSlider$.$EVT_PARK, DisplayHideArrow2);
+        jssor_slider3.$On($JssorSlider$.$EVT_PARK, DisplayHideArrow3);
+        jssor_slider4.$On($JssorSlider$.$EVT_PARK, DisplayHideArrow4);
+        jssor_slider5.$On($JssorSlider$.$EVT_PARK, DisplayHideArrow5);
+        
+        function DisplayHideArrow1(index) {
+        	var hideLeftArrow;
+        	var hideRightArrow;
+        	
+        	if (index == 0) {
+        		hideLeftArrow = true;
+        	}
+        	else if (index == jssor_slider1.$SlidesCount() - 1) {
+        		hideRightArrow = true;
+        	}
+        	
+        	jQuery(".terraRemote .jssora02l").css("visibility", hideLeftArrow ? "hidden" : "visible");
+        	jQuery(".terraRemote .jssora02r").css("visibility", hideRightArrow ? "hidden" : "visible");
+        }
+        
+        function DisplayHideArrow2(index) {
+        	var hideLeftArrow;
+        	var hideRightArrow;
+        	
+        	if (index == 0) {
+        		hideLeftArrow = true;
+        	}
+        	else if (index == jssor_slider2.$SlidesCount() - 1) {
+        		hideRightArrow = true;
+        	}
+        	
+        	jQuery(".technology .jssora02l").css("visibility", hideLeftArrow ? "hidden" : "visible");
+        	jQuery(".technology .jssora02r").css("visibility", hideRightArrow ? "hidden" : "visible");
+        }
+        
+        function DisplayHideArrow3(index) {
+        	var hideLeftArrow;
+        	var hideRightArrow;
+        	
+        	if (index == 0) {
+        		hideLeftArrow = true;
+        	}
+        	else if (index == jssor_slider3.$SlidesCount() - 1) {
+        		hideRightArrow = true;
+        	}
+        	
+        	jQuery(".usesAdvantages .jssora02l").css("visibility", hideLeftArrow ? "hidden" : "visible");
+        	jQuery(".usesAdvantages .jssora02r").css("visibility", hideRightArrow ? "hidden" : "visible");
+        }
+        
+        function DisplayHideArrow4(index) {
+        	var hideLeftArrow;
+        	var hideRightArrow;
+        	
+        	if (index == 0) {
+        		hideLeftArrow = true;
+        	}
+        	else if (index == jssor_slider4.$SlidesCount() - 1) {
+        		hideRightArrow = true;
+        	}
+        	
+        	jQuery(".ex1 .jssora02l").css("visibility", hideLeftArrow ? "hidden" : "visible");
+        	jQuery(".ex1 .jssora02r").css("visibility", hideRightArrow ? "hidden" : "visible");
+        }
+        function DisplayHideArrow5(index) {
+        	var hideLeftArrow;
+        	var hideRightArrow;
+        	
+        	if (index == 0) {
+        		hideLeftArrow = true;
+        	}
+        	else if (index == jssor_slider5.$SlidesCount() - 1) {
+        		hideRightArrow = true;
+        	}
+        	
+        	jQuery(".ex2 .jssora02l").css("visibility", hideLeftArrow ? "hidden" : "visible");
+        	jQuery(".ex2 .jssora02r").css("visibility", hideRightArrow ? "hidden" : "visible");
+        }
+        
+
+        //hide arrow left at the beginning.
+        DisplayHideArrow1(0);
+        DisplayHideArrow2(0);
+        DisplayHideArrow3(0);
+        DisplayHideArrow4(0);
+        DisplayHideArrow5(0);
 });
